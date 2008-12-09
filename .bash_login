@@ -1,19 +1,45 @@
 ###### Prompt Setup ######
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
  
 function gitPrompt {
-PS1="\h:\W\$(parse_git_branch) \u\$ "
-PS2='> '
-PS4='+ '
+	PS1="\h:\W\$(parse_git_branch) \u\$ "
+	PS2='> '
+	PS4='+ '
 }
 gitPrompt
 
+###### Setup trash function ######
+function trash {
+	# taken from http://blog.vicshih.com/2008/04/move-to-trash-from-mac-command-line.html
+  while [ -n "$1" ]; do
+    local file=`basename "$1"`
+    # Chop trailing '/' if there
+    file=${file%/}
 
+    local destination=""
+
+    if [ -e "$HOME/.Trash/$file" ]; then
+      # Extract file and extension
+      local ext=`expr "$file" : ".*\(\.[^\.]*\)$"`
+      local base=${file%$ext}
+
+      # Add a space between base and timestamp
+      test -n "$base" && base="$base "
+
+      destination="/$base`date +%H-%M-%S`_$RANDOM$ext"
+    fi  
+
+    echo "Moving '$1' to '$HOME/.Trash$destination'"
+    mv "$1" "$HOME/.Trash$destination"
+    shift
+  done
+}
 ###### Aliases ######
 alias regex='java -classpath /Users/bryanjswift/Documents/Code/javaregexdemo/classes/ regexdemo.AppRegexDemo'
 alias yuicompress='java -jar /Users/bryanjswift/Documents/Code/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar'
+alias trash='trash'
 
 ###### Path ######
 # add postgres to the path
