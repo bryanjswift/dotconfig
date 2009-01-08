@@ -18,6 +18,8 @@ map <D-7> :tabn7<CR>
 map <D-8> :tabn8<CR>
 map <D-9> :tabn9<CR>
 map <D-0> :tabn10<CR>
+" shortcuts for javascript ftplugin
+map <leader>jsff zE:JavaScriptFoldFunctions<CR>
 
 " general settings
 " backup files to the .vim directory rather than the current directory
