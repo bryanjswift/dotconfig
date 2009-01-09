@@ -5,6 +5,8 @@ let mapleader = ","
 " shortcuts for fuzzyfinder plugin
 map <leader>f :FuzzyFinderFile<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
+" shortcut for fuzzyfinder_textmate
+map <leader>t :FuzzyFinderTextMate<CR>
 " shortcuts for scratch plugin
 map <leader>s :Sscratch<CR>
 " enables cmd-# to switch between tabs
