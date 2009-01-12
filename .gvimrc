@@ -1,6 +1,10 @@
 " settings for MacVim
 " set the colors up nicely - slate theme
 colorscheme slate
+" highlighting
+set cursorline
+hi cursorline guibg=#333333
+hi CursorColumn guibg=#333333
 " make folds and comments easier to read and to be differentiated from each
 " other
 hi Folded guifg=grey80

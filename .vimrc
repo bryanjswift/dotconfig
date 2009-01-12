@@ -9,6 +9,8 @@ map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>t :FuzzyFinderTextMate<CR>
 " shortcuts for scratch plugin
 map <leader>s :Sscratch<CR>
+" shortcuts for vtreeexplorer plugin
+map <leader>d :VSTreeExplore<CR>
 " enables cmd-# to switch between tabs
 map <D-1> :tabn1<CR>
 map <D-2> :tabn2<CR>
@@ -20,6 +22,12 @@ map <D-7> :tabn7<CR>
 map <D-8> :tabn8<CR>
 map <D-9> :tabn9<CR>
 map <D-0> :tabn10<CR>
+" easier split navigation
+map <down> <C-w><down>
+map <up> <C-w><up>
+map <left> <C-w><left>
+map <right> <C-w><right>
+map <D-H> <C-w><left>
 " shortcuts for javascript ftplugin
 map <leader>jsff zE:JavaScriptFoldFunctions<CR>
 
@@ -41,7 +49,14 @@ set shiftwidth=2
 " set fold method to manual
 set foldmethod=manual
 " set acceptable file formats
-set ffs=dos,unix
+set ffs=unix,dos
 
 " allow for filetype specific things
 filetype plugin on
+
+" Tree Explorer plugin - vtreeexplorer
+let treeExplVertical=1
+let treeExplWinSize=40
+
+" blogging - vimblog
+let g:blogconfig = "~/.vimblogconfig"
