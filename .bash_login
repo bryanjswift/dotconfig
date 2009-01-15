@@ -39,7 +39,7 @@ function trash {
 
 ###### Aliases ######
 alias regex='java -classpath /Users/bryanjswift/Documents/Code/javaregexdemo/classes/ regexdemo.AppRegexDemo'
-alias yuicompress='java -jar /Users/bryanjswift/Documents/Code/yuicompressor-2.3.5/build/yuicompressor-2.3.5.jar'
+alias yuicompress='java -jar /Users/bryanjswift/Documents/Code/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias trash='trash'
 
 ###### Path ######
