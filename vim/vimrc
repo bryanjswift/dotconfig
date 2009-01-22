@@ -1,3 +1,6 @@
+" first the disabled features due to security concerns
+set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
+
 " set the leader key for commands
 let mapleader = ","
 
