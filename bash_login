@@ -40,6 +40,8 @@ function trash {
 	done
 }
 
+set -o vi
+
 ###### Aliases ######
 alias regex='java -classpath /Users/bryanjswift/Documents/Code/javaregexdemo/classes/ regexdemo.AppRegexDemo'
 alias yuicompress='java -jar /Users/bryanjswift/Documents/Code/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
