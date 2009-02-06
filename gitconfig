@@ -1,0 +1,15 @@
+[core]
+	excludesfile = /Users/bryan/.gitignore
+[user]
+	name = Bryan Swift
+	email = bryan.j.swift@gmail.com
+	signingkey = 55EF7D4A
+[github]
+	user = bryanjswift
+	token = 
+[alias]
+	sh = !git-sh
+	x = !gitx
+	cp = cherry-pick
+	ci = commit
+	co = checkout
