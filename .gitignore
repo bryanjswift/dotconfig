@@ -1,2 +1,6 @@
 /vim/view
 /vim/.netrwhist
+/vim/backup/*
+!/vim/backup/junk
+/vim/tmp/*
+!/vim/tmp/junk
