@@ -55,7 +55,8 @@ set foldmethod=manual
 set ffs=unix,dos
 
 " allow for filetype specific things
-filetype plugin on
+filetype plugin indent on
+syntax on
 
 " Tree Explorer plugin - vtreeexplorer
 let treeExplVertical=1
@@ -63,3 +64,9 @@ let treeExplWinSize=40
 
 " blogging - vimblog
 let g:blogconfig = "~/.vimblogconfig"
+
+" Clojure
+let clj_highlight_builtins = 1
+let clj_highlight_contrib = 1
+let clj_paren_rainbow = 1
+let clj_want_gorilla = 1
