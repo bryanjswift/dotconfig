@@ -54,9 +54,9 @@ alias dev_appserver='$HOME/Documents/src/appengine-java-sdk-1.2.0/bin/dev_appser
 # add postgres to the path
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/pgsql/bin:/opt/local/bin:$PATH
 # add maven to the path
-export PATH=$PATH:/Developer/Java/maven-2.0.10/bin
+export PATH=/usr/local/maven-2.0.10/bin:$PATH
 # add ant to the path
-export PATH=$PATH:/usr/share/ant/bin
+export PATH=/usr/local/ant-1.7.0/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
 
