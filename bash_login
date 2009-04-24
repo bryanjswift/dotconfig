@@ -48,6 +48,7 @@ alias regex='java -classpath $HOME/Documents/Code/javaregexdemo/classes/ regexde
 alias yuicompress='java -jar $HOME/Documents/Code/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias trash='trash'
 alias appcfg='$HOME/Documents/src/appengine-java-sdk-1.2.0/bin/appcfg.sh'
+alias dev_appserver='$HOME/Documents/src/appengine-java-sdk-1.2.0/bin/dev_appserver.sh'
 
 ###### Path ######
 # add postgres to the path
