@@ -55,7 +55,7 @@ set foldmethod=manual
 set ffs=unix,dos
 
 " allow for filetype specific things
-filetype plugin indent on
+filetype plugin on
 syntax on
 
 " Tree Explorer plugin - vtreeexplorer
