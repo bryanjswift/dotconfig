@@ -13,6 +13,6 @@ hi Comment guifg=grey60
 set lines=75
 set columns=135
 " set font
-set gfn=Anonymous:h10.00
+set gfn=Panic\ Sans:h11.00
 " set some transparency
 set transparency=10
