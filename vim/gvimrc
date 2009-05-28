@@ -10,7 +10,7 @@ hi CursorColumn guibg=#333333
 hi Folded guifg=grey80
 hi Comment guifg=grey60
 " set initial window size
-set lines=75
+set lines=70
 set columns=135
 " set font
 set gfn=Panic\ Sans:h11.00
