@@ -11,3 +11,5 @@
 	cp = cherry-pick
 	ci = commit
 	co = checkout
+[push]
+	default = matching
