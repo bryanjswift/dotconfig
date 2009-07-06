@@ -17,3 +17,7 @@ augroup END
 augroup textile
 	autocmd BufRead *.textile 								set ai formatoptions=tcroqn2 comments=n:>
 augroup END
+
+augroup aspx
+	autocmd BufRead,BufNewFile *.aspx					set ft=xml
+augroup END
