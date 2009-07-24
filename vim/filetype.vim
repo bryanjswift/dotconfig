@@ -21,3 +21,7 @@ augroup END
 augroup aspx
 	autocmd BufRead,BufNewFile *.aspx					set ft=xml
 augroup END
+
+augroup velocity
+	au! BufRead,BufNewFile *.vm									set ft=velocity
+augroup END
