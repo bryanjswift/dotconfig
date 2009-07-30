@@ -13,3 +13,5 @@
 	co = checkout
 [push]
 	default = current
+[merge]
+	tool = vimdiff
