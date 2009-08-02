@@ -23,5 +23,9 @@ augroup aspx
 augroup END
 
 augroup velocity
-	au! BufRead,BufNewFile *.vm									set ft=velocity
+	au! BufRead,BufNewFile *.vm								set ft=velocity
+augroup END
+
+augroup less
+	au BufRead,BufNewFile *.less							set ft=less
 augroup END
