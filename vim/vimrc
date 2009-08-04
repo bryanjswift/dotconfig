@@ -36,6 +36,12 @@ map <right> <C-w><right>
 map <D-H> <C-w><left>
 " shortcuts for javascript ftplugin
 map <leader>jsff zE:JavaScriptFoldFunctions<CR>
+function! ShowSyntax()
+	for id in synstack(line("."), col("."))
+		echo synIDattr(id,"name")
+	endfor
+endfunction
+map <F10> :call ShowSyntax()<CR>
 
 " general settings
 " backup files to the .vim directory rather than the current directory
