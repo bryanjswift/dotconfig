@@ -20,6 +20,9 @@ endif
 
 syn case ignore
 
+syn match lessComment "//.*$" contains=@Spell
+syn match lessVariable "@[A-Za-z_-][A-Za-z0-9_-]*"
+syn region lessVariableDefinition start="^@" end=";" contains=lessVariable,cssColor
 
 syn keyword cssTagName abbr acronym address applet area a b base
 syn keyword cssTagName basefont bdo big blockquote body br button
@@ -45,7 +48,6 @@ syn match cssIdentifier "#[A-Za-zÀ-ÿ_@][A-Za-zÀ-ÿ0-9_@-]*"
 catch /^.*/
 syn match cssIdentifier "#[A-Za-z_@][A-Za-z0-9_@-]*"
 endtry
-
 
 syn match cssMedia "@media\>" nextgroup=cssMediaType skipwhite skipnl
 syn keyword cssMediaType contained screen print aural braile embosed handheld projection ty tv all nextgroup=cssMediaComma,cssMediaBlock skipwhite skipnl
@@ -159,7 +161,6 @@ syn keyword cssRenderAttr contained static relative absolute fixed
 syn keyword cssRenderAttr contained ltr rtl embed bidi-override pre nowrap
 syn match cssRenderAttr contained "\<bidi-override\>"
 
-
 syn match cssAuralProp contained "\<\(pause\|cue\)\(-\(before\|after\)\)\=\>"
 syn match cssAuralProp contained "\<\(play-during\|speech-rate\|voice-family\|pitch\(-range\)\=\|speak\(-\(punctuation\|numerals\)\)\=\)\>"
 syn keyword cssAuralProp contained volume during azimuth elevation stress richness
@@ -198,11 +199,6 @@ syn match cssSpecialCharQ +\\'+ contained
 syn region cssStringQQ start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=cssUnicodeEscape,cssSpecialCharQQ
 syn region cssStringQ start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=cssUnicodeEscape,cssSpecialCharQ
 syn match cssClassName "\.[A-Za-z][A-Za-z0-9_-]\+"
-
-
-syn match lessComment "//.*$" contains=@Spell
-syn match lessVariable "@[A-Za-z_-][A-Za-z0-9_-]*"
-
 
 if main_syntax == "css"
   syn sync minlines=10
@@ -262,7 +258,7 @@ if version >= 508 || !exists("did_less_syn_inits")
   HiLink cssIdentifier Function
   HiLink cssInclude Include
   HiLink cssImportant Special
-  HiLink cssBraces Function
+  HiLink cssBraces SpecialChar
   HiLink cssBraceError Error
   HiLink cssError Error
   HiLink cssInclude Include
