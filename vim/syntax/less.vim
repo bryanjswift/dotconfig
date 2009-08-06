@@ -2,7 +2,7 @@
 " Language:	LESS Cascading Style Sheets
 " Maintainer:	Leaf Corcoran <leafot@gmail.com>
 " Modifier:	Bryan J Swift <bryan@bryanjswift.com>
-" URL: 		http://leafo.net/lessphp/src/less.vim
+" URL:		http://leafo.net/lessphp/vim/less.vim
 " URL:		http://gist.github.com/161047
 " Last Change:	2009 August 4
 " LESS by Leaf Corcoran
@@ -21,10 +21,6 @@ endif
 endif
 
 syn case ignore
-
-syn match lessComment "//.*$" contains=@Spell
-syn match lessVariable "@[A-Za-z_-][A-Za-z0-9_-]*"
-syn region lessVariableDefinition start="^@" end=";" contains=lessVariable,cssColor
 
 syn keyword cssTagName abbr acronym address applet area a b base
 syn keyword cssTagName basefont bdo big blockquote body br button
@@ -46,7 +42,7 @@ syn match cssSelectorOp2 "[~|]\?=" contained
 syn region cssAttributeSelector matchgroup=cssSelectorOp start="\[" end="]" transparent contains=cssUnicodeEscape,cssSelectorOp2,cssStringQ,cssStringQQ
 
 try
-syn match cssIdentifier "#[A-Za-zÀ-ÿ_@][A-Za-zÀ-ÿ0-9_@-]*"
+syn match cssIdentifier "#[A-Za-zÃ€-Ã¿_@][A-Za-zÃ€-Ã¿0-9_@-]*"
 catch /^.*/
 syn match cssIdentifier "#[A-Za-z_@][A-Za-z0-9_@-]*"
 endtry
@@ -181,11 +177,18 @@ syn keyword cssAuralAttr contained male female child code digits continuous
 syn match cssTableProp contained "\<\(caption-side\|table-layout\|border-collapse\|border-spacing\|empty-cells\|speak-header\)\>"
 syn keyword cssTableAttr contained fixed collapse separate show hide once always
 
+syn match lessComment "//.*$" contains=@Spell
+syn match lessVariable "@[A-Za-z_-][A-Za-z0-9_-]*" contained
+syn region lessVariableDefinition start="^@" end=";" contains=css.*Attr,css.*Prop,cssComment,cssValue.*,cssColor,cssURL,cssImportant,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssDefinition,cssClassName,cssTagName,cssIdentifier,lessComment,lessVariable,lessFunction
+
+" captures both the definition and the call
+syn region lessFunction matchgroup=lessFuncDef start="@[A-Za-z_-][A-Za-z0-9_-]*(" end=")" contains=css.*Attr,css.*Prop,cssComment,cssValue.*,cssColor,cssURL,cssImportant,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssDefinition,cssClassName,cssTagName,cssIdentifier,lessComment,lessVariable,lessFunction
+
 " FIXME: This allows cssMediaBlock before the semicolon, which is wrong.
 syn region cssInclude start="@import" end=";" contains=cssComment,cssURL,cssUnicodeEscape,cssMediaType
 syn match cssBraces contained "[{}]"
 syn match cssError contained "{@<>"
-syn region cssDefinition transparent matchgroup=cssBraces start='{' end='}' contains=css.*Attr,css.*Prop,cssComment,cssValue.*,cssColor,cssURL,cssImportant,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssDefinition,cssClassName,cssTagName,cssIdentifier,lessComment,lessVariable
+syn region cssDefinition transparent matchgroup=cssBraces start='{' end='}' contains=css.*Attr,css.*Prop,cssComment,cssValue.*,cssColor,cssURL,cssImportant,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssDefinition,cssClassName,cssTagName,cssIdentifier,lessComment,lessVariable,lessFunction
 " syn match cssBraceError "}"
 
 syn match cssPseudoClass ":\S*" contains=cssPseudoClassId,cssUnicodeEscape
@@ -219,6 +222,7 @@ if version >= 508 || !exists("did_less_syn_inits")
 
   HiLink lessComment Comment
   HiLink lessVariable Special
+  HiLink lessFuncDef Function
   HiLink cssComment Comment
   HiLink cssTagName Statement
   HiLink cssSelectorOp Special
@@ -287,4 +291,3 @@ endif
 
 
 " vim: ts=8
-
