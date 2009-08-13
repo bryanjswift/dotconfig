@@ -6,4 +6,6 @@ autocmd DOMLoad .* js modes.passAllKeys = /www\.google\.com/.test(buffer.URL)
 autocmd PageLoad .* js modes.passAllKeys = /www\.google\.com/.test(buffer.URL)
 autocmd LocationChange .* js modes.passAllKeys = /www\.google\.com/.test(buffer.URL)
 
+set cpt=bhl
+
 " vim: set ft=vimperator:
