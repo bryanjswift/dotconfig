@@ -3,6 +3,7 @@ set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 
 " set the leader key for commands
 let mapleader = ","
+let maplocalleader = ";"
 
 " map shortcuts
 " shortcuts for fuzzyfinder plugin
@@ -11,7 +12,7 @@ map <leader>b :FuzzyFinderBuffer<CR>
 " shortcut for fuzzyfinder_textmate
 map <leader>t :FuzzyFinderTextMate<CR>
 " shortcuts for scratch plugin
-map <leader>s :Sscratch<CR>
+"map <leader>s :Sscratch<CR>
 " shortcuts for vtreeexplorer plugin
 map <leader>d :VSTreeExplore<CR>
 " enables cmd-# to switch between tabs
@@ -73,9 +74,3 @@ let treeExplWinSize=40
 
 " blogging - vimblog
 let g:blogconfig = "~/.vimblogconfig"
-
-" Clojure
-let clj_highlight_builtins = 1
-let clj_highlight_contrib = 1
-let clj_paren_rainbow = 1
-let clj_want_gorilla = 1

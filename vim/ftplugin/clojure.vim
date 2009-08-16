@@ -11,7 +11,6 @@ let b:did_ftplugin = 1
 
 let s:cpo_save = &cpo
 set cpo&vim
-filetype plugin indent on
 
 let b:undo_ftplugin = "setlocal fo< com< cms< cpt< isk< def<"
 
@@ -61,7 +60,7 @@ function! ClojureGetFoldingLevel(lineno)
 	function closure.f() dict
 		execute self.lineno
 
-		if vimclojure#SynIdName() =~ 'clojureParen\d' && vimclojure#Yank('l', 'normal! "lyl') == '('
+		if vimclojure#SynIdName() =~ 'clojureParen\d' && vimclojure#Yank('l', 'normal "lyl') == '('
 			return 1
 		endif
 

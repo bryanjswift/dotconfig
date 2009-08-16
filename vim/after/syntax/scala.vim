@@ -2,7 +2,7 @@
 syn match scalaAnnotation "@[A-Z][a-z]\+"
 
 " Hilighting
-hi! Tag							guifg=#000080 gui=bold
+hi! Tag							guifg=#056ca2 gui=bold
 
 hi link scalaAnnotation Special
 hi! link scalaDefSpecializer Special
