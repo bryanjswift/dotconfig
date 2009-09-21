@@ -1,7 +1,8 @@
 " Vim syntax file
-" Language:	Velocity templates
-" Maintainer:	Antonio Terceiro <terceiro@im.ufba.br>
-" Last Change:	2003 Jan 22
+" Language:			Velocity Template Language
+" Maintainer:		Antonio Terceiro <terceiro@im.ufba.br>
+" Maintainer:		Bryan J Swift <bryan@bryanjswift.com>
+" Last Change:	2009 Sep 20
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
@@ -20,21 +21,18 @@ endif
 syn keyword	velocityTodo contained TODO FIXME XXX
 
 " redefine HTML Strings so they contain velocity stuff:
-syn region  htmlString   contained start=+"+ end=+"+ contains=htmlSpecialChar,javaScriptExpression,@htmlPreproc,velocityReference,velocityFormalReference
-syn region  htmlString   contained start=+'+ end=+'+ contains=htmlSpecialChar,javaScriptExpression,@htmlPreproc,velocityReference,velocityFormalReference
+syn region htmlString contained start=+"+ end=+"+ contains=htmlSpecialChar,javaScriptExpression,@htmlPreproc,velocityReference,velocityFormalReference
+syn region htmlString contained start=+'+ end=+'+ contains=htmlSpecialChar,javaScriptExpression,@htmlPreproc,velocityReference,velocityFormalReference
 
 " the both reference types support the silent mode: $!variableName
-
 syn match velocityIdentifier "[a-zA-Z][a-zA-Z_\-0-9]*" contained
 
 " changed on suggestion from Philippe Paravicini <philippe.paravicini@datalex.com>
-" syn region velocityReference         start=/\$/    skip=/(\s*\|\s*,\s*\|\s*)/   end=/\s\|$/  contains=velocityIdentifier,velocityString,velocityNumber
-syn region velocityReference         start=/\$/    skip=/([^)])/                end=/\s\|$/  contains=velocityIdentifier,velocityString,velocityNumber
-
-syn region velocitySilentReference   start=/\$\!/  skip=/(\s*\|\s*,\s*\|\s*)/   end=/\s\|$/   contains=velocityIdentifier,velocityString,velocityNumber
-
-syn region velocityFormalReference   start=/\${/      end=/}/          contains=velocityIdentifier,velocityString,velocityNumber
-syn region velocitySilentFormalReference   start=/\$\!{/      end=/}/  contains=velocityIdentifier,velocityString,velocityNumber
+" syn region velocityReference start=/\$/ skip=/(\s*\|\s*,\s*\|\s*)/ end=/\s\|$/ contains=velocityIdentifier,velocityString,velocityNumber
+syn region velocityReference start=/\$/ skip=/([^)])/ end=/[^\w\.(_\-]/ contains=velocityIdentifier,velocityString,velocityNumber
+syn region velocitySilentReference start=/\$\!/ skip=/([^)])/ end=/[^\w\.(]/ contains=velocityIdentifier,velocityString,velocityNumber
+syn region velocityFormalReference start=/\${/ end=/}/ contains=velocityIdentifier,velocityString,velocityNumber
+syn region velocitySilentFormalReference start=/\$\!{/ end=/}/ contains=velocityIdentifier,velocityString,velocityNumber
 
 " keywords:
 syn keyword velocityKeyWord contained set if else elseif end foreach include parse stop macro
@@ -51,7 +49,6 @@ syn match velocityDirective "^\s*#[^#].*" contains=velocityString,velocityRefere
 " velocity comments:
 syn region	velocityMultilineComment start=/#\*/ end=/\*#/ contains=velocityTodo
 syn match	velocityLineComment	"##.*$" contains=velocityTodo
-
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
