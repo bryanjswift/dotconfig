@@ -2,4 +2,4 @@
 # See /System/Library/LaunchDaemons
 #
 # minute  hour  mday  month wday  who             command
-  */10    *     *     *     *     {username}      /usr/bin/perl SimplenoteSync.pl
+  */10    *     *     *     *     {username}      /usr/bin/perl /Users/{username}/Documents/Code/SimplenoteSync/SimplenoteSync.pl
