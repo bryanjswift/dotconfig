@@ -1,5 +1,5 @@
 "2.0 (created: 2009/03/28 23:48:07)
-set runtimepath=$HOME/Documents/Code/dotconfig/vimperator
+set runtimepath=$HOME/Documents/code/dotconfig/vimperator
 
 set guioptions=B
 autocmd DOMLoad .* js modes.passAllKeys = /www\.google\.com/.test(buffer.URL)
