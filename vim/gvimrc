@@ -1,15 +1,15 @@
 " settings for MacVim
-" set the colors up nicely - slate theme
+" set the colors up nicely - github theme
 colorscheme github
 " highlighting
 set cursorline
 " set initial window size
 set lines=70
-set columns=140
+set columns=120
 " set font
-set gfn=Panic\ Sans:h11.00
-" set some transparency
-set transparency=10
+set gfn=DejaVu\ Sans\ Mono\ 10
+" remove toolbar
+set guioptions-=T
 
 " ** Clojure **
 let clj_highlight_builtins = 1
