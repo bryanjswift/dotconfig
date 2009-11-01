@@ -13,66 +13,37 @@ function gitPrompt {
 }
 gitPrompt
 
-###### Setup trash function ######
-function trash {
-	# taken from http://blog.vicshih.com/2008/04/move-to-trash-from-mac-command-line.html
-	while [ -n "$1" ]; do
-		local file=`basename "$1"`
-		# Chop trailing '/' if there
-		file=${file%/}
-
-		local destination=""
-
-		if [ -e "$HOME/.Trash/$file" ]; then
-			# Extract file and extension
-			local ext=`expr "$file" : ".*\(\.[^\.]*\)$"`
-			local base=${file%$ext}
-
-			# Add a space between base and timestamp
-			test -n "$base" && base="$base "
-
-			destination="/$base`date +%H-%M-%S`_$RANDOM$ext"
-		fi  
-
-		echo "Moving '$1' to '$HOME/.Trash$destination'"
-		mv "$1" "$HOME/.Trash$destination"
-		shift
-	done
-}
-
 ###### Command Line ######
 set -o vi
 
-###### Aliases ######
-alias regex='java -classpath $HOME/Documents/Code/javaregexdemo/classes/ regexdemo.AppRegexDemo'
-alias yuicompress='java -jar $HOME/Documents/Code/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
-alias trash='trash'
-alias appcfg='$HOME/Documents/src/gae/appengine-java-sdk-1.2.5/bin/appcfg.sh'
-alias dev_appserver='$HOME/Documents/src/gae/appengine-java-sdk-1.2.5/bin/dev_appserver.sh'
-
 ###### Environment Variables ######
 # environment variables for Java development
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
-export SCALA_HOME=$HOME/Documents/src/scala/scala-2.7.6.final
-export MAVEN_HOME=/Developer/Java/maven-2.0.10
+export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk
+export SCALA_HOME=$HOME/Documents/src/scala/scala-2.7.7.final
+export MAVEN_HOME=$HOME/Documents/src/java/apache-maven-2.2.1
 export M2_REPOSITORY=$HOME/.m2/repository
-export ANT_HOME=/usr/local/ant-1.7.1/
-export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
+export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.7.1
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+export GAE_HOME=$HOME/Documents/src/gae/appengine-java-sdk-1.2.6
 # catalog files for compiling man pages
-export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
+export XML_CATALOG_FILES="/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml /usr/share/xml/docbook/stylesheet/docbook-xsl/catalog.xml"
 # svn variables
 export SVN_EDITOR=vim
 export VISUAL=vim
 
+###### Aliases ######
+alias yuicompress='java -jar $HOME/Documents/Code/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
+alias appcfg='$GAE_HOME/bin/appcfg.sh'
+alias dev_appserver='$GAE_HOME/bin/dev_appserver.sh'
+
 ###### Path ######
-# add postgres to the path
-export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:/usr/local/pgsql/bin:$PATH
+# add /usr/local/bin to the path
+export PATH=/usr/local/bin:$PATH
 # add maven to the path
-export PATH=/usr/local/maven-2.0.10/bin:$PATH
+export PATH=$MAVEN_HOME/bin:$PATH
 # add ant to the path
-export PATH=/usr/local/ant-1.7.1/bin:$PATH
+export PATH=$ANT_HOME/bin:$PATH
 # add scala to the path
 export PATH=$SCALA_HOME/bin:$PATH
 # where to find compiled man pages
-export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
+export MANPATH=/usr/local/man:$MANPATH
