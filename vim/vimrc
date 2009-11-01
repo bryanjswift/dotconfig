@@ -29,12 +29,13 @@ map <D-0> :tabn10<CR>
 " tab navigation
 map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
+map <C-t> :tabnew<CR>
+map <C-w> :tabc<CR>
 " easier split navigation
 map <down> <C-w><down>
 map <up> <C-w><up>
 map <left> <C-w><left>
 map <right> <C-w><right>
-map <D-H> <C-w><left>
 " shortcuts for javascript ftplugin
 map <leader>jsff zE:JavaScriptFoldFunctions<CR>
 function! ShowSyntax()
