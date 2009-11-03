@@ -74,5 +74,6 @@ export PATH=/usr/local/maven-2.0.10/bin:$PATH
 export PATH=/usr/local/ant-1.7.1/bin:$PATH
 # add scala to the path
 export PATH=$SCALA_HOME/bin:$PATH
+export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
