@@ -65,7 +65,7 @@ export SVN_EDITOR=vim
 export VISUAL=vim
 
 ###### Path ######
-# add scala, maven, ant to the path
-export PATH=$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:$PATH
+# add scala, maven, ant, gems, mysql to the path
+export PATH=$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
