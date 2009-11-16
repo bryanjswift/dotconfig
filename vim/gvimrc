@@ -5,7 +5,7 @@ colorscheme github
 set cursorline
 " set initial window size
 set lines=70
-set columns=140
+set columns=130
 " set font
 set gfn=Panic\ Sans:h11.00
 " set some transparency

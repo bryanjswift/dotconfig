@@ -1,5 +1,7 @@
 " first the disabled features due to security concerns
 set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
+" let vim know background of terminal is dark
+set background=dark
 
 " set the leader key for commands
 let mapleader = ","
@@ -11,8 +13,6 @@ map <leader>f :FuzzyFinderFile<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 " shortcut for fuzzyfinder_textmate
 map <leader>t :FuzzyFinderTextMate<CR>
-" shortcuts for scratch plugin
-"map <leader>s :Sscratch<CR>
 " shortcuts for vtreeexplorer plugin
 map <leader>d :VSTreeExplore<CR>
 " enables cmd-# to switch between tabs
