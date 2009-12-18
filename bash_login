@@ -59,6 +59,8 @@ export MAVEN_HOME=$HOME/Documents/src/java/maven-2.0.10
 export M2_REPOSITORY=$HOME/.m2/repository
 export ANT_HOME=$HOME/Documents/src/java/ant-1.7.1
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+# ImageMagick
+export IMAGE_MAGICK_HOME=$HOME/Documents/src/ImageMagick-6.5.8/
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 # svn variables
@@ -67,6 +69,6 @@ export VISUAL=vim
 
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
-export PATH=$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
+export PATH=$IMAGE_MAGICK_HOME/bin:$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
