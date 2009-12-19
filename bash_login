@@ -50,6 +50,7 @@ alias trash='trash'
 alias appcfg='$HOME/Documents/src/gae/appengine-java-sdk-1.2.5/bin/appcfg.sh'
 alias dev_appserver='$HOME/Documents/src/gae/appengine-java-sdk-1.2.5/bin/dev_appserver.sh'
 alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
+alias amacs='aquamacs'
 
 ###### Environment Variables ######
 # environment variables for JVM development
