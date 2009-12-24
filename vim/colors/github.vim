@@ -41,7 +41,7 @@ hi PreProc						guifg=#999999 gui=bold
 	hi Macro						guifg=#999999 gui=bold
 	hi PreCondit				guifg=#999999 gui=bold
 
-hi Type								guifg=#445588 gui=bold
+hi Type								guifg=#334066 gui=bold
 	hi StorageClass			guifg=#000000 gui=bold
 	hi Structure				guifg=#000000 gui=bold
 	hi Typedef					guifg=#000000 gui=bold
