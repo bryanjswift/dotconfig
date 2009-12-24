@@ -22,3 +22,6 @@ let vimclojure#NailgunClient="/usr/local/bin/ng"
 
 " ** Fuzzy Finder TextMate **
 let g:fuzzy_ignore = "*.class,target/*"
+
+" filetype specific highlighting
+hi scalaMethodCall gui=italic
