@@ -25,23 +25,23 @@ hi Constant						guifg=#008080
 	hi RubySymbol				guifg=#990073
 
 hi Identifier					guifg=#008080
-	hi Function					guifg=#990000 gui=bold
+	hi Function					guifg=#990000
 
 hi Statement					guifg=#000000 gui=bold
 	hi Conditional			guifg=#000000 gui=bold
 	hi Repeat						guifg=#000000 gui=bold
 	hi Label						guifg=#000000 gui=bold
 	hi Operator					guifg=#000000 gui=bold
-	hi Keyword					guifg=#000000 gui=bold
+	hi Keyword					guifg=#0000ff
 	hi Exception				guifg=#990000 gui=bold
 
 hi PreProc						guifg=#999999 gui=bold
-	hi Include					guifg=#999999 gui=bold
+	hi Include					guifg=#999999
 	hi Define						guifg=#000000 gui=bold
 	hi Macro						guifg=#999999 gui=bold
 	hi PreCondit				guifg=#999999 gui=bold
 
-hi Type								guifg=#445588 gui=bold
+hi Type								guifg=#334066 gui=bold
 	hi StorageClass			guifg=#000000 gui=bold
 	hi Structure				guifg=#000000 gui=bold
 	hi Typedef					guifg=#000000 gui=bold
