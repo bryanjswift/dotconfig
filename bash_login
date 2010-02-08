@@ -7,7 +7,7 @@ function parse_git_dirty {
 }
  
 function gitPrompt {
-	PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(parse_git_branch): "
+	PS1="arctop\[\033[0;33m\] \w\[\033[00m\]\$(parse_git_branch): "
 	PS2='> '
 	PS4='+ '
 }
