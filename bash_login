@@ -54,11 +54,11 @@ alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/comp
 ###### Environment Variables ######
 # environment variables for JVM development
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
-export SCALA_HOME=$HOME/Documents/src/scala/scala-2.7.7.final
-export MAVEN_HOME=$HOME/Documents/src/java/maven-2.0.10
+export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.Beta1-prerelease
+export CLOJURE_HOME=$HOME/Documents/src/clojure
+export MAVEN_HOME=$HOME/Documents/src/java/maven-2.2.1
 export M2_REPOSITORY=$HOME/.m2/repository
-export ANT_HOME=$HOME/Documents/src/java/ant-1.7.1
-export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+export ANT_HOME=$HOME/Documents/src/java/ant-1.8.0
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 # svn variables
@@ -67,6 +67,6 @@ export VISUAL=vim
 
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
-export PATH=$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
+export PATH=$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
