@@ -4,3 +4,4 @@
 !/vim/backup/junk
 /vim/tmp/*
 !/vim/tmp/junk
+*eclim*
