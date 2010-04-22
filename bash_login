@@ -47,8 +47,8 @@ set -o vi
 alias regex='java -classpath $HOME/Documents/Code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
 alias yuicompress='java -jar $HOME/Documents/Code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias trash='trash'
-alias appcfg='$HOME/Documents/src/gae/appengine-java-sdk-1.3.1/bin/appcfg.sh'
-alias dev_appserver='$HOME/Documents/src/gae/appengine-java-sdk-1.3.1/bin/dev_appserver.sh'
+alias appcfg='$HOME/Documents/src/gae/appengine-java-sdk-1.3.3/bin/appcfg.sh'
+alias dev_appserver='$HOME/Documents/src/gae/appengine-java-sdk-1.3.3/bin/dev_appserver.sh'
 alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
 
 ###### Environment Variables ######
