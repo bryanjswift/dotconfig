@@ -19,4 +19,6 @@ let clj_want_gorilla = 1
 let vimclojure#NailgunClient="/usr/local/bin/ng"
 
 " ** Fuzzy Finder TextMate **
-let g:fuzzy_ignore = "*.class,*.jar,*.png,*.jpg,*.gif,target/*"
+let g:fuzzy_ignore = "*.class,*.jar,*.png,*.jpg,*.gif,*target/*,*boot/*"
+" filetype specific highlighting
+hi scalaMethodCall gui=italic
