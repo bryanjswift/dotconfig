@@ -43,14 +43,6 @@ function trash {
 ###### Command Line ######
 set -o vi
 
-###### Aliases ######
-alias regex='java -classpath $HOME/Documents/Code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
-alias yuicompress='java -jar $HOME/Documents/Code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
-alias trash='trash'
-alias appcfg='$HOME/Documents/src/gae/appengine-java-sdk-1.3.3/bin/appcfg.sh'
-alias dev_appserver='$HOME/Documents/src/gae/appengine-java-sdk-1.3.3/bin/dev_appserver.sh'
-alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
-
 ###### Environment Variables ######
 # environment variables for JVM development
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
@@ -59,14 +51,24 @@ export MAVEN_HOME=$HOME/Documents/src/java/maven-2.0.10
 export M2_REPOSITORY=$HOME/.m2/repository
 export ANT_HOME=$HOME/Documents/src/java/ant-1.7.1
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+export ANDROID_SDK=$HOME/Documents/src/java/android-sdk-mac_86
+export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 # svn variables
 export SVN_EDITOR=vim
 export VISUAL=vim
 
+###### Aliases ######
+alias regex='java -classpath $HOME/Documents/Code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
+alias yuicompress='java -jar $HOME/Documents/Code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
+alias trash='trash'
+alias appcfg='$GAE_SDK/bin/appcfg.sh'
+alias dev_appserver='$GAE_SDK/bin/dev_appserver.sh'
+alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
+
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
-export PATH=$HOME/.gem/ruby/1.8/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
+export PATH=$HOME/.gem/ruby/1.8/bin:$ANDROID_SDK/tools:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/opt/local/man:$MANPATH
