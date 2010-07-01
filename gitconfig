@@ -16,3 +16,5 @@
 	default = current
 [merge]
 	tool = vimdiff
+[color]
+	ui = off
