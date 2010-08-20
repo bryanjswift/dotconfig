@@ -7,7 +7,7 @@ function parse_git_dirty {
 }
  
 function gitPrompt {
-	PS1="\h\[\033[0;33m\] \W\[\033[00m\]\$(parse_git_branch): "
+	PS1="\u@\h\[\033[0;33m\] \W\[\033[00m\]\$(parse_git_branch): "
 	PS2='> '
 	PS4='+ '
 }
@@ -20,22 +20,22 @@ set -o vi
 # environment variables for Java development
 export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk
 export JDK_HOME=$JAVA_HOME
-export SCALA_HOME=$HOME/Documents/src/scala/scala-2.7.7.final
-export MAVEN_HOME=$HOME/Documents/src/java/apache-maven-2.2.1
-export M2_REPOSITORY=$HOME/.m2/repository
-export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.7.1
-export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
-export GAE_HOME=$HOME/Documents/src/gae/appengine-java-sdk-1.2.6
-# catalog files for compiling man pages
-export XML_CATALOG_FILES="/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml /usr/share/xml/docbook/stylesheet/docbook-xsl/catalog.xml"
+#export SCALA_HOME=$HOME/Documents/src/scala/scala-2.7.7.final
+#export MAVEN_HOME=$HOME/Documents/src/java/apache-maven-2.2.1
+#export M2_REPOSITORY=$HOME/.m2/repository
+#export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.7.1
+#export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+
 # svn variables
 export SVN_EDITOR=vim
 export VISUAL=vim
 
 ###### Aliases ######
-alias yuicompress='java -jar $HOME/Documents/Code/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
-alias appcfg='$GAE_HOME/bin/appcfg.sh'
-alias dev_appserver='$GAE_HOME/bin/dev_appserver.sh'
+alias free="free -m"
+alias update="sudo aptitude update"
+alias install="sudo aptitude install"
+alias upgrade="sudo aptitude safe-upgrade"
+alias remove="sudo aptitude remove"
 
 ###### Path ######
 # add /usr/local/bin to the path
