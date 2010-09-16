@@ -2,3 +2,7 @@
 ._*
 .svn
 .hg
+*.tmproj
+.classpath
+.project
+.idea
