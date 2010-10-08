@@ -9,10 +9,10 @@ let maplocalleader = ";"
 
 " map shortcuts
 " shortcuts for fuzzyfinder plugin
-map <leader>f :FuzzyFinderFile<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>f :FufFile<CR>
+map <leader>b :FufBuffer<CR>
 " shortcut for fuzzyfinder_textmate
-map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>t :FufCoverageFile<CR>
 " shortcuts for vtreeexplorer plugin
 map <leader>d :VSTreeExplore<CR>
 " enables cmd-# to switch between tabs

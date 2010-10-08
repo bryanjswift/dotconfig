@@ -4,8 +4,8 @@ colorscheme github
 " highlighting
 set cursorline
 " set initial window size
-set lines=70
-set columns=130
+set lines=63
+set columns=124
 " set font
 set gfn=Panic\ Sans:h11.00
 " set some transparency
