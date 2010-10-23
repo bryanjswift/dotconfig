@@ -61,12 +61,13 @@ export SVN_EDITOR=vim
 export VISUAL=vim
 
 ###### Aliases ######
-alias regex='java -classpath $HOME/Documents/Code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
-alias yuicompress='java -jar $HOME/Documents/Code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
+alias regex='java -classpath $HOME/Documents/code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
+alias yuicompress='java -jar $HOME/Documents/code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias trash='trash'
 alias appcfg='$GAE_SDK/bin/appcfg.sh'
 alias dev_appserver='$GAE_SDK/bin/dev_appserver.sh'
 alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
+alias packager='$HOME/Documents/code/mootools/packager/packager'
 
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
