@@ -54,6 +54,9 @@ export ANT_HOME=$HOME/Documents/src/java/ant-1.7.1
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
 export ANDROID_SDK=$HOME/Documents/src/java/android-sdk-mac_86
 export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
+export EC2_HOME=$HOME/.ec2
+export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 # svn variables
@@ -71,6 +74,6 @@ alias packager='$HOME/Documents/code/mootools/packager/packager'
 
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
-export PATH=$HOME/.gem/ruby/1.8/bin:$NODE_HOME/bin:$ANDROID_SDK/tools:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
+export PATH=$EC2_HOME/bin:$HOME/.gem/ruby/1.8/bin:$NODE_HOME/bin:$ANDROID_SDK/tools:$SCALA_HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/usr/local/Cellar/node/0.2.0/share/man:$MANPATH
