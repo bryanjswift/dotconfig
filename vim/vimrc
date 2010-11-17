@@ -63,6 +63,8 @@ set shiftwidth=2
 set foldmethod=manual
 " set acceptable file formats
 set ffs=unix,dos
+" autoindent please
+set autoindent
 
 " allow for filetype specific things
 filetype plugin on

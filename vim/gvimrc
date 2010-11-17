@@ -20,8 +20,8 @@ let clj_paren_rainbow = 1
 let clj_want_gorilla = 1
 let vimclojure#NailgunClient="/usr/local/bin/ng"
 
-" ** Fuzzy Finder TextMate **
-let g:fuzzy_ignore = "*.class,*target/*,*.jar,*boot/*"
+" ** Fuzzy Finder **
+let g:fuf_coveragefile_exclude = '\v\~$|\.(jar|class|o|exe|dll|bak|orig|sw[po])$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 
 " filetype specific highlighting
 hi scalaMethodCall gui=italic
