@@ -10,8 +10,8 @@ set columns=124
 set gfn=Panic\ Sans:h11.00
 " set some transparency
 set transparency=10
-" remove toolbar
-set guioptions-=T
+" see `:help guioptions ` for more info
+set guioptions=egmLtc
 
 " ** Clojure **
 let clj_highlight_builtins = 1
