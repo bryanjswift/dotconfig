@@ -20,11 +20,21 @@ set -o vi
 # environment variables for Java development
 export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk
 export JDK_HOME=$JAVA_HOME
-#export SCALA_HOME=$HOME/Documents/src/scala/scala-2.7.7.final
+export SCALA_HOME=/usr/share/scala/current
 #export MAVEN_HOME=$HOME/Documents/src/java/apache-maven-2.2.1
 #export M2_REPOSITORY=$HOME/.m2/repository
 #export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.7.1
 #export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+# EC2 environment variables
+export EC2_HOME=$HOME/.ec2
+export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+export EC2_USER_ID=`cat $EC2_HOME/user.id`
+export EC2_ACCESS=`cat $EC2_HOME/access.key`
+export EC2_SECRET=`cat $EC2_HOME/secret.key`
+
+alias bundle-image="sudo ec2-bundle-vol -d /mnt -u $AWS_USER_ID -k $EC2_PRIVATE_KEY -c $EC2_CERT -p "
+alias upload-image="sudo ec2-upload-bundle -b bryanjswift.servers -a $EC2_ACCESS -s $EC2_SECRET -m "
 
 # svn variables
 export SVN_EDITOR=vim
