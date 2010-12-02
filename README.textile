@@ -1,3 +1,11 @@
 h1. bash_login
 
 ~/.bash_login should source the bash_login file in this repository and then make any overriding changes
+
+h2. EC2 setup
+
+Create `$HOME/.ec2` directory and put the private key (pk-*.pem), the cert key (cert-*.pem) in it. Then create files called access.key (with the access key) secret.key (for the secret key) and user.id (with the user id, no hyphens)
+
+h1. Vim
+
+Create `~/.vimrc` that sources `vim/vimrc` and `~/.gvimrc` that sources `vim/gvimrc` then create a symbolic link from `~/.vim` to `vim` in the repository.
