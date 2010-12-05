@@ -32,9 +32,10 @@ export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 export EC2_USER_ID=`cat $EC2_HOME/user.id`
 export EC2_ACCESS=`cat $EC2_HOME/access.key`
 export EC2_SECRET=`cat $EC2_HOME/secret.key`
+export S3_BUCKET=`cat $EC2_HOME/bucket`
 
 alias bundle-image="sudo ec2-bundle-vol -d /mnt -u $EC2_USER_ID -k $EC2_PRIVATE_KEY -c $EC2_CERT -p "
-alias upload-image="sudo ec2-upload-bundle -b bryanjswift.servers -a $EC2_ACCESS -s $EC2_SECRET -m "
+alias upload-image="sudo ec2-upload-bundle -b $S3_BUCKET -a $EC2_ACCESS -s $EC2_SECRET -m "
 
 # svn variables
 export SVN_EDITOR=vim
