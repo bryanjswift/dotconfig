@@ -25,6 +25,9 @@ export SCALA_HOME=/usr/share/scala/current
 #export M2_REPOSITORY=$HOME/.m2/repository
 #export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.7.1
 #export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
+
+export EDITOR=vim
+
 # EC2 environment variables
 export EC2_HOME=$HOME/.ec2
 export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
