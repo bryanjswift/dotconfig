@@ -52,6 +52,6 @@ alias packager='$HOME/Documents/code/mootools/packager/packager'
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
 export ORIG_PATH=$PATH
-export PATH=/usr/local/bin:$MAVEN_HOME/bin:$EC2_HOME/bin:$NODE_HOME/bin:$ANDROID_SDK/tools:$SCALA_HOME/bin:$ANT_HOME/bin:$REBEL_HOME/bin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$MAVEN_HOME/bin:$EC2_HOME/bin:$NODE_HOME/bin:$SCALA_HOME/bin:$ANT_HOME/bin:$REBEL_HOME/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:/usr/local/Cellar/node/0.2.0/share/man:$MANPATH
