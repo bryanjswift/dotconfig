@@ -1,7 +1,11 @@
 " first the disabled features due to security concerns
 set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 " let vim know background of terminal is dark
-set background=dark
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 
 " set the leader key for commands
 let mapleader = ","
