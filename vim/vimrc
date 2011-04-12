@@ -6,6 +6,7 @@ if has('gui_running')
 else
   set background=dark
 endif
+colorscheme solarized
 
 " set the leader key for commands
 let mapleader = ","

@@ -1,6 +1,5 @@
 " settings for MacVim
-" set the colors up nicely - slate theme
-colorscheme solarized
+"
 " highlighting
 set cursorline
 " set initial window size
