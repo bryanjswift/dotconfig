@@ -1,6 +1,3 @@
-[submodule "vim-rooter"]
-	path = vim-rooter
-	url = git://github.com/airblade/vim-rooter.git
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
