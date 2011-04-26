@@ -1,3 +1,5 @@
+" run pathogen
+call pathogen#runtime_append_all_bundles()
 " first the disabled features due to security concerns
 set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 " let vim know background of terminal is dark
