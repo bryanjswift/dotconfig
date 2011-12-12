@@ -19,10 +19,10 @@ set -o vi
 ###### Environment Variables ######
 # environment variables for JVM development
 export CELLAR=`brew --cellar`
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
+export JAVA_HOME=$(/usr/libexec/java_home)
 export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.final
 export MAVEN_HOME=$HOME/Documents/src/java/maven-2.0.10
-export NODE_HOME=/usr/local/Cellar/node/0.2.0
+export NODE_HOME=/usr/local/Cellar/node/0.4.7
 export M2_REPOSITORY=$HOME/.m2/repository
 export ANT_HOME=$HOME/Documents/src/java/ant-1.8.2
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
@@ -42,7 +42,6 @@ export VISUAL=vim
 
 ###### Aliases ######
 alias regex='java -classpath $HOME/Documents/code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
-alias yuicompress='java -jar $HOME/Documents/code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 alias trash='trash'
 alias appcfg='$GAE_SDK/bin/appcfg.sh'
 alias dev_appserver='$GAE_SDK/bin/dev_appserver.sh'
@@ -54,4 +53,4 @@ alias packager='$HOME/Documents/code/mootools/packager/packager'
 export ORIG_PATH=$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$MAVEN_HOME/bin:$EC2_HOME/bin:$NODE_HOME/bin:$SCALA_HOME/bin:$ANT_HOME/bin:$REBEL_HOME/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
-export MANPATH=/usr/local/man:/usr/local/Cellar/node/0.2.0/share/man:$MANPATH
+export MANPATH=/usr/local/man:$NODE_HOME/share/man:$MANPATH
