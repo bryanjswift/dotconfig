@@ -34,6 +34,7 @@ export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 export EC2_ACCESS=`cat $EC2_HOME/access.key`
 export EC2_SECRET=`cat $EC2_HOME/secret.key`
 export REBEL_HOME=$HOME/Documents/src/java/jrebel
+export RBENV=$HOME/.rbenv
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 # svn variables
@@ -51,6 +52,9 @@ alias packager='$HOME/Documents/code/mootools/packager/packager'
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
 export ORIG_PATH=$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$MAVEN_HOME/bin:$EC2_HOME/bin:$NODE_HOME/bin:$SCALA_HOME/bin:$ANT_HOME/bin:$REBEL_HOME/bin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$MAVEN_HOME/bin:$EC2_HOME/bin:$NODE_HOME/bin:$RBENV/bin:$ANT_HOME/bin:$REBEL_HOME/bin:/usr/local/mysql/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:$NODE_HOME/share/man:$MANPATH
+
+###### rbenv ######
+eval "$(rbenv init -)"
