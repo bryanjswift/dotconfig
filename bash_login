@@ -48,6 +48,7 @@ alias appcfg='$GAE_SDK/bin/appcfg.sh'
 alias dev_appserver='$GAE_SDK/bin/dev_appserver.sh'
 alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
 alias packager='$HOME/Documents/code/mootools/packager/packager'
+alias iaw='open -a/Applications/iA\ Writer.app'
 
 ###### Path ######
 # add scala, maven, ant, gems, mysql to the path
