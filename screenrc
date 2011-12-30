@@ -1,0 +1,4 @@
+# Don't show the info message
+startup_message off
+# Load my bash configurations
+shell -$SHELL
