@@ -6,6 +6,7 @@ set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 if has('gui_running')
   set background=light
 else
+  let g:solarized_termtrans=10
   set background=dark
 endif
 colorscheme solarized
