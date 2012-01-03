@@ -14,7 +14,7 @@ max_peers_seed = 50
 max_uploads = 10
 
 # Maximum number of simultaneous downloads
-max_downloads_global = 3
+max_downloads_global = 10
 # Maximum number of simultaneous uploads
 max_uploads_global = 20
 
@@ -44,7 +44,6 @@ schedule = session_save,240,300,session_save=
 
 # Enable the default ratio group.
 ratio.enable=
-
 # Change the limits, the defaults should be sufficient.
 # Upload to a minimum ratio of 4.0
 ratio.min.set=400
@@ -75,9 +74,17 @@ port_random = yes
 encryption = allow_incoming,try_outgoing,enable_retry,prefer_plaintext
 
 # Sort the seeding view by the upload rate
-view_sort_current = seeding,greater=d.get_up_rate=
-view_sort_new = seeding,greater=d.get_up_rate=
-schedule = sort,5,2,view_sort=seeding
+view.sort_current = seeding,greater=d.get_up_rate=
+view.sort_new = seeding,less=d.get_up_rate=
+view.sort = seeding,3
+
+view.sort_current = leeching,greater=d.get_down_rate=
+view.sort_new = leeching,greater=d.get_down_rate=
+view.sort = leeching,3
+
+view.sort_current = main,greater=d.get_ratio=
+view.sort_new = main,less=d.get_ratio=
+view.sort = main,3
 
 # Enable DHT support for trackerless torrents or when all trackers are down.
 # May be set to "disable" (completely disable DHT), "off" (do not start DHT),
