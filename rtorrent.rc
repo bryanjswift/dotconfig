@@ -80,7 +80,7 @@ view.sort = main
 
 # Sort the seeding view by the upload rate and only show torrents with peers
 view.sort_current = seeding,greater=d.get_up_rate=
-view.filter = seeding,d.get_peers_connected=
+view.filter = seeding,"and=d.get_complete=,d.get_peers_connected="
 view.sort_new = seeding,less=d.get_up_rate=
 view.sort = seeding
 
