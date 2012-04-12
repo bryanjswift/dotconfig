@@ -6,7 +6,7 @@ set cursorline
 set lines=54
 set columns=125
 " set font
-set gfn=DejaVu\ Sans\ Mono:h11.00
+set gfn=Consolas:h12.00
 " set some transparency
 set transparency=10
 " see `:help guioptions ` for more info
