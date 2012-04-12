@@ -84,3 +84,10 @@ let treeExplWinSize=40
 
 " blogging - vimblog
 let g:blogconfig = "~/.vimblogconfig"
+
+" allow project specific vim settings
+if filereadable("./.project.vimrc")
+  source ./.project.vimrc
+endif
+set exrc
+set secure
