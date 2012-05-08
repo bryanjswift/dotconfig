@@ -17,27 +17,32 @@ gitPrompt
 set -o vi
 
 ###### Environment Variables ######
-# environment variables for JVM development
+# In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
+export HISTIGNORE="&:ls:[bf]g:exit"
+# Homebrew
 export CELLAR=`brew --cellar`
+# environment variables for JVM development
 export JAVA_HOME=$(/usr/libexec/java_home)
 export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.final
-export MAVEN_HOME=$HOME/Documents/src/java/maven-2.0.10
-export NODE_HOME=/usr/local/Cellar/node/0.4.7
 export M2_REPOSITORY=$HOME/.m2/repository
-export ANT_HOME=$HOME/Documents/src/java/ant-1.8.2
+export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.8.3
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
 export ANDROID_SDK=$CELLAR/android-sdk/r10
 export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
+export REBEL_HOME=$HOME/Documents/src/java/jrebel
+# Node
+export NODE_HOME=/usr/local/Cellar/node/0.4.7
+# EC2
 export EC2_HOME=$HOME/.ec2
 export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 export EC2_ACCESS=`cat $EC2_HOME/access.key`
 export EC2_SECRET=`cat $EC2_HOME/secret.key`
-export REBEL_HOME=$HOME/Documents/src/java/jrebel
+# Ruby
 export RBENV=$HOME/.rbenv
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
-# svn variables
+# Source Control variables
 export SVN_EDITOR=vim
 export VISUAL=vim
 
@@ -51,9 +56,9 @@ alias packager='$HOME/Documents/code/mootools/packager/packager'
 alias iaw='open -a/Applications/iA\ Writer.app'
 
 ###### Path ######
-# add scala, maven, ant, gems, mysql to the path
 export ORIG_PATH=$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$MAVEN_HOME/bin:$EC2_HOME/bin:$NODE_HOME/bin:$RBENV/bin:$ANT_HOME/bin:$REBEL_HOME/bin:/usr/local/mysql/bin:$PATH
+# add to the path
+export PATH=/usr/local/bin:/usr/local/sbin:$EC2_HOME/bin:$NODE_HOME/bin:$RBENV/bin:$ANT_HOME/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:$NODE_HOME/share/man:$MANPATH
 
