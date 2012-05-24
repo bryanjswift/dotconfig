@@ -8,7 +8,7 @@ set columns=125
 " set font
 set gfn=Consolas:h12.00
 " set some transparency
-"set transparency=10
+set transparency=10
 " see `:help guioptions ` for more info
 set guioptions=egmLtc
 
