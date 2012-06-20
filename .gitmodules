@@ -19,3 +19,6 @@
 [submodule "vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/editorconfig-vim"]
+	path = vim/bundle/editorconfig-vim
+	url = git://github.com/editorconfig/editorconfig-vim.git
