@@ -67,6 +67,7 @@ set incsearch
 " tabwidth = 2 spaces
 set ts=2
 set shiftwidth=2
+set expandtab
 " set fold method to manual
 set foldmethod=manual
 " set acceptable file formats
