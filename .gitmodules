@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-clojure"]
 	path = vim/bundle/vim-clojure
 	url = git://github.com/krisajenkins/vimclojure.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
