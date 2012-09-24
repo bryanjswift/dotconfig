@@ -30,8 +30,6 @@ export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
 export ANDROID_SDK=$CELLAR/android-sdk/r10
 export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
 export REBEL_HOME=$HOME/Documents/src/java/jrebel
-# Node
-export NODE_HOME=/usr/local/Cellar/node/0.4.7
 # EC2
 export EC2_HOME=$HOME/.ec2
 export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
@@ -58,9 +56,9 @@ alias iaw='open -a/Applications/iA\ Writer.app'
 ###### Path ######
 export ORIG_PATH=$PATH
 # add to the path
-export PATH=/usr/local/bin:/usr/local/sbin:$EC2_HOME/bin:$NODE_HOME/bin:$RBENV/bin:$ANT_HOME/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$EC2_HOME/bin:$RBENV/bin:$ANT_HOME/bin:$PATH
 # where to find compiled man pages
-export MANPATH=/usr/local/man:$NODE_HOME/share/man:$MANPATH
+export MANPATH=/usr/local/man:$MANPATH
 
 ###### rbenv ######
 eval "$(rbenv init -)"
