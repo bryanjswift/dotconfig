@@ -4,6 +4,16 @@
 
 # vim
 
+```
 ln -s $HOME/Documents/code/dotconfig/vim ~/.vim
-`echo "source ~/.vim/vimrc" > ~/.vimrc`
-`echo "source ~/.vim/gvimrc" > ~/.gvimrc`
+echo "source ~/.vim/vimrc" > ~/.vimrc
+echo "source ~/.vim/gvimrc" > ~/.gvimrc
+```
+
+# git
+
+```
+echo "[include]" > ~/.gitconfig
+echo "  path = Documents/code/dotconfig/gitconfig"
+cp ~/Documents/code/dotconfig/gitignore ~/.gitignore
+```
