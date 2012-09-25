@@ -1,3 +1,0 @@
-h1. bash_login
-
-~/.bash_login should source the bash_login file in this repository and then make any overriding changes

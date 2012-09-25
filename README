@@ -1,0 +1,9 @@
+# bash_login
+
+`echo "source \$HOME/Documents/code/dotconfig/bash_login" > ~/.bash_login`
+
+# vim
+
+ln -s $HOME/Documents/code/dotconfig/vim ~/.vim
+`echo "source ~/.vim/vimrc" > ~/.vimrc`
+`echo "source ~/.vim/gvimrc" > ~/.gvimrc`
