@@ -1,7 +1,7 @@
 [user]
 	name = Bryan Swift
 	email = bryan.j.swift@gmail.com
-	signingkey = 55EF7D4A
+	signingkey =
 [github]
 	user = bryanjswift
 	token = 
@@ -18,3 +18,10 @@
 	tool = vimdiff
 [color]
 	ui = off
+[push]
+	default = current
+[merge]
+	tool = vimdiff
+[color]
+	diff = auto
+	interactive = auto
