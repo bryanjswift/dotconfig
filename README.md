@@ -1,11 +1,21 @@
 # Homebrew
 
+Make sure Java is installed
+
+```
+java --request
+```
+
 Make sure Xcode and Command Line Tools are installed
 
 ```
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-brew install git ctags macvim
+brew install git ctags macvim rbenv ruby-build tmux s3cmd node scala gpg
 ```
+
+# Ruby
+
+List ruby versions available with `rbenv install -l`. Recommend installing the latest patch of 1.9.2 and 1.9.3.
 
 # Get dotfiles
 
@@ -18,7 +28,9 @@ git submodule update
 
 # bash_login
 
-`echo "source \$HOME/Documents/code/dotconfig/bash_login" > ~/.bash_login`
+```
+echo "source \$HOME/Documents/code/dotconfig/bash_login" > ~/.bash_login
+```
 
 # vim
 
@@ -35,3 +47,21 @@ echo "[include]" > ~/.gitconfig
 echo "  path = Documents/code/dotconfig/gitconfig"
 cp ~/Documents/code/dotconfig/gitignore ~/.gitignore
 ```
+
+# Link other dotfiles
+
+```
+ln -s ~/Documents/code/dotconfig/rtorrent.rc ~/.rtorrent.rc
+ln -s ~/Documents/code/dotconfig/screenrc ~/.screenrc
+ln -s ~/Documents/code/dotconfig/tmux.conf ~/.tmux.conf
+ln -s ~/Documents/code/dotconfig/tigrc ~/.tigrc
+```
+
+# Get Applications from web
+
+* [Vagrant](http://downloads.vagrantup.com)
+* [TextMate](https://github.com/textmate/textmate/downloads)
+* [Transmit](http://panic.com/transmit)
+* [Coda 2](http://panic.com/coda)
+* [Adobe Creative Suite](https://creative.adobe.com)
+* [VMWare Fusion](http://vmware.com)
