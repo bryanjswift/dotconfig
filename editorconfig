@@ -1,0 +1,13 @@
+; top-most EditorConfig file
+root = true
+
+; Unix-style newlines
+[*]
+end_of_line = LF
+indent_style = space
+indent_size = 2
+
+; We recommend you to keep these unchanged
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
