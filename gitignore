@@ -2,6 +2,7 @@
 ._*
 .svn
 .hg
+.session
 *.tmproj
 .classpath
 .project

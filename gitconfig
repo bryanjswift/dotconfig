@@ -1,3 +1,6 @@
+[core]
+	autocrlf = input
+	quotepath = false
 [user]
 	name = Bryan Swift
 	email = bryan.j.swift@gmail.com
