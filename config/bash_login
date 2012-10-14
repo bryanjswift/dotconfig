@@ -25,15 +25,12 @@ set -o vi
 export DOTCONFIG=$HOME/Documents/code/dotconfig
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
-# Homebrew
-export CELLAR=`brew --cellar`
 # environment variables for JVM development
 export JAVA_HOME=$(/usr/libexec/java_home)
 export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.final
 export M2_REPOSITORY=$HOME/.m2/repository
 export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.8.3
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
-export ANDROID_SDK=$CELLAR/android-sdk/r10
 export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
 export REBEL_HOME=$HOME/Documents/src/java/jrebel
 # EC2
@@ -63,7 +60,7 @@ alias iaw='open -a/Applications/iA\ Writer.app'
 ###### Path ######
 export ORIG_PATH=$PATH
 # add to the path
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$RBENV/bin:$ANT_HOME/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$RBENV/bin:$ANT_HOME/bin:$RBENV/bin:$PATH
 # where to find compiled man pages
 export MANPATH=/usr/local/man:$MANPATH
 
@@ -71,9 +68,6 @@ export MANPATH=/usr/local/man:$MANPATH
 eval "$(rbenv init -)"
 
 ###### maven autocomplete ######
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
 if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
   . $DOTCONFIG/bash-completion/maven_bash_completion.bash
 fi
