@@ -26,8 +26,7 @@ export DOTCONFIG=$HOME/Documents/code/dotconfig
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
 # environment variables for JVM development
-export JAVA_HOME=$(/usr/libexec/java_home)
-export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.final
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
 export M2_REPOSITORY=$HOME/.m2/repository
 export ANT_HOME=$HOME/Documents/src/java/apache-ant-1.8.3
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
