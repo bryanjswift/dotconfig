@@ -15,6 +15,7 @@
 	ci = commit
 	co = checkout
 	st = status
+	fa = !git remote | xargs -tn1 git fetch
 [push]
 	default = current
 [merge]
