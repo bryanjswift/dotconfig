@@ -44,7 +44,7 @@ map <left> <C-w><left>
 map <right> <C-w><right>
 map <D-H> <C-w><left>
 " shortcuts for javascript ftplugin
-map <leader>jsff zE:JavaScriptFoldFunctions<CR>
+map <leader>zff zE:FoldFunctions<CR>
 function! ShowSyntax()
 	for id in synstack(line("."), col("."))
 		echo synIDattr(id,"name")

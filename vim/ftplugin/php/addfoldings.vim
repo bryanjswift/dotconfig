@@ -5,12 +5,12 @@
 " License:      This file is placed in the public domain.
 
 " see if the script has been run for this buffer already
-if exists("b:did_jsfoldings")
+if exists("b:did_phpfoldings")
 	finish
 endif
-let b:did_jsfoldings = 1
+let b:did_phpfoldings = 1
 
-" define a function to fold JavaScript functions
+" define a function to fold PHP functions
 function! FoldFunctions()
 	if &foldmethod == "manual"
 		" if manual search for functions and fold them
