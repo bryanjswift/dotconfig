@@ -1,13 +1,17 @@
 ###### Prompt Setup ######
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+function get_git_branch {
+  git branch | awk '/^\*/ { print $2 }'
 }
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+function get_git_dirty {
+  git diff --quiet || echo '*'
+}
+function get_git_prompt {
+  git branch &> /dev/null || return 1
+  echo "[$(get_git_branch)$(get_git_dirty)]"
 }
  
 function gitPrompt {
-	PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(parse_git_branch): "
+	PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(get_git_prompt): "
 	PS2='> '
 	PS4='+ '
 }
