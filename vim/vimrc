@@ -43,7 +43,7 @@ map <up> <C-w><up>
 map <left> <C-w><left>
 map <right> <C-w><right>
 map <D-H> <C-w><left>
-" shortcuts for javascript ftplugin
+" shortcuts for javascript and PHP ftplugin
 map <leader>zff zE:FoldFunctions<CR>
 function! ShowSyntax()
 	for id in synstack(line("."), col("."))
@@ -76,6 +76,7 @@ set ffs=unix,dos
 set autoindent
 
 " allow for filetype specific things
+filetype on
 filetype plugin on
 syntax on
 
@@ -86,9 +87,5 @@ let treeExplWinSize=40
 " blogging - vimblog
 let g:blogconfig = "~/.vimblogconfig"
 
-" allow project specific vim settings
-if filereadable("./.project.vimrc")
-  source ./.project.vimrc
-endif
 set exrc
 set secure
