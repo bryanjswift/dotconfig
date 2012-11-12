@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-rust"]
 	path = vim/bundle/vim-rust
 	url = git://github.com/bryanjswift/vim-rust.git
+[submodule "vim/bundle/ctrlp-vim"]
+	path = vim/bundle/ctrlp-vim
+	url = git://github.com/kien/ctrlp.vim.git
