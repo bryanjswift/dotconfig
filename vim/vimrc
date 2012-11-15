@@ -34,9 +34,6 @@ map <D-7> :tabn7<CR>
 map <D-8> :tabn8<CR>
 map <D-9> :tabn9<CR>
 map <D-0> :tabn10<CR>
-" tab navigation
-map <C-n> :tabn<CR>
-map <C-p> :tabp<CR>
 " easier split navigation
 map <down> <C-w><down>
 map <up> <C-w><up>
@@ -74,6 +71,9 @@ set foldmethod=manual
 set ffs=unix,dos
 " autoindent please
 set autoindent
+" wildignore
+set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
+set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
 
 " allow for filetype specific things
 filetype on
