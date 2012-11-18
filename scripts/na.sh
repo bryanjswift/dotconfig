@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # NA_TODO_EXT Must be set to something to limit text searches
-NA_TODO_EXT="taskpaper"
+NA_TODO_EXT="ft"
 NA_NEXT_TAG="@na"
 NA_DONE_TAG="@done"
 NA_MAX_DEPTH=3
