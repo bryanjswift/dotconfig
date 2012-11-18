@@ -1,6 +1,0 @@
-# The periodic and atrun jobs have moved to launchd jobs
-# See /System/Library/LaunchDaemons
-#
-MAILTO=""
-# minute  hour  mday  month wday  who             command
-  */10    *     *     *     *     {username}      /usr/bin/perl /Users/{username}/Documents/Code/SimplenoteSync/SimplenoteSync.pl
