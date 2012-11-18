@@ -86,6 +86,7 @@ let treeExplWinSize=40
 
 " blogging - vimblog
 let g:blogconfig = "~/.vimblogconfig"
+let g:ctrlp_open_new_file = 't'
 
 set exrc
 set secure
