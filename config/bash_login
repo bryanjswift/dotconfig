@@ -1,6 +1,6 @@
 ###### Prompt Setup ######
 function get_git_branch {
-  git branch | awk '/^\*/ { print $2 }'
+  git branch | awk '/^\*/ { print $0 }' | sed "s/^\* \(.*\)$/\1/"
 }
 function get_git_dirty {
   [[ 0 -eq `git status --porcelain | wc -l` ]] || echo "*"
