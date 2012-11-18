@@ -21,6 +21,8 @@ gitPrompt
 set -o vi
 
 ###### Environment Variables ######
+# Dotconfig Home
+export DOTCONFIG=$HOME/Documents/code/dotconfig
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
 # Homebrew
@@ -73,4 +75,4 @@ eval "$(rbenv init -)"
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-[[ -s "$HOME/Documents/code/dotconfig/na.sh" ]] && source "$HOME/Documents/code/dotconfig/na.sh"
+[[ -s "$DOTCONFIG/scripts/na.sh" ]] && source "$DOTCONFIG/scripts/na.sh"
