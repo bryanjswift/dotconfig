@@ -71,8 +71,10 @@ export MANPATH=/usr/local/man:$MANPATH
 eval "$(rbenv init -)"
 
 ###### maven autocomplete ######
-. $HOME/Documents/code/dotconfig/bash-completion/maven_bash_completion.bash
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
+fi
+if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
+  . $DOTCONFIG/bash-completion/maven_bash_completion.bash
 fi
 [[ -s "$DOTCONFIG/scripts/na.sh" ]] && source "$DOTCONFIG/scripts/na.sh"
