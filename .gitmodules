@@ -7,9 +7,6 @@
 [submodule "vim-gundo"]
 	path = vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "vim-puppet"]
-	path = vim/bundle/puppet-vim
-	url = git://github.com/ajf/puppet-vim.git
 [submodule "vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
@@ -49,3 +46,12 @@
 [submodule "vim/bundle/ctrlp-vim"]
 	path = vim/bundle/ctrlp-vim
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-puppet"]
+	path = vim/bundle/vim-puppet
+	url = git://github.com/rodjek/vim-puppet.git
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
