@@ -78,3 +78,7 @@ if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
   . $DOTCONFIG/bash-completion/maven_bash_completion.bash
 fi
 [[ -s "$DOTCONFIG/scripts/na.sh" ]] && source "$DOTCONFIG/scripts/na.sh"
+if [ -d $HOME/.tmuxinator/scripts ]; then
+  [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+  source $HOME/.tmuxinator/scripts/tmuxinator_completion
+fi
