@@ -2,14 +2,17 @@
 function get_git_branch {
   git branch | awk '/^\*/ { print substr($0, 3, (length - 2)) }'
 }
+function get_git_tag {
+  git name-rev HEAD --tags --name-only | awk '/\^0$/ { printf " ["; printf substr($0, 1,  length - 2); print "]"; }'
+}
 function get_git_dirty {
   [[ 0 -eq `git status --porcelain | wc -l` ]] || echo "*"
 }
 function get_git_prompt {
   git branch &> /dev/null || return 1
-  echo "[$(get_git_branch)$(get_git_dirty)]"
+  echo "$(get_git_tag) ($(get_git_branch)$(get_git_dirty))"
 }
- 
+
 function gitPrompt {
 	PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(get_git_prompt): "
 	PS2='> '
