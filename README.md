@@ -29,7 +29,7 @@ git submodule update
 # bash_login
 
 ```
-echo "source \$HOME/Documents/code/dotconfig/bash_login" > ~/.bash_login
+echo "source \$HOME/Documents/code/dotconfig/config/bash_login" > ~/.bash_login
 ```
 
 # vim
@@ -44,8 +44,8 @@ echo "source ~/.vim/gvimrc" > ~/.gvimrc
 
 ```
 echo "[include]" > ~/.gitconfig
-echo "  path = Documents/code/dotconfig/gitconfig"
-cp ~/Documents/code/dotconfig/gitignore ~/.gitignore
+echo "  path = Documents/code/dotconfig/gitconfig" >> ~/.gitconfig
+cp ~/Documents/code/dotconfig/config/gitignore ~/.gitignore
 ```
 
 # Link other dotfiles
