@@ -59,6 +59,7 @@ ln -s ~/Documents/code/dotconfig/config/tigrc ~/.tigrc
 
 # Get Applications from web
 
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://downloads.vagrantup.com)
 * [TextMate](https://github.com/textmate/textmate/downloads)
 * [Transmit](http://panic.com/transmit)
