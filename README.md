@@ -51,10 +51,10 @@ cp ~/Documents/code/dotconfig/gitignore ~/.gitignore
 # Link other dotfiles
 
 ```
-ln -s ~/Documents/code/dotconfig/rtorrent.rc ~/.rtorrent.rc
-ln -s ~/Documents/code/dotconfig/screenrc ~/.screenrc
-ln -s ~/Documents/code/dotconfig/tmux.conf ~/.tmux.conf
-ln -s ~/Documents/code/dotconfig/tigrc ~/.tigrc
+ln -s ~/Documents/code/dotconfig/config/rtorrent.rc ~/.rtorrent.rc
+ln -s ~/Documents/code/dotconfig/config/screenrc ~/.screenrc
+ln -s ~/Documents/code/dotconfig/config/tmux.conf ~/.tmux.conf
+ln -s ~/Documents/code/dotconfig/config/tigrc ~/.tigrc
 ```
 
 # Get Applications from web
