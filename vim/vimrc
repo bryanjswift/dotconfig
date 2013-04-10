@@ -1,5 +1,10 @@
+" This must be first, because it changes other options as side effect
+set nocompatible
 " run pathogen
+call pathogen#helptags()
 call pathogen#infect()
+" Allow buffer changes to persist in background (without saving first)
+set hidden
 " first the disabled features due to security concerns
 set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 " let vim know background of terminal is dark
@@ -71,6 +76,12 @@ set autoindent
 " wildignore
 set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
 set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
+" show whitespace in a useful way
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" Make it possible to disable autoindent and stuff when pasting
+set pastetoggle=<F2>
 
 " allow for filetype specific things
 filetype on
@@ -84,7 +95,7 @@ let treeExplWinSize=40
 " blogging - vimblog
 let g:blogconfig = "~/.vimblogconfig"
 let g:ctrlp_open_new_file = 't'
-let g:ctrlp_root_markers = ['.gitmodules']
+let g:ctrlp_root_markers = ['.gitmodules', '.ctrlp']
 
 set exrc
 set secure
