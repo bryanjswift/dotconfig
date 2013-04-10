@@ -7,15 +7,16 @@
 	signingkey =
 [github]
 	user = bryanjswift
-	token = 
+	token =
 [alias]
-	sh = !git-sh
-	x = !gitx
-	cp = cherry-pick
-	ci = commit
-	co = checkout
-	st = status
-	fa = !git remote | xargs -tn1 git fetch
+	cp       = cherry-pick
+	ci       = commit
+	co       = checkout
+	st       = status
+	fa       = !git remote | xargs -tn1 git fetch
+	assume   = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 [push]
 	default = current
 [merge]
