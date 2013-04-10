@@ -78,7 +78,7 @@ set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
 set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
 " show whitespace in a useful way
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:>.
 
 " Make it possible to disable autoindent and stuff when pasting
 set pastetoggle=<F2>
