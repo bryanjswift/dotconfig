@@ -50,6 +50,7 @@ if [ -d $EC2_HOME ]; then
 fi
 # Ruby
 export RBENV=$HOME/.rbenv
+export RUBIES=(~/.rbenv/versions/*)
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 # Source Control variables
