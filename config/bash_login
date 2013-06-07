@@ -3,7 +3,8 @@ function get_git_branch {
   git branch | awk '/^\*/ { print substr($0, 3, (length - 2)) }'
 }
 function get_git_tag {
-  git name-rev HEAD --tags --name-only | grep -v '^undefined$' | awk '/(^.*?)(\^0)?$/ { printf " ["; printf $1; print "]"; }'
+  #git name-rev HEAD --tags --name-only | grep -v '^undefined$' | awk '/(^.*?)(\^0)?$/ { printf " ["; printf $1; print "]"; }'
+  git describe | awk '/^.*/ { printf " ["; printf $0; print "]"; }'
 }
 function get_git_dirty {
   [[ 0 -eq `git status --porcelain | wc -l` ]] || echo "*"
