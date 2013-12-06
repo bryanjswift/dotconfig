@@ -74,7 +74,6 @@ export ORIG_PATH=$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$ANT_HOME/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH # Add NPM globals to PATH
 export PATH=$RBENV/bin:$PATH # Add rbenv scripts to PATH
-export PATH=/usr/local/share/python/:$PATH # Add Python modules (pip) to path
 # where to find compiled man pages
 export MANPATH=/usr/local/man:$MANPATH
 
