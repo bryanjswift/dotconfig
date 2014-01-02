@@ -64,3 +64,6 @@
 [submodule "vim/bundle/vim-vinegar"]
 	path = vim/bundle/vim-vinegar
 	url = git@github.com:tpope/vim-vinegar.git
+[submodule "vim/bundle/vim-investigate"]
+	path = vim/bundle/vim-investigate
+	url = https://github.com/Keithbsmiley/investigate.vim.git
