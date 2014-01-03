@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import re, subprocess
+import os, re, subprocess
 
 # Get a password out of the system keychain
 def get_keychain_pass(account=None, server=None):
@@ -8,9 +8,9 @@ def get_keychain_pass(account=None, server=None):
         'command': 'find-internet-password',
         'account': account,
         'server': server,
-        'keychain': '/Users/bryanjswift/Library/Keychains/login.keychain',
+        'keychain': os.environ['HOME'] + '/Library/Keychains/login.keychain',
     }
-    command = "sudo -u bryanjswift %(security)s -v %(command)s -g -a %(account)s -s %(server)s %(keychain)s" % params
+    command = "sudo -u " + os.environ['USER'] + " %(security)s -v %(command)s -g -a %(account)s -s %(server)s %(keychain)s" % params
     output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
     outtext = [l for l in output.splitlines()
                if l.startswith('password: ')][0]
