@@ -48,6 +48,19 @@ echo "  path = Documents/code/dotconfig/gitconfig" >> ~/.gitconfig
 cp ~/Documents/code/dotconfig/config/gitignore ~/.gitignore
 ```
 
+# offlineimap and company
+
+Make it possible to read mail locally and offline from the terminal (or anything supporting Maildir). Open up the 'Keychain Access' app and add the entries for IMAP and SMTP servers referenced in [config/offlineimap/offlineimaprc](config/offlineimap/offlineimaprc) and [config/msmtprc](config/msmtprc). IMAP entries have should have a 'where' of `http://imap.domain.name`; SMTP entries should have a 'where' of `smtp://smtp.domain.name`.
+
+```
+brew install lynx msmtp mutt notmuch offline-imap openssl
+ln -s ~/Documents/code/dotconfig/config/mutt ~/.mutt
+ln -s ~/Documents/code/dotconfig/config/offlineimap ~/.offlineimap
+ln -s ~/Documents/code/dotconfig/config/msmtprc ~/.msmtprc
+ln -s ~/Documents/code/dotconfig/config/offlineimap/offlineimaprc ~/.offlineimaprc
+ln -s ~/Documents/code/dotconfig/config/notmuch-config ~/.nomuch-config
+```
+
 # Link other dotfiles
 
 ```
