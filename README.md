@@ -58,8 +58,10 @@ ln -s ~/Documents/code/dotconfig/config/mutt ~/.mutt
 ln -s ~/Documents/code/dotconfig/config/offlineimap ~/.offlineimap
 ln -s ~/Documents/code/dotconfig/config/msmtprc ~/.msmtprc
 ln -s ~/Documents/code/dotconfig/config/offlineimap/offlineimaprc ~/.offlineimaprc
-ln -s ~/Documents/code/dotconfig/config/notmuch-config ~/.nomuch-config
+cp ~/Documents/code/dotconfig/config/notmuch-config ~/.notmuch-config
 ```
+
+Make sure to edit ~/.notmuch-config for the correct `database.path` config value.
 
 # Link other dotfiles
 
