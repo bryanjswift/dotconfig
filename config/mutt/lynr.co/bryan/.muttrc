@@ -6,7 +6,7 @@ set header_cache     = ~/.mutt/general/cache/headers      # where to store heade
 set message_cachedir = ~/.mutt/general/cache/bodies       # where to store bodies
 set certificate_file = ~/.mutt/general/certificates       # where to store certs
 set mailcap_path     = ~/.mutt/general/mailcap            # entries for filetypes
-set tmpdir           = ~/.mutt/general/temp               # where to keep temp files
+set tmpdir           = ~/.mutt/general/tmp                # where to keep temp files
 set signature        = ~/.mutt/general/sig                # my signature file
 #
 # Basic Options --------------------------------------
