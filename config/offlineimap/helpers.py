@@ -72,10 +72,8 @@ def fastmail_local(folder):
     mapping = {
         'archive':   'INBOX.Archive',
         'drafts':    'INBOX.Drafts',
-        'important': 'INBOX.Important',
         'junk':      'INBOX.Junk Mail',
         'sent':      'INBOX.Sent Items',
-        'starred':   'INBOX.Starred',
         'trash':     'INBOX.Trash',
     }
     return mapping.get(folder, folder)
