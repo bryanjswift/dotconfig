@@ -47,8 +47,6 @@ set spoolfile = "+INBOX"
 
 # Mailboxes to show in the sidebar.
 mailboxes +INBOX \
-          +starred \
-          +important \
           +archive \
           +drafts \
           +sent \
