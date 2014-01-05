@@ -50,6 +50,7 @@ def gmail_mapping():
         '[Gmail]/Trash':      'trash',
     }
 
+# Offlineimap nametrans methods for gmail accounts
 def gmail_remote(folder):
     mapping = gmail_mapping()
     return mapping.get(folder, folder)
@@ -80,6 +81,8 @@ def fastmail_local(folder):
     return mapping.get(folder, folder)
 
 # Offlineimap methods for lynr.co accounts
+# Uses `remote_lowered` but the remote mailboxes aren't preceded by 'INBOX.'
+# so the translations only splits and lowercases.
 def lynrco_remote(folder):
     return remote_lowered(folder)
 
