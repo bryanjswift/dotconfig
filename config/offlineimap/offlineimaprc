@@ -35,7 +35,7 @@ status_backend = sqlite
 
 [Repository lynrco-local]
 type = Maildir
-localfolders = ~/Documents/.mail/lynr.co/bryan
+localfolders = /Volumes/Mail/lynr.co/bryan
 nametrans = lambda folder: lynrco_local(folder)
 
 [Repository lynrco-remote]
@@ -51,7 +51,7 @@ folderfilter = lambda folder: not is_airmail_folder(folder) and folder not in [ 
 
 [Repository fastmail-local]
 type = Maildir
-localfolders = ~/Documents/.mail/fastmail.fm/bryanjswift
+localfolders = /Volumes/Mail/fastmail.fm/bryanjswift
 nametrans = lambda folder: fastmail_local(folder)
 
 [Repository fastmail-remote]
@@ -67,7 +67,7 @@ folderfilter = lambda folder: not is_airmail_folder(folder)
 
 [Repository gmail-local]
 type = Maildir
-localfolders = ~/Documents/.mail/gmail.com/bryanjswift
+localfolders = /Volumes/Mail/gmail.com/bryanjswift
 nametrans = lambda folder: gmail_local(folder)
 
 [Repository gmail-remote]
@@ -83,7 +83,7 @@ folderfilter = lambda folder: not is_airmail_folder(folder)
 
 [Repository swiftwork-local]
 type = Maildir
-localfolders = ~/Documents/.mail/swift-work.com/bswift
+localfolders = /Volumes/Mail/swift-work.com/bswift
 nametrans = lambda folder: gmail_local(folder)
 
 [Repository swiftwork-remote]
