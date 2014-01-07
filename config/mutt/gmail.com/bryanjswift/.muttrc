@@ -52,6 +52,7 @@ mailboxes +INBOX \
           +archive \
           +drafts \
           +sent \
+          +junk \
 
 # Other special folders.
 set mbox      = "+archive"
