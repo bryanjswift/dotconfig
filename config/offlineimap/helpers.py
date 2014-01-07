@@ -48,6 +48,7 @@ def gmail_mapping():
         '[Gmail]/Sent Mail':  'sent',
         '[Gmail]/Starred':    'starred',
         '[Gmail]/Trash':      'trash',
+        '[Gmail]/Spam':       'junk',
     }
 
 # Offlineimap nametrans methods for gmail accounts
