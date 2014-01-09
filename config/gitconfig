@@ -13,7 +13,7 @@
 	ci       = commit
 	co       = checkout
 	st       = status
-	fa       = !git remote | xargs -tn1 git fetch
+	fa       = !git remote | grep -v heroku | xargs -tn1 git fetch
 	assume   = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
 	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
