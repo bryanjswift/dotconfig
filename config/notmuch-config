@@ -52,7 +52,7 @@ other_email=mail@bryanwrit.es;bryanjswift@fastmail.fm;bryan@bryanjswift.com;brya
 
 [new]
 tags=unread;inbox;
-ignore=
+ignore=.Trashes;.fseventsd;.bzvol;.DS_Store;.VolumeIcon.icns;
 
 # Search configuration
 #
