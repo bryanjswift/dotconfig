@@ -2,7 +2,7 @@
 # For Homebrew installation see /usr/local/Cellar/offline-imap/6.5.5/offlineimap.conf
 [general]
 # Basic Settings
-accounts = lynrco, fastmail, gmail, swiftwork
+accounts = gmail, lynrco, fastmail, swiftwork
 maxsyncaccounts = 1
 ui = ttyui
 #ui = blinkenlights
