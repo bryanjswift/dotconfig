@@ -3,11 +3,9 @@
 	quotepath = false
 [user]
 	name = Bryan Swift
-	email = bryan.j.swift@gmail.com
-	signingkey =
+	email = mail@bryanwrit.es
 [github]
 	user = bryanjswift
-	token =
 [alias]
 	cp       = cherry-pick
 	ci       = commit
@@ -23,10 +21,7 @@
 	tool = vimdiff
 [color]
 	ui = off
-[push]
-	default = current
-[merge]
-	tool = vimdiff
-[color]
 	diff = auto
 	interactive = auto
+[merge]
+	tool = vimdiff
