@@ -53,6 +53,9 @@ mailboxes +INBOX \
           +drafts \
           +sent \
           +junk \
+          +freelance.tbar \
+          +lynr \
+          +taxes.2014 \
 
 # Other special folders.
 set mbox      = "+archive"
