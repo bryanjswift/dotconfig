@@ -117,3 +117,5 @@ set secure
 
 " ** Plugin Mappings ** "
 map <leader>u :GundoToggle<CR>
+" Show line numbers on netrw directory listings
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
