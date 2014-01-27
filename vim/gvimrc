@@ -1,7 +1,5 @@
 " settings for MacVim
 "
-" highlighting
-set cursorline
 " set initial window size
 set lines=54
 set columns=125
