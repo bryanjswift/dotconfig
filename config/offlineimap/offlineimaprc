@@ -2,7 +2,7 @@
 # For Homebrew installation see /usr/local/Cellar/offline-imap/6.5.5/offlineimap.conf
 [general]
 # Basic Settings
-accounts = gmail, lynrco, fastmail, swiftwork
+accounts = gmail, lynrco, fastmail, wondersauce, swiftwork
 maxsyncaccounts = 1
 ui = ttyui
 #ui = blinkenlights
@@ -31,6 +31,11 @@ status_backend = sqlite
 [Account swiftwork]
 localrepository = swiftwork-local
 remoterepository = swiftwork-remote
+status_backend = sqlite
+
+[Account wondersauce]
+localrepository = wondersauce-local
+remoterepository = wondersauce-remote
 status_backend = sqlite
 
 [Repository lynrco-local]
@@ -94,5 +99,21 @@ cert_fingerprint = 89091347184d41768bfc0da9fad94bfe882dd358
 remotehost = imap.gmail.com
 remoteuser = bswift@swift-work.com
 remotepasseval = get_keychain_pass(account="bswift@swift-work.com", server="imap.gmail.com")
+nametrans = lambda folder: gmail_remote(folder)
+folderfilter = lambda folder: not is_airmail_folder(folder)
+
+[Repository wondersauce-local]
+type = Maildir
+localfolders = /Volumes/Mail/wondersauce.com/bryan
+nametrans = lambda folder: gmail_local(folder)
+
+[Repository wondersauce-remote]
+maxconnections = 1
+type = Gmail
+ssl = yes
+cert_fingerprint = 89091347184d41768bfc0da9fad94bfe882dd358
+remotehost = imap.gmail.com
+remoteuser = bryan@wondersauce.com
+remotepasseval = get_keychain_pass(account="bryan@wondersauce.com", server="imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)

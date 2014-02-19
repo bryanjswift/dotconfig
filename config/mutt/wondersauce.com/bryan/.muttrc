@@ -1,0 +1,37 @@
+# Load global defaults
+source $HOME/Documents/code/dotconfig/config/mutt/muttrc
+
+# * Override globals *
+
+#
+# Paths ----------------------------------------------
+set folder           = /Volumes/Mail/wondersauce.com/bryan  # mailbox location
+#
+# Account Settings -----------------------------------
+#
+# Default inbox.
+set spoolfile = "+INBOX"
+# Mailboxes to show in the sidebar.
+mailboxes +INBOX \
+          +starred \
+          +important \
+          +archive \
+          +anco \
+          +drafts \
+          +sent \
+          +junk \
+
+# Other special folders.
+set mbox      = "+archive"
+set postponed = "+drafts"
+set record    = "+sent"
+#
+# Index Key Bindings ---------------------------------
+#
+# Sync email
+macro index O "<shell-escape>offlineimap -a wondersauce<enter>"           "run offlineimap to sync mail"
+macro index o "<shell-escape>offlineimap -a wondersauce -qf INBOX<enter>" "run offlineimap to sync inbox"
+#
+# Compose View Options -------------------------------
+set from     = "bryan@wondersauce.com"
+set sendmail = "/usr/local/bin/msmtp -a bryan-wondersaucecom"
