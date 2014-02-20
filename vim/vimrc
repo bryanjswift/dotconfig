@@ -94,13 +94,6 @@ filetype on
 filetype plugin on
 syntax on
 
-" Tree Explorer plugin - vtreeexplorer
-let treeExplVertical=1
-let treeExplWinSize=40
-
-" blogging - vimblog
-let g:blogconfig = "~/.vimblogconfig"
-
 " CTRL-P
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_root_markers = ['.gitmodules', '.ctrlp']
