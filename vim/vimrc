@@ -52,7 +52,7 @@ map <F10> :call ShowSyntax()<CR>
 
 " general settings
 " backup files to the .vim directory rather than the current directory
-set backup
+set nobackup
 set backupdir=~/.vim/backup,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim/tmp
