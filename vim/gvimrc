@@ -8,6 +8,9 @@ set gfn=Consolas:h12.00
 " see `:help guioptions ` for more info
 set guioptions=egmLtc
 
+set laststatus=2
+set noshowmode
+
 " ** Clojure **
 let clj_highlight_builtins = 1
 let clj_highlight_contrib = 1
