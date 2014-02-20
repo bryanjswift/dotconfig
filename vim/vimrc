@@ -11,7 +11,6 @@ set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 if has('gui_running')
   set background=light
 else
-  let g:solarized_termtrans=10
   set background=dark
 endif
 colorscheme solarized
@@ -45,9 +44,9 @@ map <D-H> <C-w><left>
 " shortcuts for javascript and PHP ftplugin
 map <leader>zff zE:FoldFunctions<CR>
 function! ShowSyntax()
-	for id in synstack(line("."), col("."))
-		echo synIDattr(id,"name")
-	endfor
+  for id in synstack(line("."), col("."))
+    echo synIDattr(id,"name")
+  endfor
 endfunction
 map <F10> :call ShowSyntax()<CR>
 
@@ -60,6 +59,7 @@ set directory=~/.vim/tmp
 set writebackup
 " show line numbers and ruler all the time
 set number
+set rnu
 set ruler
 " highlight line of cursor
 set cursorline
