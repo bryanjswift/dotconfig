@@ -108,6 +108,11 @@ set include                          # include message in replies
 set forward_quote                    # include message in forwards
 set copy                             # keep a copy of sent mail
 
+# Contacts completion
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
 set editor = "vim"                   # Use terminal Vim to compose email.
 
 set sendmail_wait = 0
