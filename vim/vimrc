@@ -35,6 +35,9 @@ map <D-7> :tabn7<CR>
 map <D-8> :tabn8<CR>
 map <D-9> :tabn9<CR>
 map <D-0> :tabn10<CR>
+" relative line numbers
+map <D-r> :set rnu<CR>
+map <D-R> :set nornu<CR>
 " easier split navigation
 map <down> <C-w><down>
 map <up> <C-w><up>
@@ -59,7 +62,6 @@ set directory=~/.vim/tmp
 set writebackup
 " show line numbers and ruler all the time
 set number
-set rnu
 set ruler
 " highlight line of cursor
 set cursorline
