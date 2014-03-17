@@ -87,4 +87,7 @@ fi
 if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
   . $DOTCONFIG/bash-completion/maven_bash_completion.bash
 fi
+if [ -f $DOTCONFIG/bash-completion/hk-bash-completion.sh ]; then
+  . $DOTCONFIG/bash-completion/hk-bash-completion.sh
+fi
 [[ -s "$DOTCONFIG/scripts/na.sh" ]] && source "$DOTCONFIG/scripts/na.sh"

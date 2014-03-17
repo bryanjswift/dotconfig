@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.github.com/heroku/hk/master/contrib/hk-bash-completion.sh">redirected</a>.</body></html>
