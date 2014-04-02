@@ -1,0 +1,22 @@
+# MS Word documents
+application/msword; ~/.mutt/general/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+
+# Images
+image/jpg; ~/.mutt/general/view_attachment.sh %s jpg
+image/jpeg; ~/.mutt/general/view_attachment.sh %s jpg
+image/pjpeg; ~/.mutt/general/view_attachment.sh %s jpg
+image/png; ~/.mutt/general/view_attachment.sh %s png
+image/gif; ~/.mutt/general/view_attachment.sh %s gif
+
+# PDFs
+application/pdf; ~/.mutt/general/view_attachment.sh %s pdf
+
+# HTML
+# Open temp file in default browser
+#text/html; ~/.mutt/general/view_attachment.sh %s html
+text/html; lynx -dump -force_html %s; needsterminal; copiousoutput
+
+text/plain; cat %s; copiousoutput
+
+# Unidentified files
+application/octet-stream; ~/.mutt/general/view_attachment.sh %s "-"

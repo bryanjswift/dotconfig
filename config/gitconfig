@@ -3,29 +3,25 @@
 	quotepath = false
 [user]
 	name = Bryan Swift
-	email = bryan.j.swift@gmail.com
-	signingkey =
+	email = mail@bryanwrit.es
 [github]
 	user = bryanjswift
-	token = 
 [alias]
-	sh = !git-sh
-	x = !gitx
-	cp = cherry-pick
-	ci = commit
-	co = checkout
-	st = status
-	fa = !git remote | xargs -tn1 git fetch
+	cp       = cherry-pick
+	ci       = commit
+	co       = checkout
+	st       = status
+	fa       = !git remote | grep -v heroku | xargs -tn1 git fetch
+	assume   = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 [push]
 	default = current
 [merge]
 	tool = vimdiff
 [color]
 	ui = off
-[push]
-	default = current
-[merge]
-	tool = vimdiff
-[color]
 	diff = auto
 	interactive = auto
+[merge]
+	tool = vimdiff

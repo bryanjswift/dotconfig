@@ -29,7 +29,7 @@ git submodule update
 # bash_login
 
 ```
-echo "source \$HOME/Documents/code/dotconfig/bash_login" > ~/.bash_login
+echo "source \$HOME/Documents/code/dotconfig/config/bash_login" > ~/.bash_login
 ```
 
 # vim
@@ -44,24 +44,39 @@ echo "source ~/.vim/gvimrc" > ~/.gvimrc
 
 ```
 echo "[include]" > ~/.gitconfig
-echo "  path = Documents/code/dotconfig/gitconfig"
-cp ~/Documents/code/dotconfig/gitignore ~/.gitignore
+echo "  path = Documents/code/dotconfig/gitconfig" >> ~/.gitconfig
+cp ~/Documents/code/dotconfig/config/gitignore ~/.gitignore
 ```
+
+# offlineimap and company
+
+Make it possible to read mail locally and offline from the terminal (or anything supporting Maildir). Open up the 'Keychain Access' app and add the entries for IMAP and SMTP servers referenced in [config/offlineimap/offlineimaprc](config/offlineimap/offlineimaprc) and [config/msmtprc](config/msmtprc). IMAP entries have should have a 'where' of `http://imap.domain.name`; SMTP entries should have a 'where' of `smtp://smtp.domain.name`. See [Steve Losh's the Homely Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/), specifically the section on [Retrieving Passwords](http://stevelosh.com/blog/2012/10/the-homely-mutt/#retrieving-passwords) for more information about seeting this up.
+
+```
+brew install lynx msmtp mutt notmuch offline-imap contacts openssl
+ln -s ~/Documents/code/dotconfig/config/mutt ~/.mutt
+ln -s ~/Documents/code/dotconfig/config/offlineimap ~/.offlineimap
+ln -s ~/Documents/code/dotconfig/config/msmtprc ~/.msmtprc
+ln -s ~/Documents/code/dotconfig/config/offlineimap/offlineimaprc ~/.offlineimaprc
+cp ~/Documents/code/dotconfig/config/notmuch-config ~/.notmuch-config
+```
+
+Make sure to edit ~/.notmuch-config for the correct `database.path` config value.
 
 # Link other dotfiles
 
 ```
-ln -s ~/Documents/code/dotconfig/rtorrent.rc ~/.rtorrent.rc
-ln -s ~/Documents/code/dotconfig/screenrc ~/.screenrc
-ln -s ~/Documents/code/dotconfig/tmux.conf ~/.tmux.conf
-ln -s ~/Documents/code/dotconfig/tigrc ~/.tigrc
+ln -s ~/Documents/code/dotconfig/config/rtorrent.rc ~/.rtorrent.rc
+ln -s ~/Documents/code/dotconfig/config/screenrc ~/.screenrc
+ln -s ~/Documents/code/dotconfig/config/tmux.conf ~/.tmux.conf
+ln -s ~/Documents/code/dotconfig/config/tigrc ~/.tigrc
 ```
 
 # Get Applications from web
 
+* [1Password](https://agilebits.com/downloads)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://downloads.vagrantup.com)
-* [TextMate](https://github.com/textmate/textmate/downloads)
 * [Transmit](http://panic.com/transmit)
-* [Coda 2](http://panic.com/coda)
 * [Adobe Creative Suite](https://creative.adobe.com)
 * [VMWare Fusion](http://vmware.com)

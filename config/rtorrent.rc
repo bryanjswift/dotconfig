@@ -56,7 +56,7 @@ ratio.upload.set=250M
 system.method.set = group.seeding.ratio.command, d.close=
 
 # Move files to ./unsorted when download completes
-system.method.set_key = event.download.finished,move_complete,"execute=mv,-n,$d.get_base_path=,./unsorted/;d.set_directory=./unsorted/"
+system.method.set_key = event.download.finished,move_complete,"d.close=;execute=mv,-n,$d.get_base_path=,./unsorted/;d.set_directory=./unsorted/;d.start="
 
 # Port range to use for listening.
 port_range = 33101-33199
@@ -104,11 +104,11 @@ schedule = sort_active,14,5,view.sort=active
 # May be set to "disable" (completely disable DHT), "off" (do not start DHT),
 # "auto" (start and stop DHT as needed), or "on" (start DHT immediately).
 # The default is "off". For DHT to work, a session directory must be defined.
-# 
+#
 #dht = auto
 
-# UDP port to use for DHT. 
-# 
+# UDP port to use for DHT.
+#
 #dht_port = 6881
 
 # Enable peer exchange (for torrents not marked private)

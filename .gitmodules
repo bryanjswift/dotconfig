@@ -28,18 +28,12 @@
 [submodule "vim/bundle/vim-scala"]
 	path = vim/bundle/vim-scala
 	url = git://github.com/derekwyatt/vim-scala.git
-[submodule "vim/bundle/vim-clojure"]
-	path = vim/bundle/vim-clojure
-	url = git://github.com/krisajenkins/vimclojure.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "vim/bundle/vim-jade"]
-	path = vim/bundle/vim-jade
-	url = git://github.com/digitaltoad/vim-jade.git
 [submodule "vim/bundle/vim-rust"]
 	path = vim/bundle/vim-rust
 	url = git://github.com/bryanjswift/vim-rust.git
@@ -48,10 +42,31 @@
 	url = git://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/vim-puppet"]
 	path = vim/bundle/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
+	url = git://github.com/bryanjswift/vim-puppet.git
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "vim/bundle/vim-seek"]
+	path = vim/bundle/vim-seek
+	url = git://github.com/goldfeld/vim-seek.git
+[submodule "vim/bundle/vim-vinegar"]
+	path = vim/bundle/vim-vinegar
+	url = git://github.com/tpope/vim-vinegar.git
+[submodule "vim/bundle/vim-elixir"]
+	path = vim/bundle/vim-elixir
+	url = git://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/bundle/vim-coffee-script"]
+	path = vim/bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = git://github.com/bling/vim-airline.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git

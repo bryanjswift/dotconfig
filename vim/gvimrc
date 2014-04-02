@@ -1,7 +1,5 @@
 " settings for MacVim
 "
-" highlighting
-set cursorline
 " set initial window size
 set lines=54
 set columns=125
@@ -9,6 +7,9 @@ set columns=125
 set gfn=Ubuntu\ Mono\ 13
 " see `:help guioptions ` for more info
 set guioptions=egmLtc
+
+set laststatus=2
+set noshowmode
 
 " ** Clojure **
 let clj_highlight_builtins = 1

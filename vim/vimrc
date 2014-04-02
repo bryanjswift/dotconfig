@@ -1,28 +1,29 @@
+" This must be first, because it changes other options as side effect
+set nocompatible
 " run pathogen
+call pathogen#helptags()
 call pathogen#infect()
+" Allow buffer changes to persist in background (without saving first)
+set hidden
 " first the disabled features due to security concerns
 set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
 " let vim know background of terminal is dark
 if has('gui_running')
   set background=light
 else
-  let g:solarized_termtrans=10
   set background=dark
 endif
 colorscheme solarized
 
 " set the leader key for commands
-let mapleader = ","
-let maplocalleader = ";"
+"let mapleader = ","
+"let maplocalleader = ";"
 
+" set backspace permissions
+set backspace=indent,eol,start
+" reduce leader timeout from 1000ms
+set timeoutlen=350
 " map shortcuts
-" shortcuts for fuzzyfinder plugin
-map <leader>f :FufFile<CR>
-map <leader>b :FufBuffer<CR>
-" shortcut for fuzzyfinder_textmate
-map <leader>t :FufCoverageFile<CR>
-" shortcuts for vtreeexplorer plugin
-map <leader>d :VSTreeExplore<CR>
 " enables cmd-# to switch between tabs
 map <D-1> :tabn1<CR>
 map <D-2> :tabn2<CR>
@@ -34,6 +35,9 @@ map <D-7> :tabn7<CR>
 map <D-8> :tabn8<CR>
 map <D-9> :tabn9<CR>
 map <D-0> :tabn10<CR>
+" relative line numbers
+map <D-r> :set rnu<CR>
+map <D-R> :set nornu<CR>
 " easier split navigation
 map <down> <C-w><down>
 map <up> <C-w><up>
@@ -43,26 +47,32 @@ map <D-H> <C-w><left>
 " shortcuts for javascript and PHP ftplugin
 map <leader>zff zE:FoldFunctions<CR>
 function! ShowSyntax()
-	for id in synstack(line("."), col("."))
-		echo synIDattr(id,"name")
-	endfor
+  for id in synstack(line("."), col("."))
+    echo synIDattr(id,"name")
+  endfor
 endfunction
 map <F10> :call ShowSyntax()<CR>
 
 " general settings
 " backup files to the .vim directory rather than the current directory
-set backup
-set backupdir=~/.vim/backup
+set nobackup
+set backupdir=~/.vim/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim/tmp
+set writebackup
 " show line numbers and ruler all the time
 set number
 set ruler
+" highlight line of cursor
+set cursorline
+" highlight matching [{()}]
+set showmatch
 " search ignores case and doesn't highlight all finds
-set ignorecase
 set nohlsearch
 set incsearch
 " tabwidth = 2 spaces
-set ts=2
+set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 " set fold method to manual
@@ -74,20 +84,33 @@ set autoindent
 " wildignore
 set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
 set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
+" show whitespace in a useful way
+set list
+set listchars=tab:>.
+
+" Make it possible to disable autoindent and stuff when pasting
+set pastetoggle=<F2>
 
 " allow for filetype specific things
 filetype on
 filetype plugin on
 syntax on
 
-" Tree Explorer plugin - vtreeexplorer
-let treeExplVertical=1
-let treeExplWinSize=40
-
-" blogging - vimblog
-let g:blogconfig = "~/.vimblogconfig"
+" CTRL-P
 let g:ctrlp_open_new_file = 't'
-let g:ctrlp_root_markers = ['.gitmodules']
+let g:ctrlp_root_markers = ['.gitmodules', '.ctrlp']
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+  \ 'fallback': 'find %s -type f'
+  \ }
 
 set exrc
 set secure
+
+" ** Plugin Mappings ** "
+map <leader>u :GundoToggle<CR>
+" Show line numbers on netrw directory listings
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
