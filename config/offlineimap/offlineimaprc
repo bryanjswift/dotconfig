@@ -54,7 +54,7 @@ nametrans = lambda folder: lynrco_local(folder)
 [Repository lynrco-remote]
 type = IMAP
 ssl = yes
-cert_fingerprint = 8d896ebc65ae8a00ed59e404c45bc840248c9312
+cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
 remotehost = mail.lynr.co
 remoteuser = bryan@lynr.co
 remotepasseval = get_keychain_pass(account="bryan@lynr.co", server="mail.lynr.co")
@@ -70,7 +70,7 @@ nametrans = lambda folder: lynrco_local(folder)
 [Repository support-lynrco-remote]
 type = IMAP
 ssl = yes
-cert_fingerprint = 8d896ebc65ae8a00ed59e404c45bc840248c9312
+cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
 remotehost = mail.lynr.co
 remoteuser = support@lynr.co
 remotepasseval = get_keychain_pass(account="support@lynr.co", server="mail.lynr.co")
