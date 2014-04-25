@@ -26,6 +26,10 @@ gitPrompt
 set -o vi
 
 ###### Environment Variables ######
+# Source Control variables
+export SVN_EDITOR=vim
+export VISUAL=vim
+export EDITOR=vim
 # Dotconfig Home
 export DOTCONFIG=$HOME/Documents/code/dotconfig
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
@@ -55,39 +59,31 @@ export RBENV=$HOME/.rbenv
 export RUBIES=(~/.rbenv/versions/*)
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
-# Source Control variables
-export SVN_EDITOR=vim
-export VISUAL=vim
 
 ###### Aliases ######
-alias regex='java -classpath $HOME/Documents/code/java/javaregexdemo/classes/ regexdemo.AppRegexDemo'
-alias trash='trash'
-alias appcfg='$GAE_SDK/bin/appcfg.sh'
-alias dev_appserver='$GAE_SDK/bin/dev_appserver.sh'
-alias closure-compiler='java -jar $HOME/Documents/src/java/closure-compiler/compiler.jar'
-alias packager='$HOME/Documents/code/mootools/packager/packager'
-alias iaw='open -a/Applications/iA\ Writer.app'
+alias byword='open -a /Applications/Byword.app'
 
 ###### Path ######
 export ORIG_PATH=$PATH
 # add to the path
-export PATH=/usr/local/bin:/usr/local/sbin:$ANT_HOME/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
+export PATH=$ANT_HOME/bin:$PATH # Add Ant to path
 export PATH=/usr/local/share/npm/bin:$PATH # Add NPM globals to PATH
 export PATH=$RBENV/bin:$PATH # Add rbenv scripts to PATH
-# where to find compiled man pages
-export MANPATH=/usr/local/man:$MANPATH
 
 ###### rbenv ######
 eval "$(rbenv init -)"
 
-###### maven autocomplete ######
+###### bash autocomplete ######
+# Homebrew autocomplete
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+# Maven autocomplete
 if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
   . $DOTCONFIG/bash-completion/maven_bash_completion.bash
 fi
+# Heroku (hk) autocomplete
 if [ -f $DOTCONFIG/bash-completion/hk-bash-completion.sh ]; then
   . $DOTCONFIG/bash-completion/hk-bash-completion.sh
 fi
-[[ -s "$DOTCONFIG/scripts/na.sh" ]] && source "$DOTCONFIG/scripts/na.sh"
