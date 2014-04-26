@@ -60,6 +60,7 @@ bind index p        recall-message
 bind index N        search-opposite
 
 # Saner copy/move dialogs
+macro index A "<save-message>=archive/<enter>"
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
