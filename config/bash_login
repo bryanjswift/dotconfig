@@ -12,11 +12,13 @@ function get_git_dirty {
 }
 function get_git_prompt {
   git branch &> /dev/null || return 1
-  echo -e "$(get_git_tag)(\033[0;34m$(get_git_branch)\033[0;0m\033[0;36m$(get_git_dirty)\033[0;0m)"
+  echo "$(get_git_tag) ($(get_git_branch)$(get_git_dirty))"
 }
 
 function gitPrompt {
-  PS1="\h\033[0;33m \w \033[0;0m\$(get_git_prompt): "
+  #PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(get_git_prompt): "
+  #PS1="\h\033[0;33m \w \033[0;0m\$(get_git_prompt): "
+  PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(get_git_tag) (\[\033[0;36m\]\$(get_git_branch)\[\033[00m\]\[\033[0;35m\]\$(get_git_dirty)\[\033[00m\]): "
   PS2='> '
   PS4='+ '
 }
