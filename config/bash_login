@@ -16,9 +16,9 @@ function get_git_prompt {
 }
 
 function gitPrompt {
-	PS1="\h\033[0;33m \w \033[0;0m\$(get_git_prompt): "
-	PS2='> '
-	PS4='+ '
+  PS1="\h\033[0;33m \w \033[0;0m\$(get_git_prompt): "
+  PS2='> '
+  PS4='+ '
 }
 gitPrompt
 
