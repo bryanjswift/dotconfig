@@ -1,3 +1,13 @@
+# Regular Colors
+NONE="\[\033[0;0m\]"          # Color Off
+BLACK="\[\033[0;30m\]"        # Black
+RED="\[\033[0;31m\]"          # Red
+GREEN="\[\033[0;32m\]"        # Green
+YELLOW="\[\033[0;33m\]"       # Yellow
+BLUE="\[\033[0;34m\]"         # Blue
+PURPLE="\[\033[0;35m\]"       # Purple
+CYAN="\[\033[0;36m\]"         # Cyan
+WHITE="\[\033[0;37m\]"        # White
 ###### Prompt Setup ######
 function get_git_branch {
   git branch | awk '/^\*/ { print substr($0, 3, (length - 2)) }'
@@ -8,19 +18,15 @@ function get_git_tag {
   git describe --exact-match HEAD 2>&1 | grep -v 'fatal' | awk '{ printf " ["; printf $1; print "] "; }'
 }
 function get_git_dirty {
-  [[ 0 -eq `git status --porcelain | wc -l` ]] || echo "*"
+  [[ 0 -eq `git status --porcelain | wc -l` ]] || echo '*'
 }
-function get_git_prompt {
-  git branch &> /dev/null || return 1
-  printf "$(get_git_tag) (\[\033[0;36m\]$(get_git_branch)\[\033[00m\]\[\033[0;35m\]$(get_git_dirty)\[\033[00m\])"
-}
-
-function gitPrompt {
-  PS1="\h\[\033[0;33m\] \w\[\033[00m\]`get_git_prompt`: "
-  PS2='> '
-  PS4='+ '
-}
-gitPrompt
+PS1="\h$YELLOW \w$NONE"'$(git branch &> /dev/null;\
+  if [ 0 -eq $? ]; then\
+    echo "$(get_git_tag) ('$CYAN'$(get_git_branch)'$PURPLE'$(get_git_dirty)'$NONE')";\
+  else\
+    printf "";\
+  fi;\
+)'": "
 
 ###### Command Line ######
 set -o vi
