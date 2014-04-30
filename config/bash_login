@@ -5,18 +5,18 @@ function get_git_branch {
 function get_git_tag {
   #git name-rev HEAD --tags --name-only | grep -v '^undefined$' | awk '/(^.*?)(\^0)?$/ { printf " ["; printf $1; print "]"; }'
   #git describe HEAD | grep -v 'fatal:' | perl -p -i -e "s/^(.*?)(-[0-9]+-g[a-zA-Z0-9]+)?$/ [\$1]/"
-  git describe --exact-match HEAD 2>&1 | grep -v 'fatal' | awk '{ printf " ["; printf $1; print "]"; }'
+  git describe --exact-match HEAD 2>&1 | grep -v 'fatal' | awk '{ printf " ["; printf $1; print "] "; }'
 }
 function get_git_dirty {
   [[ 0 -eq `git status --porcelain | wc -l` ]] || echo "*"
 }
 function get_git_prompt {
   git branch &> /dev/null || return 1
-  echo -e "$(get_git_tag) (\033[0;34m$(get_git_branch)\033[0;0m\033[0;36m$(get_git_dirty)\033[0;0m)"
+  echo -e "$(get_git_tag)(\033[0;34m$(get_git_branch)\033[0;0m\033[0;36m$(get_git_dirty)\033[0;0m)"
 }
 
 function gitPrompt {
-	PS1="\h\[\033[0;33m\] \w\[\033[00m\]\$(get_git_prompt): "
+	PS1="\h\033[0;33m \w \033[0;0m\$(get_git_prompt): "
 	PS2='> '
 	PS4='+ '
 }
