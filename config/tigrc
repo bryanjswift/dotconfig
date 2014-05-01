@@ -1,3 +1,8 @@
 # http://jonas.nitro.dk/tig/tigrc.5.html
-set show-date = relative
 set line-graphics = ascii
+
+set main-view = line-number:no,interval=5 \
+        id:no \
+        date:relative \
+        author:full,width=0 \
+        commit-title:yes,graph,refs,overflow=no
