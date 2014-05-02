@@ -104,6 +104,7 @@ maxconnections = 1
 type = Gmail
 ssl = yes
 cert_fingerprint = 0f7a6d02be71cf3d263feb781cb091d9f2c5af78
+cert_fingerprint = 22b4c96075592f0e0e20134ae008ae4a5f0177a6
 remotehost = imap.gmail.com
 remoteuser = bryan.j.swift@gmail.com
 remotepasseval = get_keychain_pass(account="bryan.j.swift@gmail.com", server="imap.gmail.com")
@@ -120,6 +121,7 @@ maxconnections = 1
 type = Gmail
 ssl = yes
 cert_fingerprint = 0f7a6d02be71cf3d263feb781cb091d9f2c5af78
+cert_fingerprint = 22b4c96075592f0e0e20134ae008ae4a5f0177a6
 remotehost = imap.gmail.com
 remoteuser = bswift@swift-work.com
 remotepasseval = get_keychain_pass(account="bswift@swift-work.com", server="imap.gmail.com")
@@ -136,6 +138,7 @@ maxconnections = 1
 type = Gmail
 ssl = yes
 cert_fingerprint = 0f7a6d02be71cf3d263feb781cb091d9f2c5af78
+cert_fingerprint = 22b4c96075592f0e0e20134ae008ae4a5f0177a6
 remotehost = imap.gmail.com
 remoteuser = bryan@wondersauce.com
 remotepasseval = get_keychain_pass(account="bryan@wondersauce.com", server="imap.gmail.com")
