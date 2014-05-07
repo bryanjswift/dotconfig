@@ -22,7 +22,7 @@ function get_git_dirty {
 }
 PS1="\h$YELLOW \w$NONE"'$(git branch &> /dev/null;\
   if [ 0 -eq $? ]; then\
-    echo "$(get_git_tag) ('$CYAN'$(get_git_branch)'$PURPLE'$(get_git_dirty)'$NONE')";\
+    echo "$(get_git_tag)('$CYAN'$(get_git_branch)'$PURPLE'$(get_git_dirty)'$NONE')";\
   else\
     printf "";\
   fi;\
