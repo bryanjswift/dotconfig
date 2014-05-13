@@ -14,6 +14,7 @@ set wait_key = no        # shut up, mutt
 set mbox_type = Maildir  # mailbox type
 set timeout = 2          # idle time before scanning
 set mail_check = 0       # minimum time between scans
+set resolve = no         # don't change message when modifying
 #unset move               # gmail does that
 set delete               # don't ask, just do
 unset confirmappend      # don't ask, just do!
@@ -59,8 +60,11 @@ bind index <tab>    sync-mailbox
 bind index p        recall-message
 bind index N        search-opposite
 
-# Saner copy/move dialogs
-macro index A "<save-message>=archive/<enter>"
+# Saner copy/move
+#
+# NOTE: This 'mark read and archive' macro only works because of
+# 'set resolve = no' earlier in the configuration.
+macro index A "<clear-flag>N<save-message>=archive/<enter>" "Mark read and move to archive"
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
