@@ -26,6 +26,11 @@ remoterepository = support-lynrco-remote
 status_backend = sqlite
 #postsynchook = notmuch new    # Used to locally index email
 
+[Account tech-lynrco]
+localrepository = tech-lynrco-local
+remoterepository = tech-lynrco-remote
+status_backend = sqlite
+
 [Account fastmail]
 localrepository = fastmail-local
 remoterepository = fastmail-remote
@@ -79,6 +84,22 @@ cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
 remotehost = mail.lynr.co
 remoteuser = support@lynr.co
 remotepasseval = get_keychain_pass(account="support@lynr.co", server="mail.lynr.co")
+maxconnections = 1
+nametrans = lambda folder: lynrco_remote(folder)
+folderfilter = lambda folder: not is_airmail_folder(folder) and folder not in [ 'Sent', ]
+
+[Repository tech-lynrco-local]
+type = Maildir
+localfolders = /Volumes/Mail/lynr.co/tech
+nametrans = lambda folder: lynrco_local(folder)
+
+[Repository tech-lynrco-remote]
+type = IMAP
+ssl = yes
+cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
+remotehost = mail.lynr.co
+remoteuser = tech@lynr.co
+remotepasseval = get_keychain_pass(account="tech@lynr.co", server="mail.lynr.co")
 maxconnections = 1
 nametrans = lambda folder: lynrco_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder) and folder not in [ 'Sent', ]
