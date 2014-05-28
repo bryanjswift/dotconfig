@@ -46,6 +46,11 @@ localrepository = knightstmpvar-local
 remoterepository = knightstmpvar-remote
 status_backend = sqlite
 
+[Account siberia]
+localrepository = siberia-local
+remoterepository = siberia-remote
+status_backend = sqlite
+
 [Account swiftwork]
 localrepository = swiftwork-local
 remoterepository = swiftwork-remote
@@ -154,6 +159,26 @@ remotehost = mail.messagingengine.com
 remoteuser = bryan@knightstmpvar.com
 remotepasseval = get_keychain_pass(account="bryan@knightstmpvar.com", server="mail.messagingengine.com")
 nametrans = lambda folder: fastmail_remote(folder)
+folderfilter = lambda folder: not is_airmail_folder(folder)
+
+[Repository siberia-local]
+type = Maildir
+localfolders = /Volumes/Mail/siberia.io/bryan
+nametrans = lambda folder: gmail_local(folder)
+
+[Repository siberia-remote]
+maxconnections = 1
+type = Gmail
+ssl = yes
+cert_fingerprint = 0f7a6d02be71cf3d263feb781cb091d9f2c5af78
+cert_fingerprint = 22b4c96075592f0e0e20134ae008ae4a5f0177a6
+cert_fingerprint = bc9fb09aeb065316c9561d0d91c68ae822261601
+cert_fingerprint = f0863bc037e7d4f155fe004833e808c6da8952f7
+cert_fingerprint = 89091347184d41768bfc0da9fad94bfe882dd358
+remotehost = imap.gmail.com
+remoteuser = bryan@siberia.io
+remotepasseval = get_keychain_pass(account="bryan@siberia.io", server="imap.gmail.com")
+nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
 
 [Repository swiftwork-local]

@@ -1,0 +1,36 @@
+# Load global defaults
+source $HOME/Documents/code/dotconfig/config/mutt/muttrc
+
+# * Override globals *
+
+#
+# Paths ----------------------------------------------
+set folder           = /Volumes/Mail/siberia.io/bryan  # mailbox location
+#
+# Account Settings -----------------------------------
+#
+# Default inbox.
+set spoolfile = "+INBOX"
+# Mailboxes to show in the sidebar.
+mailboxes +INBOX \
+          +starred \
+          +important \
+          +archive \
+          +drafts \
+          +sent \
+          +junk \
+
+# Other special folders.
+set mbox      = "+archive"
+set postponed = "+drafts"
+set record    = "+sent"
+#
+# Index Key Bindings ---------------------------------
+#
+# Sync email
+macro index O "<shell-escape>offlineimap -a siberia<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -a siberia -qf INBOX<enter>" "run offlineimap to sync inbox"
+#
+# Compose View Options -------------------------------
+set from     = "bryan@siberia.io"
+set sendmail = "/usr/local/bin/msmtp -a bryan-siberiaio"
