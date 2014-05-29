@@ -45,6 +45,7 @@ Make it possible to read mail locally and offline from the terminal (or anything
     ln -s ~/Documents/code/dotconfig/config/offlineimap ~/.offlineimap
     ln -s ~/Documents/code/dotconfig/config/msmtprc ~/.msmtprc
     ln -s ~/Documents/code/dotconfig/config/offlineimap/offlineimaprc ~/.offlineimaprc
+    ln -s ~/Documents/code/dotconfig/certs/ca-bundle.crt /Volumes/Mail/ca-bundle.crt
     cp ~/Documents/code/dotconfig/config/notmuch-config ~/.notmuch-config
 
 Make sure to edit ~/.notmuch-config for the correct `database.path` config value.
