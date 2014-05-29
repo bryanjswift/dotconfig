@@ -49,6 +49,18 @@ Make it possible to read mail locally and offline from the terminal (or anything
 
 Make sure to edit ~/.notmuch-config for the correct `database.path` config value.
 
+## Certificate Authority
+
+[certs/ca-bundle.crt](certs/ca-bundle.crt) comes from
+[bagder/ca-bundle][cabundle] and can be used as a certificate authority
+trust file. The bundle is linked from the [curl project][curl]. The certs
+are extracted fromt he Mozilla CA bundle and converted to PEM using
+[mk-ca-bundle.pl][mkbundle] from the curl repository.
+
+[cabundle]: https://github.com/bagder/ca-bundle
+[curl]: http://curl.haxx.se/docs/caextract.html
+[mkbundle]: https://github.com/bagder/curl/blob/master/lib/mk-ca-bundle.pl
+
 # Link other dotfiles
 
     ln -s ~/Documents/code/dotconfig/config/rtorrent.rc ~/.rtorrent.rc
