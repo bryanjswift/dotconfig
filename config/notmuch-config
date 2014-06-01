@@ -48,11 +48,11 @@ primary_email=bryan@lynr.co
 #		names will be ignored, independent of its depth/location
 #		in the mail store.
 #
-other_email=mail@bryanwrit.es;bryanjswift@fastmail.fm;bryan@bryanjswift.com;bryan.j.swift@gmail.com;bswift@swift-work.com;
+other_email=mail@bryanwrit.es;bryanjswift@fastmail.fm;bryan@bryanjswift.com;bryan.j.swift@gmail.com;bswift@swift-work.com;bryan@siberia.io;bryan@knightstmpvar.com;
 
 [new]
 tags=unread;inbox;
-ignore=.Trashes;.fseventsd;.bzvol;.DS_Store;.VolumeIcon.icns;
+ignore=.Trashes;.fseventsd;.bzvol;.DS_Store;.VolumeIcon.icns;.apdisk;ca-bundle.crt;
 
 # Search configuration
 #
