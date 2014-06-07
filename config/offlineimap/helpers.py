@@ -31,13 +31,13 @@ def remote_lowered(folder):
 # Take a folder name that is not 'INBOX' then:
 # If folder in mapping.keys() return the corresponding value
 # If folder not in mapping.keys() return folder with the first letter capitalized
-def local_capitalized(folder, mapping={}):
+def local_capitalized(folder, mapping={}, prefix=''):
     if folder == 'INBOX':
       return folder
     elif folder in mapping.keys():
       return mapping.get(folder)
     else:
-      return folder.capitalize()
+      return prefix + folder.capitalize()
 
 # Provide a mapping of common [Gmail] folders
 def gmail_mapping():
@@ -71,13 +71,10 @@ def fastmail_remote(folder):
 
 def fastmail_local(folder):
     mapping = {
-        'archive':   'INBOX.Archive',
-        'drafts':    'INBOX.Drafts',
         'junk':      'INBOX.Junk Mail',
         'sent':      'INBOX.Sent Items',
-        'trash':     'INBOX.Trash',
     }
-    return mapping.get(folder, folder)
+    return local_capitalized(folder, mapping, 'INBOX.')
 
 # Offlineimap methods for lynr.co accounts
 # Uses `remote_lowered` but the remote mailboxes aren't preceded by 'INBOX.'
