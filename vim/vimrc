@@ -52,6 +52,8 @@ function! ShowSyntax()
   endfor
 endfunction
 map <F10> :call ShowSyntax()<CR>
+" Mapping to regenerate tags with `ctags`
+map <Leader>rt :!ctags -R --exclude=.git<CR><CR>
 
 " general settings
 " backup files to the .vim directory rather than the current directory
@@ -108,6 +110,7 @@ let g:ctrlp_user_command = {
     \ },
   \ 'fallback': 'find %s -type f'
   \ }
+let g:ctrlp_extensions = ['buffertag']
 
 set exrc
 set secure
