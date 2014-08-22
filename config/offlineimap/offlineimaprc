@@ -61,6 +61,11 @@ localrepository = wondersauce-local
 remoterepository = wondersauce-remote
 status_backend = sqlite
 
+[Account lynr-fastmail]
+localrepository = lynr-fastmail-local
+remoterepository = lynr-fastmail-remote
+status_backend = sqlite
+
 [Repository lynrco-local]
 type = Maildir
 localfolders = /Volumes/Mail/lynr.co/bryan
@@ -203,4 +208,20 @@ remotehost = imap.gmail.com
 remoteuser = bryan@wondersauce.com
 remotepasseval = get_keychain_pass(account="bryan@wondersauce.com", server="imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
+folderfilter = lambda folder: not is_airmail_folder(folder)
+
+[Repository lynr-fastmail-local]
+type = Maildir
+localfolders = /Volumes/Mail/lynr.co/fastmail
+nametrans = lambda folder: fastmail_local(folder)
+
+[Repository lynr-fastmail-remote]
+maxconnections = 1
+type = IMAP
+ssl = yes
+cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
+remotehost = mail.messagingengine.com
+remoteuser = bryan@lynr.co
+remotepasseval = get_keychain_pass(account="bryan@lynr.co", server="mail.messagingengine.com")
+nametrans = lambda folder: fastmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
