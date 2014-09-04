@@ -7,17 +7,16 @@ call pathogen#infect()
 set hidden
 " first the disabled features due to security concerns
 set modelines=0 " no modelines [http://www.guninski.com/vim1.html]
+" do not show mode information in message line
+set noshowmode
 " let vim know background of terminal is dark
-"if has('gui_running')
+if has('gui_running')
   set background=light " Always light for now
-"else
-"  set background=dark
-"endif
+else
+  "set background=dark
+  set background=light " Always light for now
+endif
 colorscheme solarized
-
-" set the leader key for commands
-"let mapleader = ","
-"let maplocalleader = ";"
 
 " set backspace permissions
 set backspace=indent,eol,start
@@ -36,8 +35,8 @@ map <D-8> :tabn8<CR>
 map <D-9> :tabn9<CR>
 map <D-0> :tabn10<CR>
 " relative line numbers
-map <D-r> :set rnu<CR>
-map <D-R> :set nornu<CR>
+map <D-r> :set relativenumber<CR>
+map <D-R> :set norelativenumber<CR>
 " easier split navigation
 map <down> <C-w><down>
 map <up> <C-w><up>

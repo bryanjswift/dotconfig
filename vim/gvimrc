@@ -9,7 +9,6 @@ set gfn=Consolas:h12.00
 set guioptions=egmLtc
 
 set laststatus=2
-set noshowmode
 
 " ** Clojure **
 let clj_highlight_builtins = 1
