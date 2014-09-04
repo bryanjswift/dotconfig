@@ -107,34 +107,5 @@ map <leader>u :GundoToggle<CR>
 " Show line numbers on netrw directory listings
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
-" Airline
-let g:airline_section_b = airline#section#create(['%f'])
-let g:airline_section_c = airline#section#create([''])
-let g:airline_section_z = airline#section#create(['|%c|'])
-let g:airline_mode_map = {
-  \ '__' : '-',
-  \ 'n'  : 'N',
-  \ 'i'  : 'I',
-  \ 'R'  : 'R',
-  \ 'v'  : 'V',
-  \ 'V'  : 'V-L',
-  \ 'c'  : 'C',
-  \ '' : 'V-B',
-  \ 's'  : 'S',
-  \ 'S'  : 'S-L',
-  \ '' : 'S-B',
-  \ }
-
-" CTRL-P
-let g:ctrlp_cmd = 'CtrlPLastMode'
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_root_markers = ['.gitmodules', '.ctrlp']
-let g:ctrlp_switch_buffer = 'e'
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files'],
-    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-    \ },
-  \ 'fallback': 'find %s -type f'
-  \ }
-let g:ctrlp_extensions = ['buffertag']
+source $DOTCONFIG/vim/conf/airline.vim
+source $DOTCONFIG/vim/conf/ctrlp.vim
