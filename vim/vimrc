@@ -76,8 +76,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-" set fold method to manual
-set foldmethod=manual
+" set fold method to marker
+set foldmethod=marker
 " set acceptable file formats
 set ffs=unix,dos
 " autoindent please
