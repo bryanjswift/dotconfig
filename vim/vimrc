@@ -107,5 +107,5 @@ map <leader>u :GundoToggle<CR>
 " Show line numbers on netrw directory listings
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
-source $DOTCONFIG/vim/conf/airline.vim
+source $DOTCONFIG/vim/conf/lightline.vim
 source $DOTCONFIG/vim/conf/ctrlp.vim
