@@ -2,7 +2,7 @@
 source $HOME/Documents/code/dotconfig/config/mutt/muttrc
 
 # * Override globals *
-set status_format = "%f [%r%m msgs%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%> %?p?( %p postponed )?  tech@lynr.co"
+set status_format = "%f%r [ %m msgs%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%> %?p?( %p postponed )?  tech@lynr.co"
 
 #
 # Paths ----------------------------------------------
