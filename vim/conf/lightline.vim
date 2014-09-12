@@ -8,7 +8,15 @@ let g:lightline = {
   \             [ 'filename' ],
   \             [ 'ctrlpmark' ] ],
   \   'right': [ [ 'lineinfo' ],
-  \              [ 'filetype' ] ]
+  \              [ 'filetype' ],
+  \              [ 'foldmethod' ] ]
+  \ },
+  \ 'inactive': {
+  \   'left': [ [ 'filename' ] ],
+  \   'right': [ [ 'filetype' ] ]
+  \ },
+  \ 'component': {
+  \   'foldmethod': '%{&foldmethod}',
   \ },
   \ 'component_function': {
   \   'ctrlpmark': 'LlBjsMark',
