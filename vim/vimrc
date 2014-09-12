@@ -85,6 +85,7 @@ set autoindent
 " wildignore
 set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
 set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
+set wildignore+=*.so,*.swp,*.zip,*.jpg,*.png,*.gif
 " show whitespace in a useful way
 set list
 set listchars=tab:>.

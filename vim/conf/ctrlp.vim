@@ -1,4 +1,6 @@
 " CTRL-P
+nnoremap <C-_> :CtrlPBufTag<CR>
+
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_root_markers = ['.gitmodules', '.ctrlp']
@@ -11,3 +13,5 @@ let g:ctrlp_user_command = {
   \ 'fallback': 'find %s -type f'
   \ }
 let g:ctrlp_extensions = ['buffertag']
+" CTRL-P - MRU
+let g:ctrlp_mruf_max = 50
