@@ -10,7 +10,7 @@
 	cp       = cherry-pick
 	ci       = commit
 	co       = checkout
-	st       = status
+	st       = status -s -b
 	fa       = !git remote | grep -v heroku | xargs -tn1 git fetch
 	assume   = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
