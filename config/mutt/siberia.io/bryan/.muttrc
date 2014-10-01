@@ -2,7 +2,10 @@
 source $HOME/Documents/code/dotconfig/config/mutt/muttrc
 
 # * Override globals *
+# Status Bar -----------------------------------------
 set status_format = "%f%r [ %m msgs%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%> %?p?( %p postponed )?  bryan@siberia.io"
+# Compose View Options -------------------------------
+unset copy   # Don't copy sent mail, gmail does this
 
 #
 # Paths ----------------------------------------------
