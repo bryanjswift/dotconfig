@@ -13,6 +13,7 @@
 	st        = status -s -b
 	fa        = !git remote | grep -v heroku | xargs -tn1 git fetch
 	conflicts = diff --name-only --diff-filter=U
+	flicts    = diff --name-only --diff-filter=U
 	assume    = update-index --assume-unchanged
 	unassume  = update-index --no-assume-unchanged
 	assumed   = "!git ls-files -v | grep ^h | cut -c 3-"
