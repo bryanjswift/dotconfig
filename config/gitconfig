@@ -1,5 +1,6 @@
 [core]
 	autocrlf = input
+	editor = vim
 	quotepath = false
 [user]
 	name = Bryan Swift
