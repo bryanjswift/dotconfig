@@ -19,7 +19,6 @@
 	flicts    = diff --name-only --diff-filter=U
 	assume    = update-index --assume-unchanged
 	unassume  = update-index --no-assume-unchanged
-	assumed   = "!git ls-files -v | grep ^h | cut -c 3-"
 [push]
 	default = current
 [merge]
@@ -28,5 +27,3 @@
 	ui = off
 	diff = auto
 	interactive = auto
-[merge]
-	tool = vimdiff
