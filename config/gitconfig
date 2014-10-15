@@ -8,16 +8,16 @@
 [github]
 	user = bryanjswift
 [alias]
+	assume    = update-index --assume-unchanged
 	cp        = cherry-pick
 	ci        = commit
 	co        = checkout
-	st        = status -s -b
-	fa        = !git remote | grep -v heroku | xargs -tn1 git fetch
-	dt        = difftool
-	mt        = mergetool
 	conflicts = diff --name-only --diff-filter=U
+	dt        = difftool
+	fa        = !git remote | grep -v heroku | xargs -tn1 git fetch
 	flicts    = diff --name-only --diff-filter=U
-	assume    = update-index --assume-unchanged
+	mt        = mergetool
+	st        = status -s -b
 	unassume  = update-index --no-assume-unchanged
 [push]
 	default = current
