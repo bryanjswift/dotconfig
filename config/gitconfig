@@ -13,6 +13,8 @@
 	co        = checkout
 	st        = status -s -b
 	fa        = !git remote | grep -v heroku | xargs -tn1 git fetch
+	dt        = difftool
+	mt        = mergetool
 	conflicts = diff --name-only --diff-filter=U
 	flicts    = diff --name-only --diff-filter=U
 	assume    = update-index --assume-unchanged
