@@ -18,6 +18,7 @@
 	flicts    = diff --name-only --diff-filter=U
 	mt        = mergetool
 	odate = !git show ORIG_HEAD --format='%ad' | head -n1 | tr -d '\n'
+	oneline   = log --oneline
 	st        = status -s -b
 	unassume  = update-index --no-assume-unchanged
 [push]
