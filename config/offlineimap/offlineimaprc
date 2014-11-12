@@ -2,7 +2,7 @@
 # For Homebrew installation see /usr/local/Cellar/offline-imap/6.5.5/offlineimap.conf
 [general]
 # Basic Settings
-accounts = fastmail, gmail, lynrco, knightstmpvar, siberia, swiftwork
+accounts = fastmail, gmail, lynrco, knightstmpvar, siberia
 maxsyncaccounts = 1
 ui = ttyui
 #ui = blinkenlights
@@ -17,19 +17,6 @@ remoterepository = lynrco-remote
 # Advanced Settings
 status_backend = sqlite
 #postsynchook = notmuch new    # Used to locally index email
-
-[Account support-lynrco]
-# Basic Settings
-localrepository = support-lynrco-local
-remoterepository = support-lynrco-remote
-# Advanced Settings
-status_backend = sqlite
-#postsynchook = notmuch new    # Used to locally index email
-
-[Account tech-lynrco]
-localrepository = tech-lynrco-local
-remoterepository = tech-lynrco-remote
-status_backend = sqlite
 
 [Account fastmail]
 localrepository = fastmail-local
@@ -69,50 +56,17 @@ status_backend = sqlite
 [Repository lynrco-local]
 type = Maildir
 localfolders = /Volumes/Mail/lynr.co/bryan
-nametrans = lambda folder: lynrco_local(folder)
+nametrans = lambda folder: fastmail_local(folder)
 
 [Repository lynrco-remote]
 type = IMAP
 ssl = yes
-cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
-remotehost = mail.lynr.co
+cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
+maxconnections = 1
+remotehost = mail.messagingengine.com
 remoteuser = bryan@lynr.co
-remotepasseval = get_keychain_pass(account="bryan@lynr.co", server="mail.lynr.co")
-maxconnections = 1
-nametrans = lambda folder: lynrco_remote(folder)
-folderfilter = lambda folder: not is_airmail_folder(folder) and folder not in [ 'Sent', ]
-
-[Repository support-lynrco-local]
-type = Maildir
-localfolders = /Volumes/Mail/lynr.co/support
-nametrans = lambda folder: lynrco_local(folder)
-
-[Repository support-lynrco-remote]
-type = IMAP
-ssl = yes
-cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
-remotehost = mail.lynr.co
-remoteuser = support@lynr.co
-remotepasseval = get_keychain_pass(account="support@lynr.co", server="mail.lynr.co")
-maxconnections = 1
-nametrans = lambda folder: lynrco_remote(folder)
-folderfilter = lambda folder: not is_airmail_folder(folder) and folder not in [ 'Sent', ]
-
-[Repository tech-lynrco-local]
-type = Maildir
-localfolders = /Volumes/Mail/lynr.co/tech
-nametrans = lambda folder: lynrco_local(folder)
-
-[Repository tech-lynrco-remote]
-type = IMAP
-ssl = yes
-cert_fingerprint = 3796e0c721bd9d731f89c84c49dd59af8b86b01f
-remotehost = mail.lynr.co
-remoteuser = tech@lynr.co
-remotepasseval = get_keychain_pass(account="tech@lynr.co", server="mail.lynr.co")
-maxconnections = 1
-nametrans = lambda folder: lynrco_remote(folder)
-folderfilter = lambda folder: not is_airmail_folder(folder) and folder not in [ 'Sent', ]
+remotepasseval = get_keychain_pass(account="bryan@lynr.co", server="mail.messagingengine.com")
+nametrans = lambda folder: fastmail_remote(folder)
 
 [Repository fastmail-local]
 type = Maildir
@@ -209,19 +163,4 @@ remoteuser = bryan@wondersauce.com
 remotepasseval = get_keychain_pass(account="bryan@wondersauce.com", server="imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
-
-[Repository lynr-fastmail-local]
-type = Maildir
-localfolders = /Volumes/Mail/lynr.co/fastmail
-nametrans = lambda folder: fastmail_local(folder)
-
-[Repository lynr-fastmail-remote]
-maxconnections = 1
-type = IMAP
-ssl = yes
-cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
-remotehost = mail.messagingengine.com
-remoteuser = bryan@lynr.co
-remotepasseval = get_keychain_pass(account="bryan@lynr.co", server="mail.messagingengine.com")
-nametrans = lambda folder: fastmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
