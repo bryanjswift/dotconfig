@@ -48,11 +48,6 @@ localrepository = wondersauce-local
 remoterepository = wondersauce-remote
 status_backend = sqlite
 
-[Account lynr-fastmail]
-localrepository = lynr-fastmail-local
-remoterepository = lynr-fastmail-remote
-status_backend = sqlite
-
 [Repository lynrco-local]
 type = Maildir
 localfolders = /Volumes/Mail/lynr.co/bryan
