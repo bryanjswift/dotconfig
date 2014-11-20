@@ -1,6 +1,11 @@
 # Load global defaults
 source $HOME/Documents/code/dotconfig/config/mutt/muttrc
 
+set pgp_sign_as=0xA1088B7D
+my_hdr X-PGP-Key: http://bryanwrit.es/siberia-pubkey.asc
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xA1088B7D -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xA1088B7D -- -r %r -- %f"
+
 # * Override globals *
 # Status Bar -----------------------------------------
 set status_format = "%f%r [ %m msgs%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%> %?p?( %p postponed )?  bryan@siberia.io"
