@@ -56,7 +56,7 @@ nametrans = lambda folder: fastmail_local(folder)
 [Repository lynrco-remote]
 type = IMAP
 ssl = yes
-cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
+cert_fingerprint = 958b1601563aef92607a41eb5bad22e3cace8431
 maxconnections = 1
 remotehost = mail.messagingengine.com
 remoteuser = bryan@lynr.co
@@ -72,7 +72,7 @@ nametrans = lambda folder: fastmail_local(folder)
 maxconnections = 1
 type = IMAP
 ssl = yes
-cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
+cert_fingerprint = 958b1601563aef92607a41eb5bad22e3cace8431
 remotehost = mail.messagingengine.com
 remoteuser = bryanjswift@fastmail.fm
 remotepasseval = get_keychain_pass(account="bryanjswift@fastmail.fm", server="mail.messagingengine.com")
@@ -104,7 +104,7 @@ nametrans = lambda folder: fastmail_local(folder)
 maxconnections = 1
 type = IMAP
 ssl = yes
-cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
+cert_fingerprint = 958b1601563aef92607a41eb5bad22e3cace8431
 remotehost = mail.messagingengine.com
 remoteuser = bryan@knightstmpvar.com
 remotepasseval = get_keychain_pass(account="bryan@knightstmpvar.com", server="mail.messagingengine.com")
