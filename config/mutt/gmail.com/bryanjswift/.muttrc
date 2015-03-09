@@ -24,9 +24,8 @@ mailboxes +INBOX \
           +starred \
           +important \
           +archive \
-          +freelance.tbar \
-          +lynr \
           +taxes.2014 \
+          +taxes.2015 \
           +drafts \
           +sent \
           +junk \
