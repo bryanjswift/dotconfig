@@ -9,6 +9,7 @@
 	user = bryanjswift
 [alias]
 	assume    = update-index --assume-unchanged
+	assumed   = !git ls-files -v | grep '^[[:lower:]]' | cut -d ' ' -f 2
 	cp        = cherry-pick
 	ci        = commit
 	co        = checkout
@@ -17,8 +18,9 @@
 	fa        = !git remote | grep -v heroku | xargs -tn1 git fetch
 	flicts    = diff --name-only --diff-filter=U
 	mt        = mergetool
-	odate = !git show ORIG_HEAD --format='%ad' | head -n1 | tr -d '\n'
+	odate     = !git show ORIG_HEAD --format='%ad' | head -n1 | tr -d '\n'
 	oneline   = log --oneline
+	select    = !git st | pick | cut -c4-
 	st        = status -s -b
 	unassume  = update-index --no-assume-unchanged
 [push]
