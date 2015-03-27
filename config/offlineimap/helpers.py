@@ -80,9 +80,8 @@ def fastmail_local(folder):
 # Uses `remote_lowered` but the remote mailboxes aren't preceded by 'INBOX.'
 # so the translations only splits and lowercases.
 def lynrco_remote(folder):
-    return remote_lowered(folder)
+    return fastmail_remote(folder)
 
 def lynrco_local(folder):
-    mapping = { 'sent': 'Sent Messages', }
-    return local_capitalized(folder, mapping)
+    return fastmail_local(folder)
 
