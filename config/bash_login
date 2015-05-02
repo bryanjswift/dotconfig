@@ -90,3 +90,5 @@ fi
 if [ -f $DOTCONFIG/bash-completion/hk-bash-completion.sh ]; then
   . $DOTCONFIG/bash-completion/hk-bash-completion.sh
 fi
+# fzf autocomplete
+[ -f $DOTCONFIG/config/fzf.bash ] && source $DOTCONFIG/config/fzf.bash
