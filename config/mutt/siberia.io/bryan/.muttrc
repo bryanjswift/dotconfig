@@ -1,5 +1,6 @@
 # Load global defaults
 source $HOME/Documents/code/dotconfig/config/mutt/muttrc
+source $HOME/Documents/code/dotconfig/config/mutt/crypto
 
 set pgp_sign_as=0xA1088B7D
 my_hdr X-PGP-Key: http://bryanwrit.es/siberia-pubkey.asc
