@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-jsx"]
 	path = vim/bundle/vim-jsx
 	url = git@github.com:mxw/vim-jsx.git
+[submodule "vim/bundle/vim-tern"]
+	path = vim/bundle/vim-tern
+	url = git@github.com:ternjs/tern_for_vim.git
