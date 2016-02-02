@@ -86,7 +86,7 @@ nametrans = lambda folder: gmail_local(folder)
 
 [Repository gmail-remote]
 auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
-maxconnections = 1
+maxconnections = 2
 type = Gmail
 ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
