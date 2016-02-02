@@ -85,6 +85,7 @@ localfolders = /Volumes/Mail/gmail.com/bryanjswift
 nametrans = lambda folder: gmail_local(folder)
 
 [Repository gmail-remote]
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
 maxconnections = 1
 type = Gmail
 ssl = yes
@@ -117,6 +118,7 @@ localfolders = /Volumes/Mail/siberia.io/bryan
 nametrans = lambda folder: gmail_local(folder)
 
 [Repository siberia-remote]
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
 maxconnections = 1
 type = Gmail
 ssl = yes
