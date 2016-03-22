@@ -20,6 +20,9 @@ function get_git_tag {
 function get_git_dirty {
   [[ 0 -eq `git status --porcelain | wc -l` ]] || echo '*'
 }
+function get_git_sha {
+  git rev-parse --short HEAD | tr -d "\n"
+}
 PS1_DEFAULT="\h$YELLOW \w$NONE"'$(git branch &> /dev/null;\
   if [ 0 -eq $? ]; then\
     echo "$(get_git_tag)('$CYAN'$(get_git_branch)'$PURPLE'$(get_git_dirty)'$NONE')";\
