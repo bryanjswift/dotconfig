@@ -44,13 +44,10 @@ export EDITOR=vim
 export DOTCONFIG=$HOME/Documents/code/dotconfig
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
-# Homebrew
-export CELLAR=`brew --cellar`
 # environment variables for JVM development
 export JAVA_HOME=$(/usr/libexec/java_home)
 export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.final
 export M2_REPOSITORY=$HOME/.m2/repository
-export ANT_HOME=$(brew --cellar ant)/1.9.3
 export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
 export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
 # EC2
@@ -62,9 +59,6 @@ if [ -d $EC2_HOME ]; then
   export EC2_ACCESS=`cat $EC2_HOME/access.key`
   export EC2_SECRET=`cat $EC2_HOME/secret.key`
 fi
-# Ruby
-export RBENV=$HOME/.rbenv
-export RUBIES=(~/.rbenv/versions/*)
 # catalog files for compiling man pages
 export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 
@@ -76,16 +70,8 @@ export ORIG_PATH=$PATH
 # add to the path
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
 export PATH=/usr/local/share/npm/bin:$PATH # Add NPM globals to PATH
-export PATH=$RBENV/bin:$PATH # Add rbenv scripts to PATH
-
-###### rbenv ######
-eval "$(rbenv init -)"
 
 ###### bash autocomplete ######
-# Homebrew autocomplete
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
 # Maven autocomplete
 if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
   . $DOTCONFIG/bash-completion/maven_bash_completion.bash
@@ -93,4 +79,11 @@ fi
 # Heroku (hk) autocomplete
 if [ -f $DOTCONFIG/bash-completion/hk-bash-completion.sh ]; then
   . $DOTCONFIG/bash-completion/hk-bash-completion.sh
+fi
+
+if hash brew 2>/dev/null; then
+  source $DOTCONFIG/config/bash/brew.bashrc
+fi
+if hash rbenv 2>/dev/null; then
+  source $DOTCONFIG/config/bash/rbenv.bashrc
 fi
