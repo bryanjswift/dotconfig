@@ -44,12 +44,6 @@ export EDITOR=vim
 export DOTCONFIG=$HOME/Documents/code/dotconfig
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
-# environment variables for JVM development
-export JAVA_HOME=$(/usr/libexec/java_home)
-export SCALA_HOME=$HOME/Documents/src/scala/scala-2.8.0.final
-export M2_REPOSITORY=$HOME/.m2/repository
-export CLOJURE_EXT=$HOME/Documents/src/clojure/clojure-classpath
-export GAE_SDK=$HOME/Documents/src/gae/appengine-java-sdk-1.3.3
 # EC2
 export EC2_HOME=$HOME/.ec2
 if [ -d $EC2_HOME ]; then
@@ -81,6 +75,7 @@ if [ -f $DOTCONFIG/bash-completion/hk-bash-completion.sh ]; then
   . $DOTCONFIG/bash-completion/hk-bash-completion.sh
 fi
 
+source $DOTCONFIG/config/bash/jvm.bashrc
 if hash brew 2>/dev/null; then
   source $DOTCONFIG/config/bash/brew.bashrc
 fi
