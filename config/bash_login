@@ -41,7 +41,9 @@ export SVN_EDITOR=vim
 export VISUAL=vim
 export EDITOR=vim
 # Dotconfig Home
-export DOTCONFIG=$HOME/Documents/code/dotconfig
+if [ ! -n "$DOTCONFIG" ]; then
+  export DOTCONFIG=$HOME/Documents/code/dotconfig
+fi
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
 # catalog files for compiling man pages
