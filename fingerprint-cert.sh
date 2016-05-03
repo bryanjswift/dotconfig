@@ -7,12 +7,12 @@
 #  echo "${CERT}"
 #  echo |\
 #  openssl s_client -connect $CERT 2>/dev/null |\
-#  sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' |\
 #  openssl x509 -noout -fingerprint
 #done
+#
+# See http://www.shellhacks.com/en/HowTo-Check-SSL-Certificate-Expiration-Date-from-the-Linux-Shell
 
 echo "${1}"
 echo |\
 openssl s_client -connect $1 2>/dev/null |\
-sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' |\
 openssl x509 -noout -fingerprint
