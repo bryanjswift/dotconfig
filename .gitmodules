@@ -55,9 +55,6 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "certs"]
-	path = certs
-	url = git://github.com/bagder/ca-bundle.git
 [submodule "vim/bundle/vim-polyglot"]
 	path = vim/bundle/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot.git
