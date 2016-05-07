@@ -72,7 +72,7 @@ set autoindent
 " wildignore - don't show these files when expanding globs
 set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
 set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
-set wildignore+=*.so,*.swp,*.zip,*.jpg,*.png,*.gif
+set wildignore+=*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.class
 " show whitespace in a useful way
 set list
 set listchars=tab:>.
