@@ -23,17 +23,6 @@ set backspace=indent,eol,start
 " reduce leader timeout from 1000ms
 set timeoutlen=350
 " map shortcuts
-" enables cmd-# to switch between tabs
-map <D-1> :tabn1<CR>
-map <D-2> :tabn2<CR>
-map <D-3> :tabn3<CR>
-map <D-4> :tabn4<CR>
-map <D-5> :tabn5<CR>
-map <D-6> :tabn6<CR>
-map <D-7> :tabn7<CR>
-map <D-8> :tabn8<CR>
-map <D-9> :tabn9<CR>
-map <D-0> :tabn10<CR>
 " relative line numbers
 map <D-r> :set relativenumber<CR>
 map <D-R> :set norelativenumber<CR>
@@ -42,7 +31,6 @@ map <down> <C-w><down>
 map <up> <C-w><up>
 map <left> <C-w><left>
 map <right> <C-w><right>
-map <D-H> <C-w><left>
 " shortcuts for javascript and PHP ftplugin
 map <leader>zff zE:FoldFunctions<CR>
 function! ShowSyntax()
@@ -51,8 +39,6 @@ function! ShowSyntax()
   endfor
 endfunction
 map <F10> :call ShowSyntax()<CR>
-" Mapping to regenerate tags with `ctags`
-map <Leader>rt :!ctags -R --exclude=.git<CR><CR>
 
 " general settings
 " backup files to the .vim directory rather than the current directory
