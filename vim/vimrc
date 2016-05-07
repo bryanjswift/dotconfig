@@ -54,10 +54,11 @@ set ruler
 set cursorline
 " highlight matching [{()}]
 set showmatch
-" search ignores case and doesn't highlight all finds
+" search doesn't highlight all finds
 set nohlsearch
+" search ignores case
 set incsearch
-" tabwidth = 2 spaces
+" tabwidth = 2 spaces (this may be overriden by editorconfig)
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -68,7 +69,7 @@ set foldmethod=marker
 set ffs=unix,dos
 " autoindent please
 set autoindent
-" wildignore
+" wildignore - don't show these files when expanding globs
 set wildignore+=tmp/*,node_modules/*,vendor/rails/*,vendor/gems/*
 set wildignore+=vendor/plugins/*,src/main/webapp/WEB-INF/classes/*
 set wildignore+=*.so,*.swp,*.zip,*.jpg,*.png,*.gif
