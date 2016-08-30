@@ -7,7 +7,7 @@ Make sure Java is installed
 Make sure Xcode and Command Line Tools are installed
 
     ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-    brew install git ctags macvim rbenv ruby-build tmux s3cmd node scala gpg
+    brew install git tig ctags macvim rbenv ruby-build tmux s3cmd node scala gpg
 
 # Ruby
 
