@@ -66,10 +66,10 @@
 	url = git://github.com/tfnico/vim-gradle.git
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
+	url = git://github.com/pangloss/vim-javascript.git
 [submodule "vim/bundle/vim-jsx"]
 	path = vim/bundle/vim-jsx
-	url = git@github.com:mxw/vim-jsx.git
+	url = git://github.com/mxw/vim-jsx.git
 [submodule "vim/bundle/vim-autotag"]
 	path = vim/bundle/vim-autotag
-	url = git@github.com:craigemery/vim-autotag.git
+	url = git://github.com/craigemery/vim-autotag.git
