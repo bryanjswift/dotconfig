@@ -33,7 +33,7 @@ List ruby versions available with `rbenv install -l`. Recommend installing the l
 # git
 
     echo "[include]" > ~/.gitconfig
-    echo "  path = Documents/code/dotconfig/gitconfig" >> ~/.gitconfig
+    echo "  path = Documents/code/dotconfig/config/gitconfig" >> ~/.gitconfig
     cp ~/Documents/code/dotconfig/config/gitignore ~/.gitignore
 
 # offlineimap and company
