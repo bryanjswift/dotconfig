@@ -57,6 +57,12 @@ maxconnections = 2
 type = Gmail
 ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
+starttls = no
+oauth2_access_token_eval = get_access_token("bryan.j.swift@gmail.com")
+oauth2_client_id_eval = get_client_id("bryan.j.swift@gmail.com")
+oauth2_client_secret_eval = get_client_secret("bryan.j.swift@gmail.com")
+oauth2_refresh_token_eval = get_refresh_token("bryan.j.swift@gmail.com")
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
 remotehost = imap.gmail.com
 remoteuser = bryan.j.swift@gmail.com
 remotepasseval = get_keychain_pass(account="bryan.j.swift@gmail.com", server="imap.gmail.com")
@@ -74,6 +80,12 @@ maxconnections = 1
 type = Gmail
 ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
+starttls = no
+oauth2_access_token_eval = get_access_token("bryan@siberia.io")
+oauth2_client_id_eval = get_client_id("bryan@siberia.io")
+oauth2_client_secret_eval = get_client_secret("bryan@siberia.io")
+oauth2_refresh_token_eval = get_refresh_token("bryan@siberia.io")
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
 remotehost = imap.gmail.com
 remoteuser = bryan@siberia.io
 remotepasseval = get_keychain_pass(account="bryan@siberia.io", server="imap.gmail.com")
