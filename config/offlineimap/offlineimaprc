@@ -39,7 +39,7 @@ nametrans = lambda folder: fastmail_local(folder)
 maxconnections = 1
 type = IMAP
 ssl = yes
-cert_fingerprint = 958b1601563aef92607a41eb5bad22e3cace8431
+sslcacertfile = /Volumes/Mail/ca-bundle.crt
 remotehost = mail.messagingengine.com
 remoteuser = bryanjswift@fastmail.fm
 remotepasseval = get_keychain_pass(account="bryanjswift@fastmail.fm", server="mail.messagingengine.com")
@@ -53,7 +53,7 @@ nametrans = lambda folder: gmail_local(folder)
 
 [Repository gmail-remote]
 auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
-maxconnections = 2
+maxconnections = 1
 type = Gmail
 ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
