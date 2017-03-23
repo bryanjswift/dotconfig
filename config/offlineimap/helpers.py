@@ -17,6 +17,18 @@ def get_keychain_pass(account=None, server=None):
 
     return re.match(r'password: "(.*)"', outtext).group(1)
 
+def get_access_token(account=None):
+    return bytearray(get_keychain_pass(account, "oauth2-access.gmail.com"))
+
+def get_client_id(account=None):
+    return get_keychain_pass(account, "oauth2-client.gmail.com")
+
+def get_client_secret(account=None):
+    return get_keychain_pass(account, "oauth2-secret.gmail.com")
+
+def get_refresh_token(account=None):
+    return bytearray(get_keychain_pass(account, "oauth2-refresh.gmail.com"))
+
 # Take a folder name that is not 'INBOX' then:
 # 1. remove prefixed 'INBOX.'
 # 1. make it lowercase
