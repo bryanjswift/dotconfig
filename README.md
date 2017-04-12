@@ -22,6 +22,9 @@ List ruby versions available with `rbenv install -l`. Recommend installing the l
 
 # bash_login
 
+Sourcing the `bash_login` file as below can also be done in a `.profile` file
+if `.bash_login` doesn't exist.
+
     echo "source \$HOME/Documents/code/dotconfig/config/bash_login" > ~/.bash_login
 
 # vim
