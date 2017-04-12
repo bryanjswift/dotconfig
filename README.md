@@ -38,7 +38,17 @@ List ruby versions available with `rbenv install -l`. Recommend installing the l
 
 # offlineimap and company
 
-Make it possible to read mail locally and offline from the terminal (or anything supporting Maildir). Open up the 'Keychain Access' app and add the entries for IMAP and SMTP servers referenced in [config/offlineimap/offlineimaprc](config/offlineimap/offlineimaprc) and [config/msmtprc](config/msmtprc). IMAP entries have should have a 'where' of `http://imap.domain.name`; SMTP entries should have a 'where' of `smtp://smtp.domain.name`. See [Steve Losh's the Homely Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/), specifically the section on [Retrieving Passwords](http://stevelosh.com/blog/2012/10/the-homely-mutt/#retrieving-passwords) for more information about seeting this up.
+Make it possible to read mail locally and offline from the terminal (or
+anything supporting Maildir). Open up the 'Keychain Access' app and add the
+entries for IMAP and SMTP servers referenced in
+[config/offlineimap/offlineimaprc](config/offlineimap/offlineimaprc) and
+[config/msmtprc](config/msmtprc). IMAP entries have should have a 'where' of
+`http://imap.domain.name`; SMTP entries should have a 'where' of
+`smtp://smtp.domain.name`. See [Steve Losh's the Homely
+Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/), specifically the
+section on [Retrieving
+Passwords](http://stevelosh.com/blog/2012/10/the-homely-mutt/#retrieving-passwords)
+for more information about seeting this up.
 
     brew install lynx msmtp mutt notmuch offlineimap openssl
     brew install keith/formulae/contacts-cli
