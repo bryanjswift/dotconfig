@@ -76,6 +76,18 @@ are extracted fromt he Mozilla CA bundle and converted to PEM using
 [curl]: http://curl.haxx.se/docs/caextract.html
 [mkbundle]: https://github.com/bagder/curl/blob/master/lib/mk-ca-bundle.pl
 
+# gpg
+
+If `gpg-agent` isn't installed and running then signing commits can get to be
+quite cumbersome, particularly during `git rebase` executions. The gpg setup
+and config files are cribbed from [yoshuawuyts][yoshuawuyts-gpg].
+
+    brew install gnupg gpg-agent pinentry-mac
+    mkdir ~/.gnupg
+    cp config/gpg/gpg.conf config/gpg/gpg-agent.conf ~/.gnupg
+
+[yoshuawuyts-gpg]: https://gist.github.com/yoshuawuyts/69f25b0384d41b46a126f9b42d1f9db2
+
 # Link other dotfiles
 
     ln -s ~/Documents/code/dotconfig/config/rtorrent.rc ~/.rtorrent.rc
