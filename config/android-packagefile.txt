@@ -25,4 +25,10 @@ platforms;android-19
 sources;android-19
 platforms;android-18
 sources;android-18
-
+system-images;android-18;default;x86
+system-images;android-19;default;x86
+system-images;android-21;google_apis;x86_64
+system-images;android-22;google_apis;x86_64
+system-images;android-23;google_apis;x86_64
+system-images;android-24;google_apis;x86_64
+system-images;android-25;google_apis;x86_64
