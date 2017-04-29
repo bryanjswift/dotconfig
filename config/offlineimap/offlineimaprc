@@ -13,22 +13,18 @@ fsync = False
 [Account fastmail]
 localrepository = fastmail-local
 remoterepository = fastmail-remote
-status_backend = sqlite
 
 [Account gmail]
 localrepository = gmail-local
 remoterepository = gmail-remote
-status_backend = sqlite
 
 [Account siberia]
 localrepository = siberia-local
 remoterepository = siberia-remote
-status_backend = sqlite
 
 [Account swiftwork]
 localrepository = swiftwork-local
 remoterepository = swiftwork-remote
-status_backend = sqlite
 
 [Repository fastmail-local]
 type = Maildir
