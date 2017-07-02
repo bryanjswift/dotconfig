@@ -82,3 +82,7 @@ fi
 if hash gpg-agent 2>/dev/null; then
   source $DOTCONFIG/config/bash/gpg.bashrc
 fi
+# If go is on the path then include the things that support golang
+if hash gpg-agent 2>/dev/null; then
+  source $DOTCONFIG/config/bash/golang.bashrc
+fi
