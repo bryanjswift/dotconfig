@@ -18,6 +18,10 @@ remoterepository = fastmail-remote
 localrepository = gmail-local
 remoterepository = gmail-remote
 
+[Account protonmail]
+localrepository = protonmail-local
+remoterepository = protonmail-remote
+
 [Account siberia]
 localrepository = siberia-local
 remoterepository = siberia-remote
@@ -63,6 +67,23 @@ remotehost = imap.gmail.com
 remoteuser = bryan.j.swift@gmail.com
 remotepasseval = get_keychain_pass(account="bryan.j.swift@gmail.com", server="imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
+folderfilter = lambda folder: not is_airmail_folder(folder)
+
+[Repository protonmail-local]
+type = Maildir
+localfolders = /Volumes/Mail/protonmail.com/bryanjswift
+nametrans = lambda folder: fastmail_local(folder)
+
+[Repository protonmail-remote]
+maxconnections = 1
+type = IMAP
+ssl = yes
+sslcacertfile = /Volumes/Mail/ca-bundle.crt
+remotehost = 127.0.0.1
+remoteport = 1143
+remoteuser = bryanjswift@protonmail.com
+remotepasseval = get_keychain_pass(account="bryanjswift@protonmail.com", server="mail.protonmail.com")
+nametrans = lambda folder: fastmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
 
 [Repository siberia-local]
