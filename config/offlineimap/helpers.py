@@ -132,6 +132,19 @@ def should_sync_fastmail(folder):
         and not is_airmail_folder(folder)
 
 # Define wrapper function for whether or not a siberia folder should sync
+def should_sync_gmail(folder):
+    return not folder == '[Gmail]/Spam' \
+        and not folder == '[Gmail]/Important' \
+        and not folder == '[Gmail]/Starred' \
+        and not folder == '[Gmail]/Trash' \
+        and not folder.startswith('freelance') \
+        and not folder.startswith('lynr') \
+        and not folder.startswith('persnicketly') \
+        and not folder.startswith('recipes') \
+        and not folder.startswith('taxes') \
+        and not is_airmail_folder(folder)
+
+# Define wrapper function for whether or not a siberia folder should sync
 def should_sync_siberia(folder):
     return not folder == '[Gmail]/Spam' \
         and not folder == '[Gmail]/Important' \
