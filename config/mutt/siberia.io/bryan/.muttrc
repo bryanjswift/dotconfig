@@ -23,12 +23,9 @@ set folder           = /Volumes/Mail/siberia.io/bryan  # mailbox location
 set spoolfile = "+INBOX"
 # Mailboxes to show in the sidebar.
 mailboxes +INBOX \
-          +starred \
-          +important \
           +archive \
           +drafts \
           +sent \
-          +junk \
 
 # Other special folders.
 set mbox      = "+archive"

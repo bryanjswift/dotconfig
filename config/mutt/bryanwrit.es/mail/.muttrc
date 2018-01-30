@@ -19,12 +19,10 @@ set spoolfile = "+INBOX"
 # Mailboxes to show in the sidebar.
 mailboxes +INBOX \
           +archive \
-          +archive.taxes-2016 \
-          +archive.taxes-2017 \
+          +archive.taxes-2018 \
           +archive.travel \
           +drafts \
           +sent \
-          +junk \
 
 # Other special folders.
 set mbox      = "+archive"
