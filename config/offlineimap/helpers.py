@@ -73,6 +73,30 @@ def gmail_local(folder):
     mapping = dict(zip(m.values(), m.keys()))
     return mapping.get(folder, folder)
 
+def should_sync_siberia(folder):
+    return not folder == '[Gmail]/Spam' \
+        and not folder == '[Gmail]/Important' \
+        and not folder == '[Gmail]/Starred' \
+        and not folder == '[Gmail]/Trash' \
+        and not folder.startswith('[Readdle]') \
+        and not folder.startswith('avis') \
+        and not folder.startswith('billing') \
+        and not folder.startswith('cloudnav') \
+        and not folder.startswith('contacts') \
+        and not folder.startswith('dated') \
+        and not folder.startswith('intel') \
+        and not is_airmail_folder(folder)
+
+def should_sync_fastmail(folder):
+    return not folder == 'INBOX.Junk Mail' \
+        and not folder == 'INBOX.Notes' \
+        and not folder == 'INBOX.Trash' \
+        and not folder.endswith('taxes-2014') \
+        and not folder.endswith('taxes-2015') \
+        and not folder.endswith('taxes-2016') \
+        and not folder.endswith('taxes-2017') \
+        and not is_airmail_folder(folder)
+
 # Checks if the name of folder is one commonly used by Airmail
 def is_airmail_folder(folder):
     return folder.startswith('[Airmail]')

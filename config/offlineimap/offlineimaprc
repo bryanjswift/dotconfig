@@ -44,7 +44,7 @@ remotehost = mail.messagingengine.com
 remoteuser = bryanjswift@fastmail.fm
 remotepasseval = get_keychain_pass(account="bryanjswift@fastmail.fm", server="mail.messagingengine.com")
 nametrans = lambda folder: fastmail_remote(folder)
-folderfilter = lambda folder: not is_airmail_folder(folder)
+folderfilter = lambda folder: should_sync_fastmail(folder)
 
 [Repository gmail-local]
 type = Maildir
@@ -107,7 +107,7 @@ remotehost = imap.gmail.com
 remoteuser = bryan@siberia.io
 remotepasseval = get_keychain_pass(account="bryan@siberia.io", server="imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
-folderfilter = lambda folder: not is_airmail_folder(folder)
+folderfilter = lambda folder: should_sync_siberia(folder)
 
 [Repository swiftwork-local]
 type = Maildir
