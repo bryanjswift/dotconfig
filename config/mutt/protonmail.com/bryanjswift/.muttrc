@@ -1,0 +1,39 @@
+# Load global defaults
+source $HOME/Documents/code/dotconfig/config/mutt/muttrc
+source $HOME/Documents/code/dotconfig/config/mutt/crypto
+
+set pgp_sign_as=0xF9A56D56
+my_hdr X-PGP-Key: http://bryanwrit.es/pubkey.asc
+
+# * Override globals *
+set status_format = "%f%r [ %m msgs%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%> %?p?( %p postponed )?  bryanjswift@protonmail.com"
+
+#
+# Paths ----------------------------------------------
+set folder           = /Volumes/Mail/protonmail.com/bryanjswift  # mailbox location
+#
+# Account Settings -----------------------------------
+#
+# Default inbox.
+set spoolfile = "+INBOX"
+# Mailboxes to show in the sidebar.
+mailboxes +INBOX \
+          +archive \
+          +drafts \
+          +sent \
+          +junk \
+
+# Other special folders.
+set mbox      = "+archive"
+set postponed = "+drafts"
+set record    = "+sent"
+#
+# Index Key Bindings ---------------------------------
+#
+# Sync email
+macro index O "<shell-escape>offlineimap -a protonmail<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -a protonmail -qf INBOX<enter>" "run offlineimap to sync inbox"
+#
+# Compose View Options -------------------------------
+set from     = "bryanjswift@protonmail.com"
+set sendmail = "/usr/local/bin/msmtp -a protonmail"

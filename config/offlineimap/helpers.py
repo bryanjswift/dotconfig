@@ -101,6 +101,10 @@ def should_sync_fastmail(folder):
 def is_airmail_folder(folder):
     return folder.startswith('[Airmail]')
 
+# Checks if the name of folder is 'All'
+def is_protonmail_all_folder(folder):
+    return folder.endswith('All Mail')
+
 # Offlineimap methods for fastmail.fm accounts
 def fastmail_remote(folder):
     return remote_lowered(folder)
@@ -111,6 +115,25 @@ def fastmail_local(folder):
         'sent':      'INBOX.Sent Items',
     }
     return local_capitalized(folder, mapping, 'INBOX.')
+
+# Offlineimap methods for protonmail accounts
+def protonmail_mapping():
+    return {
+        'All Mail': 'all',
+        'Archive': 'archive',
+        'Sent': 'sent',
+        'Spam': 'spam',
+        'Trash': 'trash',
+    }
+
+def protonmail_remote(folder):
+    mapping = protonmail_mapping()
+    return mapping.get(folder, folder)
+
+def protonmail_local(folder):
+    m = protonmail_mapping()
+    mapping = dict(zip(m.values(), m.keys()))
+    return mapping.get(folder, folder)
 
 # Offlineimap methods for lynr.co accounts
 # Uses `remote_lowered` but the remote mailboxes aren't preceded by 'INBOX.'
