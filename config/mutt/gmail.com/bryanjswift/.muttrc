@@ -22,13 +22,9 @@ set spoolfile = "+INBOX"
 # Mailboxes to show in the sidebar.
 mailboxes +INBOX \
           +starred \
-          +important \
           +archive \
-          +taxes.2014 \
-          +taxes.2015 \
           +drafts \
           +sent \
-          +junk \
 
 # Other special folders.
 set mbox      = "+archive"
