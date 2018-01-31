@@ -135,7 +135,6 @@ def should_sync_fastmail(folder):
 def should_sync_gmail(folder):
     return not folder == '[Gmail]/Spam' \
         and not folder == '[Gmail]/Important' \
-        and not folder == '[Gmail]/Starred' \
         and not folder == '[Gmail]/Trash' \
         and not folder.startswith('freelance') \
         and not folder.startswith('lynr') \
@@ -148,7 +147,6 @@ def should_sync_gmail(folder):
 def should_sync_siberia(folder):
     return not folder == '[Gmail]/Spam' \
         and not folder == '[Gmail]/Important' \
-        and not folder == '[Gmail]/Starred' \
         and not folder == '[Gmail]/Trash' \
         and not folder.startswith('[Readdle]') \
         and not folder.startswith('avis') \
