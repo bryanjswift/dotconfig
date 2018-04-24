@@ -64,9 +64,6 @@
 [submodule "vim/bundle/vim-gradle"]
 	path = vim/bundle/vim-gradle
 	url = git://github.com/tfnico/vim-gradle.git
-[submodule "vim/bundle/vim-autotag"]
-	path = vim/bundle/vim-autotag
-	url = git://github.com/craigemery/vim-autotag.git
 [submodule "vim/bundle/vim-reason-plus"]
 	path = vim/bundle/vim-reason-plus
 	url = git@github.com:reasonml-editor/vim-reason-plus.git
