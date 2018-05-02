@@ -67,6 +67,3 @@
 [submodule "vim/bundle/vim-reason-plus"]
 	path = vim/bundle/vim-reason-plus
 	url = git@github.com:reasonml-editor/vim-reason-plus.git
-[submodule "vim/bundle/vim-flow"]
-	path = vim/bundle/vim-flow
-	url = git://github.com/flowtype/vim-flow.git
