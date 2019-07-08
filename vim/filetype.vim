@@ -15,3 +15,7 @@ augroup END
 augroup velocity
   au! BufRead,BufNewFile *.vm               set ft=velocity
 augroup END
+
+augroup svelte
+  au! BufRead,BufNewFile *.svelte           set ft=html
+augroup END
