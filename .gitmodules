@@ -67,3 +67,6 @@
 [submodule "vim/bundle/vim-reason-plus"]
 	path = vim/bundle/vim-reason-plus
 	url = git@github.com:reasonml-editor/vim-reason-plus.git
+[submodule "vim/bundle/ale"]
+	path = vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
