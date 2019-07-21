@@ -92,7 +92,11 @@ set secure
 " ** Plugin Mappings ** "
 " Show line numbers on netrw directory listings
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+let g:polyglot_disabled = ['git']
+" Format rust files (.rs) on save
+let g:rustfmt_autosave = 1
 
 source $DOTCONFIG/vim/conf/lightline.vim
 source $DOTCONFIG/vim/conf/ctrlp.vim
 source $DOTCONFIG/vim/conf/jsx.vim
+source $DOTCONFIG/vim/conf/rust.vim
