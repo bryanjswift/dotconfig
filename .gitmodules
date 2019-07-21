@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-lsp"]
 	path = vim/bundle/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "vim/bundle/vim-racer"]
+	path = vim/bundle/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git
