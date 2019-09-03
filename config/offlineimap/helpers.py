@@ -8,7 +8,7 @@ def get_keychain_pass(account=None, server=None):
         'command': 'find-internet-password',
         'account': account,
         'server': server,
-        'keychain': os.environ['HOME'] + '/Library/Keychains/login.keychain',
+        'keychain': os.environ['HOME'] + '/Library/Keychains/offlineimap.keychain',
     }
     command = "sudo -u " + os.environ['USER'] + " %(security)s -v %(command)s -g -a %(account)s -s %(server)s %(keychain)s" % params
     output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
