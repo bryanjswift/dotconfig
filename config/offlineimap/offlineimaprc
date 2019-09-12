@@ -96,6 +96,7 @@ auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
 maxconnections = 1
 type = Gmail
 ssl = yes
+ssl_version = tls1_2
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
 starttls = no
 oauth2_access_token_eval = get_access_token("bryan@siberia.io")
