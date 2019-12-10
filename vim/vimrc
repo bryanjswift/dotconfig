@@ -98,3 +98,4 @@ source $DOTCONFIG/vim/conf/lightline.vim
 source $DOTCONFIG/vim/conf/ctrlp.vim
 source $DOTCONFIG/vim/conf/jsx.vim
 source $DOTCONFIG/vim/conf/rust.vim
+source $DOTCONFIG/vim/conf/vista.vim
