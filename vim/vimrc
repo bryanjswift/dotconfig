@@ -100,6 +100,7 @@ source $DOTCONFIG/vim/conf/lightline.vim
 source $DOTCONFIG/vim/conf/ctrlp.vim
 source $DOTCONFIG/vim/conf/fzf.vim
 source $DOTCONFIG/vim/conf/jsx.vim
+source $DOTCONFIG/vim/conf/ruby.vim
 source $DOTCONFIG/vim/conf/rust.vim
 source $DOTCONFIG/vim/conf/typescript.vim
 source $DOTCONFIG/vim/conf/vista.vim
