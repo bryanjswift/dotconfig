@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-racer"]
 	path = vim/pack/main/start/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git
+[submodule "vim/pack/main/start/vista-vim"]
+	path = vim/pack/main/start/vista-vim
+	url = https://github.com/liuchengxu/vista.vim.git
