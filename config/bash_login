@@ -80,11 +80,15 @@ fi
 if hash rbenv 2>/dev/null; then
   source $DOTCONFIG/config/bash/rbenv.bashrc
 fi
+# if both fzf is on the path include fzf customizations
+if hash fzf 2>/dev/null; then
+  source $DOTCONFIG/config/bash/fzf.bashrc
+fi
 # If gpg-agent is on the path then include the things that enable gpg-agent
 if hash gpg-agent 2>/dev/null; then
   source $DOTCONFIG/config/bash/gpg.bashrc
 fi
 # If go is on the path then include the things that support golang
-if hash gpg-agent 2>/dev/null; then
+if hash go 2>/dev/null; then
   source $DOTCONFIG/config/bash/golang.bashrc
 fi
