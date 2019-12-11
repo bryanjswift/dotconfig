@@ -19,6 +19,3 @@ let g:vista_finder_alternative_executives = ['ctags']
 
 " Do not try to show icons
 let g:vista#renderer#enable_icon = 0
-
-" search "tags" or symbols with Vista
-nnoremap <leader>t :Vista finder<cr>

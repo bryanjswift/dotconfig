@@ -24,15 +24,6 @@ colorscheme solarized
 set backspace=indent,eol,start
 " reduce leader timeout from 1000ms
 set timeoutlen=350
-" map shortcuts
-" relative line numbers
-map <D-r> :set relativenumber<CR>
-map <D-R> :set norelativenumber<CR>
-" easier split navigation
-map <down> <C-w><down>
-map <up> <C-w><up>
-map <left> <C-w><left>
-map <right> <C-w><right>
 " shortcuts for javascript and PHP ftplugin
 map <leader>zff zE:FoldFunctions<CR>
 function! ShowSyntax()
@@ -105,3 +96,5 @@ source $DOTCONFIG/vim/conf/ruby.vim
 source $DOTCONFIG/vim/conf/rust.vim
 source $DOTCONFIG/vim/conf/typescript.vim
 source $DOTCONFIG/vim/conf/vista.vim
+
+source $DOTCONFIG/vim/conf/keymap.vim
