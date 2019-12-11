@@ -8,6 +8,15 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 " See all the avaliable executives via `:echo g:vista#executives`.
 let g:vista_default_executive = 'vim_lsp'
 
+" Position the vista sidebar on the left
+let g:vista_sidebar_position = 'vertical topleft'
+
+" Close the vista window when selecting a tag
+let g:vista_close_on_jump = 1
+
+" Fallback to ctags if `vim_lsp` isn't available or returns no results
+let g:vista_finder_alternative_executives = ['ctags']
+
 " Do not try to show icons
 let g:vista#renderer#enable_icon = 0
 
