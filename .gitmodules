@@ -31,9 +31,6 @@
 [submodule "vim/bundle/vim-rust"]
 	path = vim/bundle/vim-rust
 	url = git://github.com/bryanjswift/vim-rust.git
-[submodule "vim/bundle/ctrlp-vim"]
-	path = vim/pack/main/start/ctrlp-vim
-	url = git://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/bundle/vim-puppet"]
 	path = vim/bundle/vim-puppet
 	url = git://github.com/bryanjswift/vim-puppet.git
