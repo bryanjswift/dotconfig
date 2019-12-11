@@ -76,3 +76,6 @@
 [submodule "vim/pack/main/start/fzf"]
 	path = vim/pack/main/start/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/main/start/asyncomplete-vim"]
+	path = vim/pack/main/start/asyncomplete-vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
