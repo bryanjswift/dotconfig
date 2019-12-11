@@ -13,9 +13,15 @@ map <right> <C-w><right>
 " fzf
 "
 " search project files
-nnoremap <leader>p :FZF<cr>
+nnoremap <leader>p :Files<cr>
+"" ctrl-p binding for files
+nnoremap <C-p> :Files<cr>
 " search open files/buffers
 nnoremap <leader>b :Buffers<cr>
+" search open files/buffers
+nnoremap <leader><space> :Buffers<cr>
+" search availble commands
+nnoremap <D-P> :Commands<cr>
 
 " vim-lsp
 "
@@ -23,9 +29,13 @@ nnoremap <leader>b :Buffers<cr>
 " nnoremap <leader>t :LspDocumentSymbol<cr>
 
 " search symbols in project
-nnoremap <leader>o :LspWorkspaceSymbol<cr>
+nnoremap <leader>i :LspWorkspaceSymbol<cr>
+"" ctrl-shift-o binding for workspace symbols
+nnoremap <C-i> :LspWorkspaceSymbol<cr>
 
 " vista
 "
 " search "tags" or symbols with Vista
-nnoremap <leader>t :Vista finder<cr>
+nnoremap <leader>o :Vista finder<cr>
+"" ctrl-t binding for tags
+nnoremap <C-o> :Vista finder<cr>
