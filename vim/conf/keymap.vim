@@ -10,6 +10,10 @@ map <up> <C-w><up>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
+" asyncomplete
+"
+imap <C-space> <plug>(asyncomplete_force_refresh)
+
 " fzf
 "
 " search project files
