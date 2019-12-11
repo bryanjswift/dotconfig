@@ -79,3 +79,6 @@
 [submodule "vim/pack/main/start/asyncomplete-vim"]
 	path = vim/pack/main/start/asyncomplete-vim
 	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "vim/pack/main/start/asyncomplete-lsp"]
+	path = vim/pack/main/start/asyncomplete-lsp
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
