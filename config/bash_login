@@ -60,16 +60,6 @@ export ORIG_PATH=$PATH
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
 export PATH=/usr/local/share/npm/bin:$PATH # Add NPM globals to PATH
 
-###### bash autocomplete ######
-# Maven autocomplete
-if [ -f $DOTCONFIG/bash-completion/maven_bash_completion.bash ]; then
-  . $DOTCONFIG/bash-completion/maven_bash_completion.bash
-fi
-# Heroku (hk) autocomplete
-if [ -f $DOTCONFIG/bash-completion/hk-bash-completion.sh ]; then
-  . $DOTCONFIG/bash-completion/hk-bash-completion.sh
-fi
-
 source $DOTCONFIG/config/bash/ec2.bashrc
 source $DOTCONFIG/config/bash/jvm.bashrc
 # If brew is on the path then include rbenv settings
