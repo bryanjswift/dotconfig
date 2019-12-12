@@ -46,8 +46,6 @@ if [ ! -n "$DOTCONFIG" ]; then
 fi
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
-# catalog files for compiling man pages
-export XML_CATALOG_FILES="/opt/local/share/xml/docbook/4.2/catalog.xml /opt/local/share/xsl/docbook-xsl/catalog.xml"
 
 ###### Aliases ######
 alias byword='open -a /Applications/Byword.app'
