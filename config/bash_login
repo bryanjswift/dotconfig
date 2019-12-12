@@ -47,11 +47,6 @@ fi
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
 
-###### Aliases ######
-alias byword='open -a /Applications/Byword.app'
-alias marked2='open -a /Applications/Marked\ 2.app'
-alias today="watson report --day --no-pager"
-
 ###### Path ######
 export ORIG_PATH=$PATH
 # add to the path
