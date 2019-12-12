@@ -51,7 +51,6 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 export ORIG_PATH=$PATH
 # add to the path
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
-export PATH=/usr/local/share/npm/bin:$PATH # Add NPM globals to PATH
 
 source $DOTCONFIG/config/bash/ec2.bashrc
 source $DOTCONFIG/config/bash/jvm.bashrc
