@@ -53,7 +53,6 @@ export ORIG_PATH=$PATH
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
 
 source $DOTCONFIG/config/bash/ec2.bashrc
-source $DOTCONFIG/config/bash/jvm.bashrc
 # If brew is on the path then include rbenv settings
 if hash brew 2>/dev/null; then
   source $DOTCONFIG/config/bash/brew.bashrc
