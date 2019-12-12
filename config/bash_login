@@ -13,9 +13,6 @@ function get_git_branch {
   git branch | awk '/^\*/ { print substr($0, 3, (length - 2)) }'
 }
 function get_git_tag {
-  #git name-rev HEAD --tags --name-only | grep -v '^undefined$' | awk '/(^.*?)(\^0)?$/ { printf " ["; printf $1; print "]"; }'
-  #git describe HEAD | grep -v 'fatal:' | perl -p -i -e "s/^(.*?)(-[0-9]+-g[a-zA-Z0-9]+)?$/ [\$1]/"
-  #git describe --exact-match HEAD 2>&1 | grep -v 'fatal' | awk '{ printf " ["; printf $1; print "] "; }'
   git tag --points-at=HEAD | awk '{ printf " ["; printf $1; print "] "; }'
 }
 function get_git_dirty {
