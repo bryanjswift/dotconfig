@@ -46,7 +46,7 @@ ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
 remotehost = imap.fastmail.com
 remoteuser = bryanjswift@fastmail.fm
-remotepasseval = get_keychain_pass(account="bryanjswift@fastmail.fm", server="mail.messagingengine.com")
+remotepasseval = get_1password_pass(account="bryanjswift@fastmail.fm", server="imap://mail.messagingengine.com")
 nametrans = lambda folder: fastmail_remote(folder)
 folderfilter = lambda folder: should_sync_fastmail(folder)
 
@@ -69,7 +69,7 @@ oauth2_refresh_token_eval = get_refresh_token("bryan.j.swift@gmail.com")
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
 remotehost = imap.gmail.com
 remoteuser = bryan.j.swift@gmail.com
-remotepasseval = get_keychain_pass(account="bryan.j.swift@gmail.com", server="imap.gmail.com")
+remotepasseval = get_1password_pass(account="bryan.j.swift@gmail.com", server="imap://imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: should_sync_gmail(folder)
 
@@ -86,7 +86,7 @@ sslcacertfile = /Volumes/Mail/ca-bundle.crt
 remotehost = 127.0.0.1
 remoteport = 1143
 remoteuser = bryanjswift@protonmail.com
-remotepasseval = get_keychain_pass(account="bryanjswift@protonmail.com", server="mail.protonmail.com")
+remotepasseval = get_1password_pass(account="bryanjswift@protonmail.com", server="imap://mail.protonmail.com")
 nametrans = lambda folder: protonmail_remote(folder)
 folderfilter = lambda folder: not is_protonmail_all_folder(folder)
 
@@ -110,7 +110,7 @@ oauth2_refresh_token_eval = get_refresh_token("bryan@siberia.io")
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
 remotehost = imap.gmail.com
 remoteuser = bryan@siberia.io
-remotepasseval = get_keychain_pass(account="bryan@siberia.io", server="imap.gmail.com")
+remotepasseval = get_1password_pass(account="bryan@siberia.io", server="imap://imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: should_sync_siberia(folder)
 
@@ -126,7 +126,7 @@ ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
 remotehost = imap.gmail.com
 remoteuser = bswift@swift-work.com
-remotepasseval = get_keychain_pass(account="bswift@swift-work.com", server="imap.gmail.com")
+remotepasseval = get_1password_pass(account="bswift@swift-work.com", server="imap://imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
 
@@ -142,6 +142,6 @@ ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
 remotehost = imap.gmail.com
 remoteuser = bryan@ticketevolution.com
-remotepasseval = get_keychain_pass(account="bryan@ticketevolution.com", server="imap.gmail.com")
+remotepasseval = get_1password_pass(account="bryan@ticketevolution.com", server="imap://imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)

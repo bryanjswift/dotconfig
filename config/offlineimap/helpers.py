@@ -1,33 +1,53 @@
 #!/usr/bin/python
-import os, re, subprocess
+import os, re, subprocess, sys
 
-# Get a password out of the system keychain
-def get_keychain_pass(account=None, server=None):
+# Requires a signed in 1password account and the 1password command line tool
+# See https://support.1password.com/command-line/
+#
+# **Params**
+# * `account` - matches the title of the 1password item
+# * `server` - matches the url of the 1password item
+#
+# **Returns** the UUID of the 1password item
+#
+def get_1password_uuid(account=None, server=None):
     params = {
-        'security': '/usr/bin/security',
-        'command': 'find-internet-password',
         'account': account,
         'server': server,
-        'keychain': os.environ['HOME'] + '/Library/Keychains/offlineimap.keychain',
     }
-    command = "sudo -u " + os.environ['USER'] + " %(security)s -v %(command)s -g -a %(account)s -s %(server)s %(keychain)s" % params
+    command = "op list items --vault=offlineimap | jq -r '.[] | select(.overview.url == \"%(server)s\" and .overview.title == \"%(account)s\").uuid'" % params
     output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
-    outtext = [l for l in output.splitlines()
-               if l.startswith('password: ')][0]
+    return output.splitlines()[0]
 
-    return re.match(r'password: "(.*)"', outtext).group(1)
+# Requires a signed in 1password account and the 1password command line tool
+# See https://support.1password.com/command-line/
+#
+# **Params**
+# `account` - matches the title of the 1password item
+# `server` - matches the url of the 1password item
+#
+# **Returns** the pasword value associated with the `account` and `server`.
+#
+def get_1password_pass(account=None, server=None):
+    params = {
+        'uuid': get_1password_uuid(account, server),
+    }
+    uuid = get_1password_uuid(account, server)
+    command = "op get item --vault=offlineimap --fields=password %(uuid)s" % params
+    output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
+    return output.splitlines()[0]
 
 def get_access_token(account=None):
-    return bytearray(get_keychain_pass(account, "oauth2-access.gmail.com"))
+    return bytearray(get_1password_pass(account, "https://oauth2-access.gmail.com"))
 
 def get_client_id(account=None):
-    return get_keychain_pass(account, "oauth2-client.gmail.com")
+    return get_1password_pass(account, "https://oauth2-client.gmail.com")
 
 def get_client_secret(account=None):
-    return get_keychain_pass(account, "oauth2-secret.gmail.com")
+    return get_1password_pass(account, "https://oauth2-secret.gmail.com")
 
 def get_refresh_token(account=None):
-    return bytearray(get_keychain_pass(account, "oauth2-refresh.gmail.com"))
+    return bytearray(get_1password_pass(account, "https://oauth2-refresh.gmail.com"))
 
 # Take a folder name that is not 'INBOX' then:
 # 1. remove prefixed 'INBOX.'
@@ -156,3 +176,16 @@ def should_sync_siberia(folder):
         and not folder.startswith('dated') \
         and not folder.startswith('intel') \
         and not is_airmail_folder(folder)
+
+def main(account=None, server=None):
+    if account == None:
+        print 'Account must be provided to retrieve password.'
+        sys.exit(1)
+    elif server == None:
+        print 'Server must be provided to retrieve password.'
+        sys.exit(1)
+    else:
+        print get_1password_pass(account, server)
+
+if __name__ == "__main__":
+    main(account=sys.argv[1], server=sys.argv[2])
