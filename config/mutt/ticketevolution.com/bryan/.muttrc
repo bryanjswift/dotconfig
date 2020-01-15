@@ -1,0 +1,40 @@
+# Load global defaults
+source $HOME/Documents/code/dotconfig/config/mutt/muttrc
+
+# * Override globals *
+# Status Bar -----------------------------------------
+set status_format = "%f%r [ %m msgs%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%> %?p?( %p postponed )?  bryan@ticketevolution.com"
+# Compose View Options -------------------------------
+unset copy   # Don't copy sent mail, gmail does this
+
+#
+# Paths ----------------------------------------------
+set folder           = /Volumes/Mail/ticketevolution.com/bryan  # mailbox location
+#
+# Account Settings -----------------------------------
+#
+# Default inbox.
+set spoolfile = "+INBOX"
+# Mailboxes to show in the sidebar.
+mailboxes +INBOX \
+          +starred \
+          +important \
+          +archive \
+          +drafts \
+          +sent \
+          +junk \
+
+# Other special folders.
+set mbox      = "+archive"
+set postponed = "+drafts"
+set record    = "+sent"
+#
+# Index Key Bindings ---------------------------------
+#
+# Sync email
+macro index O "<shell-escape>offlineimap -a ticketevolution<enter>"           "run offlineimap to sync mail"
+macro index o "<shell-escape>offlineimap -a ticketevolution -qf INBOX<enter>" "run offlineimap to sync inbox"
+#
+# Compose View Options -------------------------------
+set from     = "bryan@ticketevolution.com"
+set sendmail = "/usr/local/bin/msmtp -a bryan-ticketevolutioncom"
