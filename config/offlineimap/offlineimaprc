@@ -30,6 +30,10 @@ remoterepository = siberia-remote
 localrepository = swiftwork-local
 remoterepository = swiftwork-remote
 
+[Account ticketevolution]
+localrepository = ticketevolution-local
+remoterepository = ticketevolution-remote
+
 [Repository fastmail-local]
 type = Maildir
 localfolders = /Volumes/Mail/fastmail.fm/bryanjswift
@@ -123,5 +127,21 @@ sslcacertfile = /Volumes/Mail/ca-bundle.crt
 remotehost = imap.gmail.com
 remoteuser = bswift@swift-work.com
 remotepasseval = get_keychain_pass(account="bswift@swift-work.com", server="imap.gmail.com")
+nametrans = lambda folder: gmail_remote(folder)
+folderfilter = lambda folder: not is_airmail_folder(folder)
+
+[Repository ticketevolution-local]
+type = Maildir
+localfolders = /Volumes/Mail/ticketevolution.com/bryan
+nametrans = lambda folder: gmail_local(folder)
+
+[Repository ticketevolution-remote]
+maxconnections = 1
+type = Gmail
+ssl = yes
+sslcacertfile = /Volumes/Mail/ca-bundle.crt
+remotehost = imap.gmail.com
+remoteuser = bryan@ticketevolution.com
+remotepasseval = get_keychain_pass(account="bryan@ticketevolution.com", server="imap.gmail.com")
 nametrans = lambda folder: gmail_remote(folder)
 folderfilter = lambda folder: not is_airmail_folder(folder)
