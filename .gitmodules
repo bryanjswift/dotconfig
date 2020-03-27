@@ -4,9 +4,6 @@
 [submodule "vim-colors-solorized"]
 	path = vim/pack/main/start/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-gundo"]
-	path = vim/pack/main/start/gundo
-	url = http://github.com/sjl/gundo.vim.git
 [submodule "vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
