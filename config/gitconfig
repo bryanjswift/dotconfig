@@ -4,7 +4,16 @@
 	quotepath = false
 [user]
 	name = Bryan Swift
-	email = mail@bryanwrit.es
+	useConfigOnly = true
+[user "default"]
+	email = bryan@bryanjswift.com
+	signingkey = A439647CC2234E86D25D94496FD4B193F9A56D56
+[user "tevo"]
+	email = bryan@ticketevolution.com
+	signingkey = D4EE9EB5CCE323A1FAFC123DC7A55865A1088B7D
+[user "siberia"]
+	email = bryan@siberia.io
+	signingkey = D4EE9EB5CCE323A1FAFC123DC7A55865A1088B7D
 [github]
 	user = bryanjswift
 [alias]
@@ -23,6 +32,7 @@
 	select    = !git st | fzf | cut -c4-
 	st        = status -s -b
 	unassume  = update-index --no-assume-unchanged
+	identity  = "! git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
 [push]
 	default = current
 [merge]
