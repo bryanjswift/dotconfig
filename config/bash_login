@@ -35,15 +35,19 @@ function ps1_git_info {
   fi
 }
 function ps1_with_host {
-  export PS1="\h$YELLOW \w$NONE$(ps1_git_info): "
+  PS1="\h$YELLOW \w$NONE$(ps1_git_info): "
 }
 function ps1_with_node {
+  function get_node_hex {
+    echo -n "${GREEN}⬢ ${NONE}$(node -v)"
+  }
   # Get the current, active, version of node
   function get_node_version {
     hash node 2>/dev/null \
-      && node -v
+      && get_node_hex \
+      || echo "\h"
   }
-  export PS1="${PURPLE}$(get_node_version)${YELLOW} \w$NONE$(ps1_git_info): "
+  PS1="$(get_node_version)${YELLOW} \w$NONE$(ps1_git_info): "
 }
 
 PROMPT_COMMAND=ps1_with_host
