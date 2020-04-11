@@ -16,7 +16,7 @@ function ps1_git_info {
   }
   # Find any tags that point at the current HEAD commit
   function get_git_tag {
-    git tag --points-at=HEAD | awk '{ printf " ["; printf $1; print "] "; }'
+    git tag --points-at=HEAD | awk '{ printf "["; printf $1; print "]"; }'
   }
   # Determine if there are uncommitted changes
   function get_git_dirty {
