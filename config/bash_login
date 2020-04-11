@@ -49,6 +49,17 @@ function ps1_with_node {
   }
   PS1="$(get_node_version)${YELLOW} \w$NONE$(ps1_git_info): "
 }
+function ps1_with_python {
+  function get_python_version {
+    echo -n "🐍 $(python --version 2>&1 | cut -d' ' -f2)"
+  }
+  function get_python_info {
+    hash python 2>/dev/null \
+      && get_python_version \
+      || "\h"
+  }
+  PS1="$(get_python_info)${YELLOW} \w$NONE$(ps1_git_info): "
+}
 
 PROMPT_COMMAND=ps1_with_host
 
