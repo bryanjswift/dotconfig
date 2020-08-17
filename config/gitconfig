@@ -8,6 +8,9 @@
 [user "default"]
 	email = bryan@bryanjswift.com
 	signingkey = A439647CC2234E86D25D94496FD4B193F9A56D56
+[user "cof"]
+	email = bryan.swift@capitalone.com
+	signingkey = D4EE9EB5CCE323A1FAFC123DC7A55865A1088B7D
 [user "tevo"]
 	email = bryan@ticketevolution.com
 	signingkey = D4EE9EB5CCE323A1FAFC123DC7A55865A1088B7D
