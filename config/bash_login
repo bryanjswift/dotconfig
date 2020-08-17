@@ -104,7 +104,7 @@ if hash go 2>/dev/null; then
   source $DOTCONFIG/config/bash/golang.bashrc
 fi
 # If java is installed then include Java things
-if java -version 2>/dev/null; then
+if hash java 2>/dev/null; then
   source $DOTCONFIG/config/bash/java.bashrc
 fi
 # if starship is on the path initialize starship
