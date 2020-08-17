@@ -107,3 +107,7 @@ fi
 if java -version 2>/dev/null; then
   source $DOTCONFIG/config/bash/java.bashrc
 fi
+# if starship is on the path initialize starship
+if hash starship 2>/dev/null; then
+  source $DOTCONFIG/config/bash/starship.bashrc
+fi

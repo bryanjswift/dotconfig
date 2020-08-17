@@ -52,6 +52,12 @@ if `.bash_login` doesn't already exist.
     # Include the bash_login file from dotfiles
     echo "source \$HOME/Documents/code/dotconfig/config/bash_login" > ~/.profile
 
+## [starship](https://starship.rs)
+
+    # Link the starship configuration.
+    mkdir -p ~/.config
+    ln -s $HOME/Documents/code/dotconfig/config/starship.toml ~/.config/starship.toml
+
 ## vim
 
     # Link the vim directory from dotfiles to $HOME

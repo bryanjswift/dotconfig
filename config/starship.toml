@@ -1,0 +1,14 @@
+[aws]
+symbol = "☁ "
+disabled = true
+
+[nodejs]
+symbol = "⬢ "
+
+[git_status]
+deleted = ""
+modified = "*"
+renamed = ""
+stashed = ""
+untracked = ""
+style = "bold green"
