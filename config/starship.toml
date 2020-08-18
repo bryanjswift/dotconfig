@@ -1,6 +1,6 @@
 [aws]
 symbol = "☁ "
-disabled = true
+displayed_items = "profile"
 
 [nodejs]
 symbol = "⬢ "
