@@ -1,75 +1,45 @@
-[submodule "vim-pathogen"]
-	path = vim-pathogen
-	url = git://github.com/tpope/vim-pathogen.git
-[submodule "vim-colors-solorized"]
-	path = vim/pack/main/start/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-rails"]
-	path = vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule "vim-rooter"]
-	path = vim/pack/main/start/vim-rooter
-	url = git://github.com/airblade/vim-rooter.git
-[submodule "vim-surround"]
-	path = vim/pack/main/start/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/vim-less"]
-	path = vim/bundle/vim-less
-	url = git://github.com/groenewege/vim-less.git
-[submodule "vim/bundle/vim-scala"]
-	path = vim/bundle/vim-scala
-	url = git://github.com/derekwyatt/vim-scala.git
-[submodule "vim/bundle/vim-rust"]
-	path = vim/bundle/vim-rust
-	url = git://github.com/bryanjswift/vim-rust.git
-[submodule "vim/bundle/vim-puppet"]
-	path = vim/bundle/vim-puppet
-	url = git://github.com/bryanjswift/vim-puppet.git
-[submodule "vim/bundle/vim-ruby"]
-	path = vim/bundle/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/bundle/vim-golang"]
-	path = vim/bundle/vim-golang
-	url = git://github.com/jnwhiteh/vim-golang.git
-[submodule "vim/bundle/vim-vinegar"]
-	path = vim/pack/main/start/vim-vinegar
-	url = git://github.com/tpope/vim-vinegar.git
-[submodule "vim/bundle/vim-elixir"]
-	path = vim/bundle/vim-elixir
-	url = git://github.com/elixir-lang/vim-elixir.git
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "vim/bundle/vim-polyglot"]
-	path = vim/pack/main/start/vim-polyglot
-	url = git://github.com/sheerun/vim-polyglot.git
-[submodule "vim/bundle/vim-lightline"]
-	path = vim/pack/main/start/vim-lightline
-	url = git://github.com/itchyny/lightline.vim.git
-[submodule "vim/bundle/vim-gradle"]
-	path = vim/pack/main/start/vim-gradle
-	url = git://github.com/tfnico/vim-gradle.git
-[submodule "vim/bundle/async-vim"]
+[submodule "async-vim"]
 	path = vim/pack/main/start/async-vim
 	url = https://github.com/prabirshrestha/async.vim.git
-[submodule "vim/bundle/vim-lsp"]
-	path = vim/pack/main/start/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp.git
-[submodule "vim/bundle/vim-racer"]
-	path = vim/pack/main/start/vim-racer
-	url = https://github.com/racer-rust/vim-racer.git
-[submodule "vim/pack/main/start/vista-vim"]
-	path = vim/pack/main/start/vista-vim
-	url = https://github.com/liuchengxu/vista.vim.git
-[submodule "vim/pack/main/start/fzf-vim"]
-	path = vim/pack/main/start/fzf-vim
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule "vim/pack/main/start/fzf"]
-	path = vim/pack/main/start/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "vim/pack/main/start/asyncomplete-vim"]
-	path = vim/pack/main/start/asyncomplete-vim
-	url = https://github.com/prabirshrestha/asyncomplete.vim.git
-[submodule "vim/pack/main/start/asyncomplete-lsp"]
+[submodule "asyncomplete-lsp"]
 	path = vim/pack/main/start/asyncomplete-lsp
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "asyncomplete-vim"]
+	path = vim/pack/main/start/asyncomplete-vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "fzf"]
+	path = vim/pack/main/start/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "fzf-vim"]
+	path = vim/pack/main/start/fzf-vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim-colors-solarized"]
+	path = vim/pack/main/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim-gradle"]
+	path = vim/pack/main/start/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git
+[submodule "vim-lightline"]
+	path = vim/pack/main/start/vim-lightline
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "vim-lsp"]
+	path = vim/pack/main/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "vim-polyglot"]
+	path = vim/pack/main/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim-racer"]
+	path = vim/pack/main/start/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git
+[submodule "vim-rooter"]
+	path = vim/pack/main/start/vim-rooter
+	url = https://github.com/airblade/vim-rooter.git
+[submodule "vim-surround"]
+	path = vim/pack/main/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim-vinegar"]
+	path = vim/pack/main/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+[submodule "vista-vim"]
+	path = vim/pack/main/start/vista-vim
+	url = https://github.com/liuchengxu/vista.vim.git
