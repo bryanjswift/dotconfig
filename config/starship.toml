@@ -12,3 +12,6 @@ modified = "*"
 renamed = ""
 stashed = ""
 style = "bold red"
+
+[package]
+disabled = true
