@@ -4,10 +4,11 @@ displayed_items = "profile"
 
 [nodejs]
 symbol = "⬢ "
+style = "green"
 
 [git_status]
 deleted = ""
 modified = "*"
 renamed = ""
 stashed = ""
-style = "bold green"
+style = "bold red"
