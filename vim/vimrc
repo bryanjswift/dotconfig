@@ -2,9 +2,6 @@
 let mapleader = " "
 " This must be first, because it changes other options as side effect
 set nocompatible
-" run pathogen
-call pathogen#helptags()
-call pathogen#infect()
 " Allow buffer changes to persist in background (without saving first)
 set hidden
 " first the disabled features due to security concerns
