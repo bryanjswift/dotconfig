@@ -36,20 +36,20 @@ def get_refresh_token(account=None):
 # 1. return the first part of the split
 def remote_lowered(folder):
     if folder == 'INBOX':
-      return folder
+        return folder
     else:
-      return folder.replace('INBOX.', '').lower().split(' ')[0]
+        return folder.replace('INBOX.', '').lower().split(' ')[0]
 
 # Take a folder name that is not 'INBOX' then:
 # If folder in mapping.keys() return the corresponding value
 # If folder not in mapping.keys() return folder with the first letter capitalized
 def local_capitalized(folder, mapping={}, prefix=''):
     if folder == 'INBOX':
-      return folder
+        return folder
     elif folder in mapping.keys():
-      return mapping.get(folder)
+        return mapping.get(folder)
     else:
-      return prefix + folder.capitalize()
+        return folder.capitalize()
 
 # Provide a mapping of common [Gmail] folders
 def gmail_mapping():
@@ -87,8 +87,8 @@ def fastmail_remote(folder):
 
 def fastmail_local(folder):
     mapping = {
-        'junk':      'INBOX.Junk Mail',
-        'sent':      'INBOX.Sent Items',
+        'junk':      'Junk Mail',
+        'sent':      'Sent Items',
     }
     return local_capitalized(folder, mapping, 'INBOX.')
 
