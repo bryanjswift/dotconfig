@@ -43,3 +43,6 @@
 [submodule "vista-vim"]
 	path = vim/pack/main/start/vista-vim
 	url = https://github.com/liuchengxu/vista.vim.git
+[submodule "vim-lsp-settings"]
+	path = vim/pack/main/start/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git

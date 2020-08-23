@@ -1,4 +1,7 @@
-" Add pyls as a language server protocol
+" vim-lsp
+"
+" Add keybindings for use with a python language server. Language server setup
+" is expected to be managed by another plugin
 if executable('pyls')
     augroup LspPython
         au User lsp_setup call lsp#register_server({
