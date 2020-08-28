@@ -27,12 +27,14 @@ so require a root or sudo password.
 
 [adoptopenjdk]: https://adoptopenjdk.net
 
-To set a specific JDK version
+To set a specific JDK version, see [homebrew-openjdk][homebrew-openjdk].
 
     # adoptopenjdk8 = version 1.8
     # adoptopenjdk11 = version 11
     # adoptopenjdk14 = version 14
     export JAVA_HOME=$(/usr/libexec/java_home -v <version>
+
+[homebrew-openjdk]: https://github.com/AdoptOpenJDK/homebrew-openjdk
 
 ## Ruby
 
