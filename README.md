@@ -15,16 +15,24 @@ Install the basic tools:
 
 If Java is not installed `java -version` (on macOS) will open a window linking
 to the installer. There are alternatives available in Homebrew such as
-[AdoptOpenJDK][adoptopenjdk].
+[AdoptOpenJDK][adoptopenjdk]. The adoptopenjdk formulae run package installers
+so require a root or sudo password.
 
-    # Show the available JDK options
-    brew search jdk
     # Access adoptopenjdk formulae
     brew tap adoptopenjdk/openjdk
     # Install the latest from adoptopenjdk
     brew cask install adoptopenjdk
+    # Install useful versions for lambda development
+    brew cask install adoptopenjdk8 adoptopenjdk11 adoptopenjdk14
 
 [adoptopenjdk]: https://adoptopenjdk.net
+
+To set a specific JDK version
+
+    # adoptopenjdk8 = version 1.8
+    # adoptopenjdk11 = version 11
+    # adoptopenjdk14 = version 14
+    export JAVA_HOME=$(/usr/libexec/java_home -v <version>
 
 ## Ruby
 
