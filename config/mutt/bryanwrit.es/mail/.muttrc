@@ -19,7 +19,9 @@ set spoolfile = "+INBOX"
 # Mailboxes to show in the sidebar.
 mailboxes +INBOX \
           +archive \
-          +archive.taxes-2018 \
+          +archive.moving-2020 \
+          +archive.taxes-2019 \
+          +archive.taxes-2020 \
           +archive.travel \
           +drafts \
           +sent \
