@@ -28,9 +28,6 @@
 [submodule "vim-polyglot"]
 	path = vim/pack/main/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "vim-racer"]
-	path = vim/pack/main/start/vim-racer
-	url = https://github.com/racer-rust/vim-racer.git
 [submodule "vim-rooter"]
 	path = vim/pack/main/start/vim-rooter
 	url = https://github.com/airblade/vim-rooter.git
