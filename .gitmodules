@@ -16,9 +16,6 @@
 [submodule "vim-colors-solarized"]
 	path = vim/pack/main/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-gradle"]
-	path = vim/pack/main/start/vim-gradle
-	url = https://github.com/tfnico/vim-gradle.git
 [submodule "vim-lightline"]
 	path = vim/pack/main/start/vim-lightline
 	url = https://github.com/itchyny/lightline.vim.git
