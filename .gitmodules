@@ -40,3 +40,6 @@
 [submodule "vim-lsp-settings"]
 	path = vim/pack/main/start/vim-lsp-settings
 	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "vim/pack/main/start/plantuml-syntax"]
+	path = vim/pack/main/start/plantuml-syntax
+	url = https://github.com/aklt/plantuml-syntax.git
