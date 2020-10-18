@@ -13,3 +13,6 @@ style = "bold red"
 
 [package]
 disabled = true
+
+[time]
+disabled = false
