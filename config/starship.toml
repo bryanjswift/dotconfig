@@ -7,10 +7,8 @@ symbol = "⬢ "
 style = "green"
 
 [git_status]
-deleted = ""
+format = '([\[$conflicted$modified$staged$untracked$ahead_behind\]]($style) )'
 modified = "*"
-renamed = ""
-stashed = ""
 style = "bold red"
 
 [package]
