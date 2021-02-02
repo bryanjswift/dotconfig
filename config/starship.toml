@@ -2,8 +2,8 @@
 symbol = "☁ "
 displayed_items = "profile"
 
-[batter]
-format = "[$percentage]($style) "
+[battery]
+format = '[$percentage]($style) '
 
 [nodejs]
 symbol = "⬢ "
