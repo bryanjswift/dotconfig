@@ -2,6 +2,9 @@
 symbol = "☁ "
 displayed_items = "profile"
 
+[batter]
+format = "[$percentage]($style) "
+
 [nodejs]
 symbol = "⬢ "
 style = "green"
