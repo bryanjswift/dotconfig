@@ -83,13 +83,17 @@ export ORIG_PATH=$PATH
 # add to the path
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
 
-# If brew is on the path then include rbenv settings
+# If brew is on the path then include brew settings
 if hash brew 2>/dev/null; then
   source $DOTCONFIG/config/bash/brew.bashrc
 fi
 # If rbenv is on the path then include rbenv settings
 if hash rbenv 2>/dev/null; then
   source $DOTCONFIG/config/bash/rbenv.bashrc
+fi
+# If pyenv is on the path then include rbenv settings
+if hash pyenv 2>/dev/null; then
+  source $DOTCONFIG/config/bash/pyenv.bashrc
 fi
 # if both fzf is on the path include fzf customizations
 if hash fzf 2>/dev/null; then

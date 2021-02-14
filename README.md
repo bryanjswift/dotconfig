@@ -48,6 +48,16 @@ List ruby versions available with `rbenv install -l`.
 [rbenv]: https://github.com/rbenv/rbenv
 [ruby-install]: https://github.com/postmodern/ruby-install
 
+## Python
+
+Python versions can be managed with [`pyenv`][pyenv].
+
+    brew install pyenv
+
+List Python versions available with `pyenv install -l`.
+
+[pyenv]: https://github.com/pyenv/pyenv
+
 # Get and Setup dotfiles
 
     mkdir -p ~/Documents/code && cd ~/Documents/code
