@@ -21,17 +21,18 @@ so require a root or sudo password.
     # Access adoptopenjdk formulae
     brew tap adoptopenjdk/openjdk
     # Install the latest from adoptopenjdk
-    brew cask install adoptopenjdk
+    brew install --cask adoptopenjdk
     # Install useful versions for lambda development
-    brew cask install adoptopenjdk8 adoptopenjdk11 adoptopenjdk14
+    brew install --cask adoptopenjdk8 adoptopenjdk11 adoptopenjdk14 adoptopenjdk15
 
 [adoptopenjdk]: https://adoptopenjdk.net
 
 To set a specific JDK version, see [homebrew-openjdk][homebrew-openjdk].
 
-    # adoptopenjdk8 = version 1.8
-    # adoptopenjdk11 = version 11
-    # adoptopenjdk14 = version 14
+    # adoptopenjdk8 = 1.8
+    # adoptopenjdk11 = 11
+    # adoptopenjdk14 = 14
+    # adoptopenjdk15 = 15
     export JAVA_HOME=$(/usr/libexec/java_home -v <version>)
 
 [homebrew-openjdk]: https://github.com/AdoptOpenJDK/homebrew-openjdk
