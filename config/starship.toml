@@ -1,6 +1,7 @@
 [aws]
 symbol = "☁ "
-displayed_items = "profile"
+# format = 'on [$symbol($profile )(\($region\) )]($style)' # default
+format = 'on [$symbol($profile )]($style)'
 
 [battery]
 format = '[$percentage]($style) '
@@ -10,6 +11,7 @@ symbol = "⬢ "
 style = "green"
 
 [git_status]
+# format = '([\[$all_status$ahead_behind\]]($style) )' # default
 format = '([\[$conflicted$modified$staged$untracked$ahead_behind\]]($style) )'
 modified = "*"
 style = "bold red"
