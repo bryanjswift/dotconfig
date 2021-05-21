@@ -46,3 +46,6 @@
 [submodule "vim/pack/main/start/vim-dbml"]
 	path = vim/pack/main/start/vim-dbml
 	url = https://github.com/jidn/vim-dbml.git
+[submodule "vim/pack/main/start/vim-prisma"]
+	path = vim/pack/main/start/vim-prisma
+	url = https://github.com/pantharshit00/vim-prisma.git
