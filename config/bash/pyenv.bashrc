@@ -1,7 +1,7 @@
 # Python
-export PYENV=$(pyenv root)
-export PYENV_VERSIONS=(${PYENV}/versions/*)
+export PYENV_ROOT=$(pyenv root)
+export PYENV_VERSIONS=(${PYENV_ROOT}/versions/*)
 ## Add pyenv binaries to $PATH
-export PATH="${PYENV}/bin:${PATH}"
+export PATH="${PYENV_ROOT}/bin:${PATH}"
 ## Intialize
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
