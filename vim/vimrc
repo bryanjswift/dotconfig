@@ -83,6 +83,7 @@ set secure
 " Show line numbers on netrw directory listings
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 let g:polyglot_disabled = ['git']
+let g:rooter_patterns = ['.git', 'Makefile', '*.sln']
 
 source $DOTCONFIG/vim/conf/asyncomplete.vim
 source $DOTCONFIG/vim/conf/lightline.vim
