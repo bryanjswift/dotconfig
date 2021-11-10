@@ -115,3 +115,7 @@ fi
 if hash starship 2>/dev/null; then
   source $DOTCONFIG/config/bash/starship.bashrc
 fi
+
+# Preserve history across shells
+export PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
+shopt -s histappend
