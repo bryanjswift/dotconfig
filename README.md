@@ -150,6 +150,8 @@ and config files are cribbed from [yoshuawuyts][yoshuawuyts-gpg].
 
     # Link dotfile for tmux into the home directory
     ln -s ~/Documents/code/dotconfig/config/tmux.conf ~/.tmux.conf
+    # Link tmux plugins into the home directory
+    ln -s ~/Documents/code/dotconfig/config/tmux ~/.tmux
     # Link dotfile for tig into the home directory
     ln -s ~/Documents/code/dotconfig/config/tigrc ~/.tigrc
 

@@ -1,0 +1,4 @@
+# Ignore the stored resurrect sessions
+*
+# But keep the gitignore file
+!.gitignore

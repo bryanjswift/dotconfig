@@ -49,3 +49,6 @@
 [submodule "vim/pack/main/start/vim-prisma"]
 	path = vim/pack/main/start/vim-prisma
 	url = https://github.com/pantharshit00/vim-prisma.git
+[submodule "config/tmux/plugins/tmux-resurrect"]
+	path = config/tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
