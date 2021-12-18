@@ -2,17 +2,13 @@
 # For Homebrew installation see /usr/local/Cellar/offline-imap/6.5.5/offlineimap.conf
 [general]
 # Basic Settings
-accounts = fastmail, gmail
+accounts = gmail
 maxsyncaccounts = 1
 ui = ttyui
 #ui = blinkenlights
 # Advanced Settings
 pythonfile=~/.offlineimap/helpers.py
 fsync = False
-
-[Account fastmail]
-localrepository = fastmail-local
-remoterepository = fastmail-remote
 
 [Account gmail]
 localrepository = gmail-local
@@ -33,22 +29,6 @@ remoterepository = swiftwork-remote
 [Account ticketevolution]
 localrepository = ticketevolution-local
 remoterepository = ticketevolution-remote
-
-[Repository fastmail-local]
-type = Maildir
-localfolders = /Volumes/Mail/fastmail.fm/bryanjswift
-nametrans = lambda folder: fastmail_local(folder)
-
-[Repository fastmail-remote]
-maxconnections = 1
-type = IMAP
-ssl = yes
-sslcacertfile = /Volumes/Mail/ca-bundle.crt
-remotehost = imap.fastmail.com
-remoteuser = bryanjswift@fastmail.fm
-remotepasseval = get_1password_pass(account="bryanjswift@fastmail.fm", server="imap://mail.messagingengine.com")
-nametrans = lambda folder: fastmail_remote(folder)
-folderfilter = lambda folder: should_sync_fastmail(folder)
 
 [Repository gmail-local]
 type = Maildir

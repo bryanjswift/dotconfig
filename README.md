@@ -3,9 +3,7 @@
 Make sure Xcode and Command Line Tools are installed. Install Homebrew. Check
 [brew.sh][brew] for the latest installation instructions.
 
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-Install the basic tools:
+After homebrew is setup install the basic tools:
 
     brew install git tig macvim tmux
 
@@ -96,7 +94,7 @@ if `.bash_login` doesn't already exist.
     # Copy a global gitignore file into place
     cp ~/Documents/code/dotconfig/config/gitignore ~/.gitignore
 
-# offlineimap and company
+# mutt and friends
 
 Make it possible to read mail locally and offline from the terminal (or
 anything supporting Maildir). Open up the 'Keychain Access' app and add the
@@ -108,10 +106,17 @@ entries for IMAP and SMTP servers referenced in
 Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/), specifically the
 section on [Retrieving
 Passwords](http://stevelosh.com/blog/2012/10/the-homely-mutt/#retrieving-passwords)
-for more information about seeting this up.
+for more information about setting this up.
+
+The above description is kept as a reference for historical reasons but the
+currenet set of configuration is using the [1Password
+CLI](https://1password.com/downloads/command-line/) tool to retrieve passwords
+from an "offlineimap" vault.
 
     # Install the tools for syncing, reading and sending email locally
-    brew install lynx msmtp mutt offlineimap
+    brew install lynx msmtp mutt isync offlineimap
+    # Install the 1Password CLI
+    brew cask install 1password-cli
     # Add the command line tool for searching the macOS contacts
     brew install keith/formulae/contacts-cli
     # Link dotfiles for these tools into the home directory
@@ -119,6 +124,7 @@ for more information about seeting this up.
     ln -s ~/Documents/code/dotconfig/config/offlineimap ~/.offlineimap
     ln -s ~/Documents/code/dotconfig/config/msmtprc ~/.msmtprc
     ln -s ~/Documents/code/dotconfig/config/offlineimap/offlineimaprc ~/.offlineimaprc
+    ln -s ~/Documents/code/dotconfig/config/isync/mbsyncrc ~/.mbsyncrc
     # Link the cert bundle into the volume where maildirs are stored
     ln -s ~/Documents/code/dotconfig/certs/ca-bundle.crt /Volumes/Mail/ca-bundle.crt
 
