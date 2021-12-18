@@ -44,7 +44,7 @@ maxconnections = 1
 type = IMAP
 ssl = yes
 sslcacertfile = /Volumes/Mail/ca-bundle.crt
-remotehost = mail.messagingengine.com
+remotehost = imap.fastmail.com
 remoteuser = bryanjswift@fastmail.fm
 remotepasseval = get_keychain_pass(account="bryanjswift@fastmail.fm", server="mail.messagingengine.com")
 nametrans = lambda folder: fastmail_remote(folder)
