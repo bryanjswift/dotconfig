@@ -47,3 +47,5 @@
 	ui = off
 	diff = auto
 	interactive = auto
+[commit]
+	gpgsign = true
