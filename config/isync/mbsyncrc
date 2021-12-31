@@ -47,3 +47,62 @@ Channel fastmail-default
 Channel fastmail-sent
 Channel fastmail-drafts
 Channel fastmail-trash
+
+IMAPAccount lcd
+Host imap.gmail.com
+User bryan.swift@littlecinema.net
+SSLType IMAPS
+AuthMechs LOGIN
+CertificateFile /Volumes/Mail/ca-bundle.crt
+PassCmd "op list items --vault=offlineimap --tags=imap | op get item - --fields=title,password --format=csv | grep 'bryan.swift@littlecinema.net' | cut -d ',' -f 2"
+
+IMAPStore lcd-remote
+Account lcd
+
+MaildirStore lcd-local
+SubFolders Verbatim
+Path /Volumes/Mail/littlecinema.net/bryanswift/
+Inbox /Volumes/Mail/littlecinema.net/bryanswift/INBOX
+
+Channel lcd-inbox
+Far :lcd-remote:
+Near :lcd-local:
+Create Both
+Expunge Both
+Patterns INBOX
+SyncState *
+
+Channel lcd-archive
+Far :lcd-remote:"[Gmail]/All Mail"
+Near :lcd-local:archive
+Create Near
+Expunge Near
+SyncState *
+
+Channel lcd-sent
+Far :lcd-remote:"[Gmail]/Sent Mail"
+Near :lcd-local:sent
+Create Near
+Expunge Near
+SyncState *
+
+Channel lcd-drafts
+Far :lcd-remote:"[Gmail]/Drafts"
+Near :lcd-local:drafts
+Create Both
+Expunge Near
+SyncState *
+
+Channel lcd-trash
+Far :lcd-remote:"[Gmail]/Trash"
+Near :lcd-local:trash
+Create Both
+Expunge Near
+SyncState *
+
+Group lcd
+Channel lcd-inbox
+Channel lcd-archive
+Channel lcd-sent
+Channel lcd-drafts
+Channel lcd-trash
