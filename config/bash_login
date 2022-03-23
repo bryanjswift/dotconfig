@@ -77,6 +77,8 @@ if [ ! -n "$DOTCONFIG" ]; then
 fi
 # In bash history: ignore duplicates, `ls`, `bg`, `fg`, `exit` commands
 export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTSIZE=5000
+export HISTFILESIZE=10000
 
 ###### Path ######
 export ORIG_PATH=$PATH
