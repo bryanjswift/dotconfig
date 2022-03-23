@@ -15,7 +15,7 @@ def get_1password_uuid(account=None, server=None):
         'account': account,
         'server': server,
     }
-    command = "op list items --vault=offlineimap | jq -r '.[] | select(.overview.url == \"%(server)s\" and .overview.title == \"%(account)s\").uuid'" % params
+    command = "op item list --vault=offlineimap | jq -r '.[] | select(.overview.url == \"%(server)s\" and .overview.title == \"%(account)s\").uuid'" % params
     output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
     return output.splitlines()[0]
 
@@ -33,7 +33,7 @@ def get_1password_pass(account=None, server=None):
         'uuid': get_1password_uuid(account, server),
     }
     uuid = get_1password_uuid(account, server)
-    command = "op get item --vault=offlineimap --fields=password %(uuid)s" % params
+    command = "op item get --vault=offlineimap --fields=password %(uuid)s" % params
     output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
     return output.splitlines()[0]
 

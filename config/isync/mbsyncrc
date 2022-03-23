@@ -1,7 +1,7 @@
 IMAPAccount fastmail
 Host imap.fastmail.com
 User bryanjswift@fastmail.fm
-PassCmd "op list items --vault=offlineimap --tags=imap | op get item - --fields=title,password --format=csv | grep 'bryanjswift@fastmail.fm' | cut -d ',' -f 2"
+PassCmd "op item list --vault=offlineimap --tags=imap --format=json | op item get - --format json | jq -r '[.title, (.fields[] | select(.id == \"password\") | .value)] | @csv' | grep 'bryanjswift@fastmail.fm' | cut -d ',' -f 2 | tr -d '\"'"
 SSLType IMAPS
 CertificateFile /Volumes/Mail/ca-bundle.crt
 
@@ -54,7 +54,7 @@ User bryan.swift@littlecinema.net
 SSLType IMAPS
 AuthMechs LOGIN
 CertificateFile /Volumes/Mail/ca-bundle.crt
-PassCmd "op list items --vault=offlineimap --tags=imap | op get item - --fields=title,password --format=csv | grep 'bryan.swift@littlecinema.net' | cut -d ',' -f 2"
+PassCmd "op item list --vault=offlineimap --tags=imap --format=json | op item get - --format json | jq -r '[.title, (.fields[] | select(.id == \"password\") | .value)] | @csv' | grep 'bryan.swift@littlecinema.net' | cut -d ',' -f 2 | tr -d '\"'"
 
 IMAPStore lcd-remote
 Account lcd
