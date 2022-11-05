@@ -17,6 +17,8 @@ else
 endif
 colorscheme solarized
 
+" put annotations in line number column
+set signcolumn=number
 " set backspace permissions
 set backspace=indent,eol,start
 " reduce leader timeout from 1000ms
