@@ -83,7 +83,7 @@ export HISTFILESIZE=10000
 ###### Path ######
 export ORIG_PATH=$PATH
 # add to the path
-export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin # Reset PATH
 
 # If brew is on the path then include brew settings
 if hash brew 2>/dev/null; then
