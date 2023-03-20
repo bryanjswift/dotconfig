@@ -43,3 +43,7 @@ nnoremap <C-i> :LspWorkspaceSymbol<cr>
 nnoremap <leader>o :Vista finder<cr>
 "" ctrl-t binding for tags
 nnoremap <C-o> :Vista finder<cr>
+
+" Navigate quickfix list with ease
+nnoremap <silent> [q :cprevious<CR>
+nnoremap <silent> ]q :cnext<CR>
