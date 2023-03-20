@@ -15,7 +15,7 @@ else
   "set background=dark
   set background=light " Always light for now
 endif
-colorscheme solarized
+colorscheme catppuccin_mocha
 
 " put annotations in line number column
 set signcolumn=number

@@ -2,7 +2,7 @@
 " Used to configure https://github.com/itchyny/lightline.vim
 "
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'catppuccin_latte',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'filename' ],
