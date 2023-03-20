@@ -55,3 +55,6 @@
 [submodule "vim/pack/main/start/vim-colors-catppuccin"]
 	path = vim/pack/main/start/vim-colors-catppuccin
 	url = https://github.com/catppuccin/vim.git
+[submodule "vim/pack/main/start/vim-ack"]
+	path = vim/pack/main/start/vim-ack
+	url = https://github.com/mileszs/ack.vim.git

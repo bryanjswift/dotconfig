@@ -87,6 +87,7 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 let g:polyglot_disabled = ['git']
 let g:rooter_patterns = ['.git', 'Makefile', '*.sln']
 
+source $DOTCONFIG/vim/conf/ack.vim
 source $DOTCONFIG/vim/conf/asyncomplete.vim
 source $DOTCONFIG/vim/conf/lightline.vim
 source $DOTCONFIG/vim/conf/ctrlp.vim
