@@ -58,3 +58,6 @@
 [submodule "vim/pack/main/start/vim-ack"]
 	path = vim/pack/main/start/vim-ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "config/tmux/plugins/tmux-catppuccin"]
+	path = config/tmux/plugins/tmux-catppuccin
+	url = https://github.com/catppuccin/tmux.git
