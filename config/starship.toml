@@ -16,6 +16,9 @@ format = '([\[$conflicted$modified$staged$untracked$ahead_behind\]]($style) )'
 modified = "*"
 style = "bold red"
 
+[gradle]
+disabled = true
+
 [package]
 disabled = true
 
