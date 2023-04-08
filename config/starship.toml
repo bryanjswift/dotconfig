@@ -6,6 +6,12 @@ format = 'on [$symbol($profile )]($style)'
 [battery]
 format = '[$percentage]($style) '
 
+[docker_context]
+disabled = true
+
+[kotlin]
+disabled = true
+
 [nodejs]
 symbol = "⬢ "
 style = "green"
