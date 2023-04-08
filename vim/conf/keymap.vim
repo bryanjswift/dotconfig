@@ -46,7 +46,7 @@ nnoremap <leader>i :LspWorkspaceSymbol<cr>
 "" ctrl-shift-o binding for workspace symbols
 nnoremap <C-i> :LspWorkspaceSymbol<cr>
 " open code actions
-nnoremap <C-;> :LspCodeAction<cr>
+nnoremap <C-a> :LspCodeAction<cr>
 
 " vista
 "
